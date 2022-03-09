@@ -11,6 +11,7 @@
 --\c dbName         connect to a database
 --\d                show tables of db including BIGSERAL
 --dt                show tables of db excluding BIGSERAL
+--\d+ table_name    show a table's cloumns
 
 --pg_dump: creates backup of database to another directory/disk/etc.
 --pg_dumpall -U postgres > c:\pgbackup\all.sql
