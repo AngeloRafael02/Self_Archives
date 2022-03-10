@@ -1,7 +1,8 @@
-#Requirements: NumPy, Pandas
+#Requirements: NumPy, Pandas, MAtplotlib, and conda environment
 
 import numpy as np # provides array structure for performing operations with data, MORE coompact than lists
 import pandas as pd #PanDa = Panel Data: for reading and extracting data from files, transform it, analyze it, and more.
+import matplotlib.pyplot as plt
 
 #NUMPY
 
@@ -52,5 +53,41 @@ data = { #looks like JSON
 c = pd.DataFrame(data) #prints a table of the data + auto incrementing numbers for "index"
 c1 = pd.DataFrame(data, index = ["James", "Bob", 'Amy', "Dave"]) # replace index with names
 c2 = c1.loc["Bob"] # access a row using its index with OBJECT.loc["INDEX"]
+
+#INDEXING and SLICING
+c3 = c1[['ages']] #select a single column to print. A single column is a SERIES OBJECT
+c4 = c1[['ages','heights']] # we can select multiple columns to print, Multiple columns is a DATAFRAME
+c5 = c1.iloc[2] # prints a row according to index
+c6 = c1.iloc[:3] # print the first N of rows
+c7 = c1.iloc[1:3] # print rows 2 to 3
+c8 = c1[(c1['ages']>18) & (c1['heights']>180)] # prints with conditions (& = AND, | = OR)
+
+#READING DATA
+df = pd.read_csv("https://www.sololearn.com/uploads/ca-covid.csv") #reads a csv file (there are other file types: read_<filetype>)
+#print(df.head()) # print the first (default:5) rows of data with head() 
+#print(df.head(10)) #print the first rows according to head parameter.
+#print(df.tail())   # prints the last rows of the file
+#print(df.info())    # prints the info  about the datasets such as number of rows, columns, data types, etc.
+#df.set_index("date", inplace=True) #set our own index column by the set_index(), inplace=True specifies that change will be applied to the dataframe without the need to assign it to a new variable. print(d.head()) to see results
+df.drop('state', axis=1, inplace=True) #print(d.info()) too see results
+    #NOTE drop(): deletes rows or columns : axis = 0 means drop a row, axis = 1 mean drop a column
+#WORKING WITH DATA
+df['month'] = pd.to_datetime(df['date'], format="%d.%m.%y").dt.month_name() #added a new column called date
+#print(df.head())
+df.set_index('date', inplace=True)
+#print(df.describe()) #describe() calculates the count, mean, std, min, 25%, 50%, 75% max of the file
+#print(df['month'].value_counts()) # prints how many values appear in each ['month'] has.
+#print(df.groupby('month')['cases'].sum()) #prints the number of all total values in each month
+#print(df['cases'].sum()) #prints all values in one year
+
+
+#MATPLOTLIB
+#executing code here can generate new files
+
+s = pd.Series([18,42,9,32,81,64,10])
+
+s.plot(kind='bar') #plat a bar graph
+plt.savefig('subfolder/plot.png') #save the bar graph as plot.png, makes a new file depending on file format
+
 #PRINT EXAMPLES HERE 
-print(c2)
+#print(df)
