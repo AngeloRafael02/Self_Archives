@@ -83,11 +83,37 @@ df.set_index('date', inplace=True)
 
 #MATPLOTLIB
 #executing code here can generate new files
-
 s = pd.Series([18,42,9,32,81,64,10])
 
+    # MAKING A BAR GRAPH
 s.plot(kind='bar') #plat a bar graph
-plt.savefig('subfolder/plot.png') #save the bar graph as plot.png, makes a new file depending on file format
+#plt.savefig('subfolder/barplot.png') #save the bar graph as plot.png, makes a new file depending on file format
+   
+    # MAKING ALINE GRAPH
+df = pd.read_csv("https://www.sololearn.com/uploads/ca-covid.csv")
+df.drop('state', axis=1, inplace=True)
+df['date'] = pd.to_datetime(df['date'], format="%d.%m.%y")
+df['month'] = df['date'].dt.month
+df.set_index('date', inplace=True)
+
+df[df['month']==12][['cases','deaths']].plot() #plot(): line graph in default?, can make multiple lines on graph
+#plt.savefig('subfolder/lineplot.png') # saves the plot() as a png
+
+(df.groupby('month')['cases'].sum()).plot(kind='bar', stacked=True) #stacked=True attribute makes two or more columns stack on  bars of the graph
+#kind='box':box plot
+#plt.savefig('subfolder/barplot2.png')
+
+df[df["month"]==6]["cases"].plot(kind="hist",bins=10) #make a histogram, manually specify the bins to use using the "bins" attribute
+#plt.savefig('subfolder/histplot.png')
+
+df[df["month"]==6][["cases","deaths"]].plot(kind="area",stacked=False)
+#plt.savefig('subfolder/areaplot.png')
+
+df[df["month"]==6][["cases","deaths"]].plot(kind="scatter", x='cases',y="deaths")
+#plt.savefig('subfolder/scatterplot.png')
+
+df.groupby('month')['cases'].sum().plot(kind='pie') #Not necessarily correct plotting
+#plt.savefig('subfolder/pieplot.png')
 
 #PRINT EXAMPLES HERE 
 #print(df)
