@@ -3,8 +3,10 @@ Compilation of documentation, written in their respective programs as a bookmark
 may also serve as backup when i don't remember certain syntaxes of certain languages.
 
 Languages Currently Documented:
-    - Front-end Framework CDNs
     - Git Bash Manual
     - Basic Python
         - Python (Data Science)
     - SQL (Postgres)
+
+Other Documentations
+    - Front-end Framework CDNs
