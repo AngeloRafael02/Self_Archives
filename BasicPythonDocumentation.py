@@ -1,4 +1,4 @@
-# PYTHON DOCUMENTATION
+# BASIC PYTHON DOCUMENTATION
 # By: ANGELO RAFAEL RECIO
 
 # LIBRARIES
@@ -6,6 +6,9 @@
 
 #STRING: immutable
 # quote marks/apostrophes can be used  with backslash at the start
+
+from curses.ascii import isalpha
+
 
 words = "\"HeLlO WoRlD\"" 
 # strings can also be modified via  available functions
@@ -38,6 +41,7 @@ ArrSplice = strArr[2] # prints T
 strlen = len(strArr) # prints 13
 #slicing is a function to get a substring of a string
 strSlice = strArr[0:2] # prints "p" and "y"
+#words.isalpha() #Return True if the string is an alphabetic string, False otherwise
 
 #INTEGER
 integer = 420 
@@ -179,16 +183,26 @@ for key in me.keys():
 
 
 #FUNCTION: a code block that performs a job or returns a value
+#terms: parameters-variables of the function definition, arguments-values put into parameters
 def add(a,b): #<- can have default values. Example: def add(a = 15,b = 4):
-    return a + b
+    c = a + b
+    return c #return: returns a valuethat can be used later
 #function can have parameters/arguments if needed
 #function can be called + print in two ways:
 def subtract(a,b):
-    return a - b
+    c = a - b
+    return c
 #print(subtract(10, 5))
 #OR
 def multiply(a,b):
-    return a * b
+    c = a * b
+    return c
 display = multiply(10,5)
 #print(display)
+#NOTE: variable insied functions cannot be called outside of the block
 
+## Functions can be objects
+minus = subtract
+#print(minus(10,5)) #prints 5
+
+###TO BE CONTINUED IN intermediatePythonDocumentation.py
