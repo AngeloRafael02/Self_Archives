@@ -4,8 +4,10 @@ may also serve as backup when i don't remember certain syntaxes of certain langu
 
 Languages Currently Documented:
     - Git Bash Manual
-    - Basic Python
-        - Python (Data Science)
+    - Python
+        - Basic Python
+        - Intermediate Python
+        - Python (Data Science: NumPy, PanDa, MatplotLib)
     - SQL (Postgres)
 
 Other Documentations

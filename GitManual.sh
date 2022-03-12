@@ -1,5 +1,6 @@
 #!
-#Git Commands I usually use
+#Git Command Manual I usually use
+# RECIO, Angelo Rafael
 
 #NOTE TO SELF: use school account to join a project and experience "collaborative work"
 

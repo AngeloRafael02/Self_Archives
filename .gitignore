@@ -7,9 +7,12 @@ lineplot.png
 pieplot.png
 areaplot.png
 scatterplot.png
+areaplotWithLegends.png
 
 #my pythonntesting page
 test.py
+#my To Do list
+ToDoList.txt
 
 #VS Code settings
 .vscode/

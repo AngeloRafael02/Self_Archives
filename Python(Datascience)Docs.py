@@ -100,10 +100,10 @@ df[df['month']==12][['cases','deaths']].plot() #plot(): line graph in default?, 
 #plt.savefig('subfolder/lineplot.png') # saves the plot() as a png
 
 (df.groupby('month')['cases'].sum()).plot(kind='bar', stacked=True) #stacked=True attribute makes two or more columns stack on  bars of the graph
-#kind='box':box plot
+#kind='box':box plot. barh = horizontal bar
 #plt.savefig('subfolder/barplot2.png')
 
-df[df["month"]==6]["cases"].plot(kind="hist",bins=10) #make a histogram, manually specify the bins to use using the "bins" attribute
+df[df["month"]==6]["cases"].plot(kind="hist",bins=10) #make a histogram, for frequency distributions. manually specify the bins to use using the "bins" attribute
 #plt.savefig('subfolder/histplot.png')
 
 df[df["month"]==6][["cases","deaths"]].plot(kind="area",stacked=False)
@@ -114,6 +114,14 @@ df[df["month"]==6][["cases","deaths"]].plot(kind="scatter", x='cases',y="deaths"
 
 df.groupby('month')['cases'].sum().plot(kind='pie') #Not necessarily correct plotting
 #plt.savefig('subfolder/pieplot.png')
+
+df = df[df["month"]==6]
+df[["cases","deaths"]].plot(kind='area', legend=True, stacked=False, color=['#1970E7','#E73E19'] ) #plot an area graph, 
+plt.xlabel('Days in June')
+plt.ylabel('Number')
+plt.suptitle("COVID-18 in June")
+plt.savefig('subfolder/areaplotWithLegends.png')
+
 
 #PRINT EXAMPLES HERE 
 #print(df)
