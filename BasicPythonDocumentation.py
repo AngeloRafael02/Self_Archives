@@ -1,23 +1,23 @@
-# BASIC PYTHON DOCUMENTATION
-# By: ANGELO RAFAEL RECIO
+    # BASIC PYTHON DOCUMENTATION
+    # By: ANGELO RAFAEL RECIO
 
-# LIBRARIES
-#import math # module that provides mathematical function defined by the C standard
+    # LIBRARIES
+    #import math # module that provides mathematical function defined by the C standard
 
-#STRING: immutable
-# quote marks/apostrophes can be used  with backslash at the start
+    #STRING: immutable
+    # quote marks/apostrophes can be used  with backslash at the start
 
 from curses.ascii import isalpha
 
 
 words = "\"HeLlO WoRlD\"" 
-# strings can also be modified via  available functions
+    # strings can also be modified via  available functions
 lowercase = words.lower()
 uppercase = words.upper()
 titlecase = words.title()
-# "\" for file pathings or other, can only be used when "r" is declared before the string
+    # "\" for file pathings or other, can only be used when "r" is declared before the string
 filePath = r"C:\Users\user\Documents\UB_Files\Yr2Sem2\Python(OOP)\Documentation.py"
-# Use triple quotes to span multiple lines, can be double or single quote
+    # Use triple quotes to span multiple lines, can be double or single quote
 postgresNewTable = """
 CREATE TABLE characters (
     id BIGSERIAL NOT NULL PRIMARY KEY,
@@ -27,36 +27,36 @@ CREATE TABLE characters (
     email VARCHAR(50) 
 );
 """
-# strings can be also called on to other strings with "f" decalred before the string
+    # strings can be also called on to other strings with "f" decalred before the string
 sentence = f"my first code is { words }"
-# strings next to each other will automatically CONCATENATE, we can also select which strings to concatenate
+    # strings next to each other will automatically CONCATENATE, we can also select which strings to concatenate
 morningGreeting =  "Good" " Monring"
 firstWord = "Hey,"
 secondWord = " How Are you?"
 secondSentence = firstWord + secondWord + "lol" #use + to concatenate strings
-#strings can also be considred as arrays of characters
+    #strings can also be considred as arrays of characters
 strArr = "Python String"
 ArrSplice = strArr[2] # prints T
-# len() function to get the length of the string
+    # len() function to get the length of the string
 strlen = len(strArr) # prints 13
-#slicing is a function to get a substring of a string
+    #slicing is a function to get a substring of a string
 strSlice = strArr[0:2] # prints "p" and "y"
 #words.isalpha() #Return True if the string is an alphabetic string, False otherwise
 
-#INTEGER
+    #INTEGER
 integer = 420 
 bigNumber = 10_000_000_000 #_underscored to understand large numbers
 floatNumber = 619.00 #FLOAT: putting .0 at the end of the number
-#Operations: +-Addition --Subtraction *-multiplication //-division **-exponent %-modulus
+    #Operations: +-Addition --Subtraction *-multiplication //-division **-exponent %-modulus
 
-#CONSTANTS: written in ALL_CAPITAL_LETTERS with undersores if separating the words
-# All-caps to be treated by Programmers as Constant
+    #CONSTANTS: written in ALL_CAPITAL_LETTERS with undersores if separating the words
+    # All-caps to be treated by Programmers as Constant
 PI = 3.14
 GRAVITY = 9.81
 
-#use type(object) to return the data type of a specific input/data. Outputs "<class 'data type'>"
+    #use type(object) to return the data type of a specific input/data. Outputs "<class 'data type'>"
 
-#BOOLEAN: represents TRUE or FALSE. Note that the results are boolean, not string, despite using letters
+    #BOOLEAN: represents TRUE or FALSE. Note that the results are boolean, not string, despite using letters
 isthereString = bool('Hi') # prints TRUE
 isthereString2 = bool('') # prints FALSE
 isthereValue = bool(100) # prints TRUE
@@ -64,7 +64,7 @@ isthereValue2 = bool(0) # prints FALSE
 isNumberCorrect = bool(80 > 10) # prints TRUE
 isNumberCorrect2 = bool(80 < 10) # prints FALSE
 
-#DOCSTRINGS: Multi-line comments used for documentation of function and other parts of the code, must is put in the first part of a module, function or class
+    #DOCSTRINGS: Multi-line comments used for documentation of function and other parts of the code, must is put in the first part of a module, function or class
 def add_numbers(num1,num2):
     """This
      Returns the Sum of num1 and num2.
@@ -76,8 +76,8 @@ def add_numbers(num1,num2):
 #print(add_numbers.__code__) #prints the location (by line) of the function where the Docstring is located
 #print(math.sqrt.__doc__) # prints the the doc of squareroot function of the library
 
-#INPUT
-#input = input('Enter Value: ')
+    #INPUT
+    #input = input('Enter Value: ')
 #print(input) #prints input function, receives an input and returns it back as output
 """
 factor1 = input('Enter factor1: ')
@@ -85,12 +85,12 @@ factor2 = input('Enter facter2: ')
 answer = int(factor1) * int(factor2)
 print(f"the Product is {answer}")""" 
 
-#DATA TYPE CONVERSION
-#float(str) #turns string into a float number
-#bool(val)  #turns values to boolean value,  does it have value or not?
-# str(val)  #returns string of a value
+    #DATA TYPE CONVERSION
+    #float(str) #turns string into a float number
+    #bool(val)  #turns values to boolean value,  does it have value or not?
+    # str(val)  #returns string of a value
 
-#LIST: Arrays
+    #LIST: Arrays
 list1 = [1,2,3,4,6] #1d list
 list2 = [[0,0], [0,1], [1,1], [1,0]] #2d list
 #print(list2) #prints all in list
@@ -103,16 +103,22 @@ del list1[2]   #del deletes item via its order
 popLastValue = list1.pop() #pop() removes last element from a list and returns it as its own element/object
 list1.remove(3) #remove() removes item by value
 
-#TUPLES: Lists that can't be mutated but can be reassigned a new variable, can be used in for loops
+    #TUPLES: Lists that can't be mutated but can be reassigned a new variable, can be used in for loops
 rgb = ("red", "green", "blue")
-#rgb[3] = "white" <= won't work, 'tuple' object does not support item assignment
+    #rgb[3] = "white" <= won't work, 'tuple' object does not support item assignment
 rgb = ("orange", "yellow", "violet") #tuples can be reassign to a variable that holds a tuple
+    # Tuple Unpacking : tuples can be unpacked
+l,m,*n,o = [1,2,3,4,5,6,7,8,9] ##l=1,m=2,0=4,n=everything else
 
-#sort() - used on list to sort alphabetically
+    ##SETS: Similar to list or dictionaries. created by curly braces and has no index, cannot contain duplicate elements
+intSet = {1,2,3,4,5}
+#print(3 in intSet) ## since sets don't have indexes, call them in their object name
+
+    #sort() - used on list to sort alphabetically
 names = ["james", "mary", "charles", "urban"]
 names.sort() #print(names after this line will print all the items of the list alphabetically
 names.sort(reverse = True) #print(names after this line will print all the items of the list alphabetically in reverse
-#Other Notes: in default they will arrange strings alphabetically and integers from smallest to largest
+    #Other Notes: in default they will arrange strings alphabetically and integers from smallest to largest
 
 companies = [
     ['Google', 2019, 134.81],
@@ -125,7 +131,7 @@ def sort_key(companies):
 companies.sort(key = sort_key, reverse = True)
 #print(companies) #prints all the list of the list
 
-#Sorted() - function that returns the new sorted list from the original list. function doesn't modify the original list
+    #Sorted() - function that returns the new sorted list from the original list. function doesn't modify the original list
 guests = ['James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer']
 #NOTE: Sorted() Alters the last call of the of the list including latest sorted() functions
 #sort_guest = guests.sort()
@@ -137,7 +143,7 @@ guests = ['James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer']
 #del guests[2:5] # Deletes items on a list
 
 
-#EXCEPTION_HANDLING
+    #EXCEPTION_HANDLING
 """
 Try:
     code for program
@@ -151,8 +157,8 @@ finally: #executes after the try clause and any except clause
     print('Finishing up')
 """
 
-#Dictionary: collection of key:value pairs where each key is diagnosed with a value    JSON??
-#            the value can be a number, string, tuple or even another dictionary as long as its immutable
+    #Dictionary: collection of key:value pairs where each key is diagnosed with a value    JSON??
+    #            the value can be a number, string, tuple or even another dictionary as long as its immutable
 me = {
     'name': 'Angelo Rafael Recio', 
     'age': 20,
@@ -164,45 +170,45 @@ me = {
         "documentary": "WWI in Color"
     } 
 }
-#ways to access values on a dictionary:
-# print(me["name"]) # square bracket notation, if key doesn't exist returns KeyError
+    #ways to access values on a dictionary:
+#print(me["name"]) # square bracket notation, if key doesn't exist returns KeyError
 printAge = me.get("age") # Get() method, if key doesn't exist returns None
-#adding new key pairs to dictionary:
+    #adding new key pairs to dictionary:
 me['gender'] = 'Male' #just declare another key and value
-#modifying an existing key pair value:
+    #modifying an existing key pair value:
 me['single'] = False #just declare a new value
-#removing key pair values:
+    #removing key pair values:
 del me["single"]
-# items(): returns an object which contains a list of of key value pairs as tuples
-#                               v-list inside tuple inside list       
-# print(me.items()) #dict_items([("key1":value1),(key2:value2),...])
-# keys(): returns all the keys in a tuple in a list
-# values(): returns all values in a dictionary
+    # items(): returns an object which contains a list of of key value pairs as tuples
+    #                               v-list inside tuple inside list       
+    # print(me.items()) #dict_items([("key1":value1),(key2:value2),...])
+    # keys(): returns all the keys in a tuple in a list
+    # values(): returns all values in a dictionary
 for key in me.keys():
     print(key)
 
 
-#FUNCTION: a code block that performs a job or returns a value
-#terms: parameters-variables of the function definition, arguments-values put into parameters
+    #FUNCTION: a code block that performs a job or returns a value
+    #terms: parameters-variables of the function definition, arguments-values put into parameters
 def add(a,b): #<- can have default values. Example: def add(a = 15,b = 4):
     c = a + b
     return c #return: returns a valuethat can be used later
-#function can have parameters/arguments if needed
-#function can be called + print in two ways:
+    #function can have parameters/arguments if needed
+    #function can be called + print in two ways:
 def subtract(a,b):
     c = a - b
     return c
 #print(subtract(10, 5))
-#OR
+    #OR
 def multiply(a,b):
     c = a * b
     return c
 display = multiply(10,5)
 #print(display)
-#NOTE: variable insied functions cannot be called outside of the block
+    #NOTE: variable insied functions cannot be called outside of the block
 
-## Functions can be objects
+    ## Functions can be objects
 minus = subtract
 #print(minus(10,5)) #prints 5
 
-###TO BE CONTINUED IN intermediatePythonDocumentation.py
+    ###TO BE CONTINUED IN intermediatePythonDocumentation.py
