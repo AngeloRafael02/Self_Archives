@@ -7,7 +7,6 @@
     #STRING: immutable
     # quote marks/apostrophes can be used  with backslash at the start
 
-from curses.ascii import isalpha
 
 
 words = "\"HeLlO WoRlD\"" 
@@ -91,6 +90,8 @@ print(f"the Product is {answer}")"""
     # str(val)  #returns string of a value
 
     #LIST: Arrays
+    # Use list when collection of  data doe snot need random access.
+    # Usewhen you need a simple iterable collection that is modified frequently
 list1 = [1,2,3,4,6] #1d list
 list2 = [[0,0], [0,1], [1,1], [1,0]] #2d list
 #print(list2) #prints all in list
@@ -102,8 +103,15 @@ list1.insert(2,2.5) #insert(order, item) inserts an item ina specific place of t
 del list1[2]   #del deletes item via its order
 popLastValue = list1.pop() #pop() removes last element from a list and returns it as its own element/object
 list1.remove(3) #remove() removes item by value
+    #LIST COMPREHENSIONS are  a useful way to quickly create lists
+cubes = [i**3 for i in range(5)] #lists the first 5 cubic numbers
+print(cubes) # prints [0, 1, 8, 27, 64]
+evens = [i**2 for i in range(10) if i**2 % 2 == 0]
+print(evens) # prints [0, 4, 16, 36, 64]
+
 
     #TUPLES: Lists that can't be mutated but can be reassigned a new variable, can be used in for loops
+    #Use tuples when data should not be changes
 rgb = ("red", "green", "blue")
     #rgb[3] = "white" <= won't work, 'tuple' object does not support item assignment
 rgb = ("orange", "yellow", "violet") #tuples can be reassign to a variable that holds a tuple
@@ -111,8 +119,26 @@ rgb = ("orange", "yellow", "violet") #tuples can be reassign to a variable that 
 l,m,*n,o = [1,2,3,4,5,6,7,8,9] ##l=1,m=2,0=4,n=everything else
 
     ##SETS: Similar to list or dictionaries. created by curly braces and has no index, cannot contain duplicate elements
+    # Use sets when you need uniqueness to the elements
 intSet = {1,2,3,4,5}
 #print(3 in intSet) ## since sets don't have indexes, call them in their object name
+#print(intSet)
+intSet.add(6) # add() to add items on set
+#print(intSet)
+intSet.remove(1) # remove() ti remove items in a set
+#print(intSet)
+set1 = {1,2,3,4,5,6}
+set2 = {4,5,6,7,8,9}
+    # Union (|): used to combine sets, duplicates are turn to one
+#print(set1 | set2) # prints {1, 2, 3, 4, 5, 6, 7, 8, 9}
+    # Intersections (&): used to call elements that are the same in two sets
+#print(set1 & set2) # prints {4, 5, 6}
+    # Difference (-): used to subtract the elements in the first set but nit in the second
+#print(set1 - set2) # prints {1, 2, 3}
+#print(set2 - set1) # prints {8, 9, 7}
+    # Symmetric Difference (^): used to get items in either set but not both
+#print(set1 ^ set2) # prints {1, 2, 3, 7, 8, 9}
+
 
     #sort() - used on list to sort alphabetically
 names = ["james", "mary", "charles", "urban"]
@@ -154,11 +180,13 @@ except errorReason:
 except Exception as error: #good practice to catch other general errors
     print(error)
 finally: #executes after the try clause and any except clause
-    print('Finishing up')
+    print('Executes no matte what')
 """
 
     #Dictionary: collection of key:value pairs where each key is diagnosed with a value    JSON??
     #            the value can be a number, string, tuple or even another dictionary as long as its immutable
+    # Used when you need logical association betwee a key:value pair, when you need fast lookup far data based on custom key
+    # Used when data is constantly modified, DICTIONARIES ARE MUTABLE
 me = {
     'name': 'Angelo Rafael Recio', 
     'age': 20,
