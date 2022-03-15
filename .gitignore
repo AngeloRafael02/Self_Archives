@@ -1,4 +1,4 @@
-#Generated Files by Data Science Py3
+# Generated Files by Data Science Py3
 tempCodeRunnerFile.py
 barplot.png
 barplot2.png
@@ -9,10 +9,15 @@ areaplot.png
 scatterplot.png
 areaplotWithLegends.png
 
-#my pythonntesting page
+# generated directories by C#
+c#/bin/
+C#/obj
+C#/C#.csproj
+
+# my pythonntesting page
 test.py
 #my To Do list
 ToDoList.txt
 
-#VS Code settings
+# VS Code settings
 .vscode/
