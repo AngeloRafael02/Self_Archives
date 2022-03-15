@@ -4,11 +4,6 @@
     # This is a style of programming based on functions
     #EXAMPLE:
 
-
-
-from unittest import result
-
-
 def apply_twice(func, arg):
     return func(func(arg))
 def add_five(x):
@@ -35,11 +30,46 @@ def add_five(x):
     return x + 5
 nums = [15,25,35,45,55]
 result = list(map(add_five,nums))
-print(result)
+#print(result)
     #Lambda Syntax:
-print(list(map(lambda x: x+5,nums)))
+#print(list(map(lambda x: x+5,nums)))
 
     #filter(function,lambda) filters an iterable by leaving only the items that match the condition
 nums = [11,22,33,44,55]
 res = list(filter(lambda x: x%2==0,nums))
-print(res)
+#print(res)
+
+    #GENERATORS: type of iterable, like lists or tuples. Doesn't allow indexing but can be iterated by for loops. defined by the "yield" statement
+def countdown():
+    i=5
+    while i > 0:
+        yield i #yield is used to replace the return of a function to provide a result to its caller wotout destroying local variables
+                # because they yield one item at a time, they don't have memory restrictions, meaning they can be infinite
+        i -= 1
+for i in countdown():
+    print(i)
+    # finite generators can be converted into lists by passing them as arguments in list() function
+def numbers(x):
+    for i in range(x):
+        if i % 2 ==0:
+            yield i
+print(list(numbers(11)))
+
+    #DECORATORS: provide a way to modify functions using other functions
+    
+def decor(func):
+    def wrap():
+        print("=========")
+        func()
+        print("=========")
+    return wrap
+def print_words():
+    print("Hello")
+    #conventional way off calling an object funciton
+decorated = decor(print_words) #declaring a function with an argument as an object
+decorated() #call the object
+    #wrapping a function with a decorator vie the @ and the decorator's name
+@decor
+def print_words2():
+    print("Hi")
+print_words2() 
