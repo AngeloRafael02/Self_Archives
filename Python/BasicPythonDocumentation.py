@@ -173,7 +173,11 @@ guests = ['James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer']
 """
 Try:
     code for program
-except errorReason1:
+    if input == "certain condition":
+        raise (kind of Error) #Raise: exceptions, raised as arguments that would give detail about them
+except:
+    print("An error occurred")
+    raise # raise statement in except block re-raises what ever exception ocurred
     code if error 1 occurs
 except errorReason:
     code for error 2 occurs
