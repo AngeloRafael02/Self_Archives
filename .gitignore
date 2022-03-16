@@ -14,8 +14,9 @@ c#/bin/
 C#/obj
 C#/C#.csproj
 
-# my pythonntesting page
+# my testing pages
 test.py
+test.cs
 #my To Do list
 ToDoList.txt
 
