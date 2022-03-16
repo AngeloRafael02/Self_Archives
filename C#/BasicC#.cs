@@ -5,9 +5,11 @@
 //NOTE: Study dotnet commands in cmd
 
 namespace Basics{
-    class Variables{
+    class Program{
         static void Main(string[] args){
-            int myAge = 20;
+            /*Multi-Line 
+            Comment*/
+            int myAge = 20; //single Comment
             double pi = 3.14;
             char gura = 'a'; //char requires single quotes
             string name = "Angelo"; //strings require double quotes
@@ -17,6 +19,19 @@ namespace Basics{
                 //placeholders can be used in printing output, similar to string literals
             Console.WriteLine(" myAge = {0}, pi = {1}", myAge, pi); //don't forget to reference the variable/s used
                 //you can put as much placeholders as you need ({3},{4},...)
+            
+            string temp;
+            temp = Console.ReadLine(); //takes inputs 
+            Console.WriteLine(temp);            
+            
+            int Age = Convert.ToInt32(Console.ReadLine()); //way to take intergers
+            Console.Write("He is {0} years old.", Age);
+                //Other Convert.To___ functions:
+                //Convert.ToBoolean
+                //Convert.ToInt16
+                //Convert.ToInt64
+                //Convert.ToIntDouble
+
         }
     }
 }

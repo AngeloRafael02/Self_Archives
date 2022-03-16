@@ -173,8 +173,10 @@ guests = ['James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer']
 """
 Try:
     code for program
-    if input == "certain condition":
+    if input == "certain wrong condition":
         raise (kind of Error) #Raise: exceptions, raised as arguments that would give detail about them
+    false statement
+        assert (is this code returning a false) #assert used to check if a line of code os not working/is not true/does not make sense
 except:
     print("An error occurred")
     raise # raise statement in except block re-raises what ever exception ocurred
@@ -186,6 +188,11 @@ except Exception as error: #good practice to catch other general errors
 finally: #executes after the try clause and any except clause
     print('Executes no matte what')
 """
+def func(x):  #assert example,
+    assert x > 0, "error!"
+    print(x)
+#func(0) #goes to error
+#func(1) #lets print(x)
 
     #Dictionary: collection of key:value pairs where each key is diagnosed with a value    JSON??
     #            the value can be a number, string, tuple or even another dictionary as long as its immutable

@@ -8,6 +8,7 @@ uncommented to make an output of an example in the code
 
 Languages Currently Documented:
     - Git Bash Manual
+    - C#
     - Python
         - Basic Python
         - Intermediate Python
