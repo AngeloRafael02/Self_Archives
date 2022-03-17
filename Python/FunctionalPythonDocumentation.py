@@ -4,6 +4,9 @@
     # This is a style of programming based on functions
     #EXAMPLE:
 
+from doctest import Example
+
+
 def apply_twice(func, arg):
     return func(func(arg))
 def add_five(x):
@@ -55,8 +58,7 @@ def numbers(x):
             yield i
 print(list(numbers(11)))
 
-    #DECORATORS: provide a way to modify functions using other functions
-    
+    #DECORATORS: provide a way to modify functions using other functions  
 def decor(func):
     def wrap():
         print("=========")
@@ -73,3 +75,19 @@ decorated() #call the object
 def print_words2():
     print("Hi")
 print_words2() 
+
+    #RECURSION: 
+    #Example1
+def factorial(x): #(1) let say x = 5
+    if x == 1:
+        return 1
+    else: #(2)meets this category
+        return x*factorial(x-1) #(3) return 5 * (factorial(5-1)), repeating the function again because you called the function again
+    #Example2
+def is_even(y):
+    if y == 0:
+        return True
+    else: 
+        return is_odd(y-1) #referred to a new function and changes the value
+def is_odd(y):
+    return not is_even(y) #returns FALSE
