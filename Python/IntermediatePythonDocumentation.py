@@ -7,7 +7,7 @@ nums = {
     2: "two",
     3: "three",
 }
-    #functions
+    #dictionary functions
     ## "in" and "not in" can be used to locate if a value is in a dictionary
 #print(1 in nums) #prints True
 #print("three" in nums) # prints False
@@ -18,7 +18,18 @@ print(nums.get(1)) #prints the value of the key"1"
 print(nums.get(6,3)) #can take two keys and prints next key as INT if first key is not found
 print(nums.get(8)) #prints "none" of no keys were found
 
+    #FILE HANDLING:
+    #open() - used to manipulate files
 
+file = open("textfile.txt")
+    # we can specify the mode uy=used to open a file
+file.open("textfile.txt", "w") # W means write mode, for rewriting contents of a file
+
+file.open("/Users/user/Documents/Self_Archives/Python/subfolder/filename.txt", "r") # r means read mode, for reading contents of a file, also the deafult mode
+
+file.open("textfile.txt", "a") # W means append mode, for adding new contents of a file
+
+file.open("textfile.txt", "wb") # adding b opens ir in a binary mode, which is use for non-text file such as images and sound files
 
 
 
