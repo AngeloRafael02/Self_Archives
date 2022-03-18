@@ -20,16 +20,24 @@ print(nums.get(8)) #prints "none" of no keys were found
 
     #FILE HANDLING:
     #open() - used to manipulate files
+    #SYNTAX: variable = open("filepath", "mode")
+    # we can specify the mode used to open a file
+        #WRITE
+f = open("Python/subfolder/filename.txt", "w") # W means write mode, for rewriting contents of a file, if file is not found, will make that file
+f.write("This has been added to the file.")
+#f.close() #closing file after a write deletes all content from current file, making a new one according to the new write
+        #READ
+f = open("Python/subfolder/filename.txt", "r") # r means read mode, for reading contents of a file, also the deafult mode
+print(f.read()) #print the read file, read()reads the file, you car read certain bytes of the file by giving numbers as arguments in the read()
+#print(f.readlines()) #readlines() - return a list which each element is a line in the file
+#for line in f: # use for loop to iterate through lines in the file
+    #print(line)
+#print("Done") # after reading all the contents of the file, it will return an empty string
+f.close()
 
-file = open("textfile.txt")
-    # we can specify the mode uy=used to open a file
-file.open("textfile.txt", "w") # W means write mode, for rewriting contents of a file
+#file.open("textfile.txt", "a") # W means append mode, for adding new contents of a file
 
-file.open("/Users/user/Documents/Self_Archives/Python/subfolder/filename.txt", "r") # r means read mode, for reading contents of a file, also the deafult mode
-
-file.open("textfile.txt", "a") # W means append mode, for adding new contents of a file
-
-file.open("textfile.txt", "wb") # adding b opens ir in a binary mode, which is use for non-text file such as images and sound files
+#file.open("textfile.txt", "wb") # adding b opens ir in a binary mode, which is use for non-text file such as images and sound files
 
 
 
