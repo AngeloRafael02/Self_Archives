@@ -14,6 +14,9 @@ c#/bin/
 C#/obj
 C#/C#.csproj
 
+# environment files for python Flask
+.venv
+
 # my testing pages
 test.py
 test.cs
