@@ -16,6 +16,7 @@ C#/C#.csproj
 
 # environment files for python Flask
 .venv
+__pycache__/
 
 # my testing pages
 test.py

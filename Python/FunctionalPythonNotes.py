@@ -92,8 +92,13 @@ def is_even(y):
 def is_odd(y):
     return not is_even(y) #returns FALSE
 
-    #*args : allowsfunctions to take varying numbers of arguments
+    # *args : allows functions to take varying numbers of arguments
 def lists(named_arg, *args):
     print(named_arg)
     print(args)
 lists(1,2,3,4,5)
+
+    # **kwargs: handles various arguments that have not been declared in advance
+def dict(x,y=7,*args,**kwargs):
+    print(kwargs)
+dict(2,3,4,5,6,a=7,b=8) #a=7 and b=8 has just been declared
