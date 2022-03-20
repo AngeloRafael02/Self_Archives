@@ -23,9 +23,11 @@ namespace Basics{
             
                 //Input Methods
             string temp;
+            Console.WriteLine("Type String:");
             temp = Console.ReadLine(); //takes inputs 
             Console.WriteLine(temp);            
             
+            Console.WriteLine("Type Integer");
             int Age = Convert.ToInt32(Console.ReadLine()); //way to take intergers
             Console.Write("He is {0} years old.", Age);
                 //Other Convert.To___ functions:
@@ -54,7 +56,23 @@ namespace Basics{
                 //Increment Operator: used to decrease or increase a value by 1
             any++; //prefix - increments/decrements value, value isn't change
             ++any; //postfix - increments/decrements value first before using it
-    }
+
+                //If-Else Statement: can be nested
+            if (any < 8){
+                Console.WriteLine("\n<8");
+            } else if (any == 8){
+                Console.WriteLine("\n=8");
+            } else { //any > 8  
+                Console.WriteLine("\n>8");
+            }
+                // RELATIONAL OPERATORS
+                    //> - Greater than
+                    //< - Less than
+                    //>= - Greater than or equal
+                    //<= - Less than or equal
+                    //== equal to
+                    //!= not equal to
+        }
     }
 }
 
