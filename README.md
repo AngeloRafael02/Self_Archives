@@ -12,7 +12,10 @@ Languages Currently Documented:
     - Python
         - Basic Python
         - Intermediate Python
-        - Python (Data Science: NumPy, PanDa, MatplotLib)
+        - Data Science: Basics of NumPy, PanDa, MatplotLib
+        - Functional Python
+        - Object Oriented Programming Python (OOP)
+        - Flask Python
     - SQL (Postgres)
 
 Other Documentations

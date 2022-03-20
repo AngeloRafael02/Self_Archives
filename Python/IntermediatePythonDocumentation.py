@@ -18,9 +18,12 @@ print(nums.get(1)) #prints the value of the key"1"
 print(nums.get(6,3)) #can take two keys and prints next key as INT if first key is not found
 print(nums.get(8)) #prints "none" of no keys were found
 
+
+
     #FILE HANDLING:
     #open() - used to manipulate files
-    #SYNTAX: variable = open("filepath", "mode")
+    #SYNTAX: variable = open("filepath/filename.type", "mode")
+    #Alt Syntax: with open("filepath/filename.type", "mode") as f | f is the variable name
     # we can specify the mode used to open a file
         #WRITE
 f = open("Python/subfolder/filename.txt", "w") # W means write mode, for rewriting contents of a file, if file is not found, will make that file
@@ -39,6 +42,15 @@ f.close()
 
 #file.open("textfile.txt", "wb") # adding b opens ir in a binary mode, which is use for non-text file such as images and sound files
 
+    # none -used to represent an absence of a value (similar to null in other languages)
+    # is converted to FALSE in a Boolean Value
+#print(Boolean(None))
+    # none object is returned by any funciton that doesn't explicitly return anything else
+def some_func():
+    print ("HI") 
+        #since no return statement was delcared a none object will print 
+var = some_func() # if called to print, only returns the "return" value
+#print(var) # prints all that can be printed even the lack of a return value 
 
 
 
@@ -74,6 +86,8 @@ def functionTwice(func,x,y):
 a=1
 b=10
 #print(functionTwice(add,a,b)) ##prints 22: func=add(), a=1, b=10
+
+
 
     #MODULES files or libraries to call when certain functions are needed
 import random as rng ## "as" operator replaces name of module
