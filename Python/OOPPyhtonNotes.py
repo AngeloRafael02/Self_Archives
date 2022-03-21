@@ -1,6 +1,7 @@
     #OBJECT ORIENTED PROGRAMMING PYTHON DOCUMENTARIES
     #RECIO, Angelo Rafael
 
+
     #   CLASS: describes whatan object will be but is separate from the object itself, also called an instance?
     #   can be described as the object's blueprint, or description
 class Cat:
@@ -10,6 +11,7 @@ class Cat:
         self.legs = legs
 felix = Cat("orange",4)
 #print(felix.color) #prints "orange"
+
 
     # INHERITANCE: provides a way to share functionality between classes
 class Animal:
@@ -33,8 +35,38 @@ class B(A):
     def eggs(self):
         print(2) #is ignored because the "super" is called 
         super.spam()
-B().spam() #calling a "super" method from a Child class to the Parent Class
+#B().spam() #calling a "super" method from a Child class to the Parent Class
 
-    
+
+    #MAGIC METHODS: methods with double underscores at the beginning and end of their names.
+    # examples: Operator Overloading
+        # __add__ - method allows for the definition of a custom behavior for hte + operator in our class
+class Vector2D:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def __add__(self, other):
+        return Vector2D(self.x + other.x, self.y + other.y)
+first = Vector2D(5, 7)
+second = Vector2D(3, 9)
+result = first + second # result  = (x=(5+3) + y=(7+9))
+print(result.x) #prints 8
+print(result.y) #prints 16
+    #Other Examples
+        # __sub__ for -
+        # __mul__ for *
+        # __truediv__ for /
+        # __floordiv__ for //
+        # __mod__ for %
+        # __pow__ for **
+        # __and__ for &
+        # __or__ for |
+        # __xor__ for ^
+class SpecialString:
+    def __init__(self,cont):
+        self.cont = cont
+    def __truediv__(self, other):
+        line =  "=" * len(other.cont)
+        return "\n".join([self.cont, line, other.cont])
 
     
