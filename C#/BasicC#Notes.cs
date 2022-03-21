@@ -51,7 +51,17 @@ namespace Basics{
             
                 //ASSIGNEMT OPERATORS
             any += 2;
-                //arithmetic operators can be use for assignment
+                //Examples:
+                    //x += 1 (x = x + 1)
+                    //x -= 1 (x = x - 1)
+                    //x *= 1 (x = x * 1)
+                    //x /= 1 (x = x / 1)
+                    //x %= 1 (x = x % 1)
+                    //x &= 1 (x = x & 1)
+                    //x |= 1 (x = x | 1)
+                    //x ^= 1 (x = x ^ 1)
+                    //x >>= 1 (x = x >> 1)
+                    //x <<= 1 (x = x << 1)
 
                 //Increment Operator: used to decrease or increase a value by 1
             any++; //prefix - increments/decrements value, value isn't change
@@ -72,6 +82,26 @@ namespace Basics{
                     //<= - Less than or equal
                     //== equal to
                     //!= not equal to
+                
+                // LOGICAL OPERATORS
+                    // ! - logical negation (Console.WriteLine(!True) //prints False)
+                    // & - logical AND (bool a = true & true; Console.WriteLine(a) //prints True)
+                    // | - logical OR (bool a = false | true; Console.WriteLine(a); //prints True)
+                    // ^ - logical exclusive OR (Console.WriteLine(true ^ true); // output: False)
+                        //CONDITIONAL LOGICAL OPERATORS: used in condition of statements like "If-Else"
+                    // && - conditional logical AND
+                    // || = Conditional Logical OR
+
+                //SWITCH: Provides a more elegant way to test a variable for equality against a list of Values
+            char vowel = 'a';
+            switch(vowel){
+                case char n when (n == 'a' || n == 'e' || n == 'i' || n == 'o' || n == 'u'): //a way in taking multiple consition in one case
+                    Console.WriteLine("Vowel");
+                    break; //break - used to end a case statement
+                default: //the "else{}" statement f the switch
+                    Console.WriteLine("Consonant");
+                    break;
+            }
         }
     }
 }
