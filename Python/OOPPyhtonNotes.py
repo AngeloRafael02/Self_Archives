@@ -68,5 +68,21 @@ class SpecialString:
     def __truediv__(self, other):
         line =  "=" * len(other.cont)
         return "\n".join([self.cont, line, other.cont])
-
-    
+    #Magic Method Examples using comparison operators
+        # __lt__ for <
+        # __le__ for <=
+        # __eq__ for ==
+        # __ne__ for != if __ne__ is not implemented, it returns as the opposite of __eq__
+        # __gt__ for >
+        # __ge__ for >=
+class SpecialString1: #to be investigated
+    def __init__(self,cont):
+        self.cont = cont
+    def __gt__(self, other):
+        for index in range(len(other.cont)+1):
+            result = other.cont[:index] + ">" + self.cont
+            result += ">" + other.cont[index:]
+            print(result)
+spam = SpecialString1("spam")
+eggs = SpecialString1("eggs")
+spam > eggs    
