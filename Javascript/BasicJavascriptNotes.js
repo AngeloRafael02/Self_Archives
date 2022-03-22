@@ -41,4 +41,38 @@ console.log(integer); //console.log() for printing in terminal, document.write()
     //SYNTAX: var variableName = (condition) ? value1 : value2
 var age = 19;
 var isAdult = (age < 18) ? "Too Young" : "Old Enough"
-console.log(isAdult)
+//console.log(isAdult)
+
+    //If-ElseS Statements
+var age = 20;
+if (age > 0 || age <= 12) {
+    console.log("Elementary");
+} else if(age > 12 || age <= 18) {
+    console.log("High School");
+} else {
+    console.log("You can work I guess");
+}
+
+
+    // Switch Statement : Modified to take multiple cases in a DRY format
+var grade = 91;
+switch (true) {
+    case [75,76,77,78,79].includes(grade):
+        console.log("Almost Passing");
+        break;
+    case [80,81,82,83,84].includes(grade):
+        console.log("Passing");
+        break;
+    case [85,86,87,88,89].includes(grade):
+        console.log("Satisfying");
+        break;  
+    case [90,91,92,93,94].includes(grade):
+        console.log("Very Satisfying")
+        break;
+    case [95,96,97,98,99].includes(grade):
+        console.log("Excellent")
+        break;
+    default:
+        console.log("Input Error")
+        break;
+}
