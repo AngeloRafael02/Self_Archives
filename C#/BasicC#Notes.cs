@@ -5,8 +5,8 @@
 //NOTE: Study dotnet commands in cmd
 //TEst other C# stuff with https://try.dot.net/
 
-namespace Basics{
-    class Program{
+namespace Angelo{
+    class Basics{
         static void Main(string[] args){
             /*Multi-Line 
             Comment*/
@@ -22,14 +22,14 @@ namespace Basics{
                 //you can put as much placeholders as you need ({3},{4},...)
             
                 //Input Methods
-            string temp;
-            Console.WriteLine("Type String:");
-            temp = Console.ReadLine(); //takes inputs 
-            Console.WriteLine(temp);            
+            //string temp;
+            //Console.WriteLine("Type String:");
+            //temp = Console.ReadLine(); //takes inputs 
+            //Console.WriteLine(temp);            
             
-            Console.WriteLine("Type Integer");
-            int Age = Convert.ToInt32(Console.ReadLine()); //way to take intergers
-            Console.Write("He is {0} years old.", Age);
+            //Console.WriteLine("Type Integer");
+            //int Age = Convert.ToInt32(Console.ReadLine()); //way to take intergers
+            //Console.Write("He is {0} years old.", Age);
                 //Other Convert.To___ functions:
                 //Convert.ToBoolean
                 //Convert.ToInt16
@@ -42,6 +42,7 @@ namespace Basics{
 
                 //adding "const" before a variable makes it immutable
             const string lit = "HAHA XD";
+            Console.Write(lit);
                 // const variable must also be initialized and declared in the same line
 
                 //ARITHMETIC OPERATORS:
@@ -102,6 +103,18 @@ namespace Basics{
                     Console.WriteLine("Consonant");
                     break;
             }
+
+                //WHILE Loop - Executes its block of code as longas is condition is True
+            int num = 1;
+            while(num < 3){
+                //Console.WriteLine(num);
+                num++;
+            }   
+                //another possible syntax
+            int num1 = 1;
+            while(++num1 < 6)
+            Console.WriteLine(num1);
+
         }
     }
 }
