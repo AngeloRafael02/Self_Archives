@@ -113,8 +113,18 @@ namespace Angelo{
                 //another possible syntax
             int num1 = 1;
             while(++num1 < 6)
-            Console.WriteLine(num1);
+            //Console.WriteLine(num1);
 
+                //FOR Loop: for (init;condition;increment/compound operators){statement/s}
+            for(int x = 1; x < 5; x++){
+                //Console.WriteLine("Value of x: {0}",x);
+            }   
+                //init and increment can be left out but the semicolons are mandatory
+            int k = 2;
+            for(; k <10;){
+                Console.WriteLine(k);
+                k+=2;
+            }
         }
     }
 }
