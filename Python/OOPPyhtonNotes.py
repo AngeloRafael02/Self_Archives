@@ -86,3 +86,26 @@ class SpecialString1: #to be investigated
 spam = SpecialString1("spam")
 eggs = SpecialString1("eggs")
 spam > eggs    
+    #Magic Methods for making classes as containers:
+        # __len__ for len()
+        # __getitem__ for indexing
+        # __setitem__ for assigning to indexed values
+        # __delitem__ for for deleting indexed values
+        # __iter__ for iteration over objects such as loops
+        # __contains__ for in
+import random as rng
+class VagueList:        #To be studied
+    def __init__(self,cont):
+        self.cont=cont
+    def __getitem__(self,index):
+        return self.cont[index + rng.randint(-1,1)]
+    def __len__(self):
+        return rng.randint(0,len(self.cont)*2)
+vague_list = VagueList(["A","B","C","D","E"])
+print(len(vague_list))
+print(len(vague_list))
+print(vague_list[2])
+print(vague_list[2])
+    #Other Magic Methods
+        # __call__ for calling objects a functions
+        # __int__ and __str__ for converting objects to built-in datatypes
