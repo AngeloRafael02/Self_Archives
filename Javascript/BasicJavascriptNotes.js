@@ -54,7 +54,7 @@ if (age > 0 || age <= 12) {
 }
 
 
-    // Switch Statement : Modified to take multiple cases in a DRY format
+    // Switch Statement : Modified to take multiple cases in a DRY format (introduced in ES6)
 var grade = 91;
 switch (true) {
     case [75,76,77,78,79].includes(grade):
@@ -75,4 +75,25 @@ switch (true) {
     default:
         console.log("Input Error")
         break;
+}
+
+     //FOR Loop: for (init;condition;increment/compound operators){statement/s}
+    // Syntax: for(executed before the loop, loop condition, execute when condition ,after loop is executed)
+for (i=1;i<=5;i++) {
+    //console.log(i);
+}
+
+    // last argument can be optional as long as it is called/increment the values inside the loop
+var i = 6;
+for (;i<10;){
+    //console.log(i);
+    i++
+}
+
+    //WHILE Loop
+    //Syntax: while(condition){codeblock}
+var i = 1
+while(i<=5){
+    console.log(i);
+    i++;
 }

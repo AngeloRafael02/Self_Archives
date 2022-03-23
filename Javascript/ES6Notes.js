@@ -20,8 +20,15 @@ console.log(add3Numbers(1,2));
 const add2numbers = (x,y) => {
     let z = x + y;
     console.log(z);
-}
+}   
 add2numbers(1,2);
+    //New syntax makes simple functions readable in a few lines only
+const salutation = x => "Welcome " + x; //you can also declare the values of parameters at the function
+console.log(salutation("Angelo")) //calling anf outputting single-line function
+    //new Syntax makes it easy to use in inline function. Ex: use the function in each element of an array.
+var arr = [2,3,7,8];
+//arr.forEach(function(el){console.log(el*2);}); //for each element a function is used in it
+//arr.forEach(v => {console.log(v*2);}); //new syntax
 
 
     //LOOPS
