@@ -122,9 +122,17 @@ namespace Angelo{
                 //init and increment can be left out but the semicolons are mandatory
             int k = 2;
             for(; k <10;){
-                Console.WriteLine(k);
+                //Console.WriteLine(k);
                 k+=2;
             }
+
+                //DO-WHILE Loop: like while loop but is guaranteed to execute one time
+            int a = 0;
+            do {
+                Console.WriteLine(a);
+                a++;
+            } while(a < 4); //if consition results False in the first instance, it will loop one time only
+
         }
     }
 }
