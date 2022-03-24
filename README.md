@@ -9,7 +9,12 @@ may also serve as backup when i don't remember certain syntaxes of certain langu
 
 ### Contents
 Languages Currently Documented:
+    - HTML & CSS
+        - Vanilla HTML
+        - Vanilla CSS
+        - Bootstrap CSS
     - Bash
+        - Windows CMD Commands
         - Git Commands
     - C#
         - Basic C#
