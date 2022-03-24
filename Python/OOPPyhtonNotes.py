@@ -102,10 +102,40 @@ class VagueList:        #To be studied
     def __len__(self):
         return rng.randint(0,len(self.cont)*2)
 vague_list = VagueList(["A","B","C","D","E"])
-print(len(vague_list))
-print(len(vague_list))
-print(vague_list[2])
-print(vague_list[2])
+#print(len(vague_list))
+#print(len(vague_list))
+#print(vague_list[2])
+#print(vague_list[2])
     #Other Magic Methods
         # __call__ for calling objects a functions
         # __int__ and __str__ for converting objects to built-in datatypes
+
+
+    #ENCAPSULATION - involves packaging or related variables and function into an easy to use object
+    #data hiding - implementation of detail of class should be hidden, we can use weakly private methods
+    #weakly private methods: have a single undersore in the beginning, this signals that they are private and shouldn't be used in an external code (mostly a convention, does not stop external code from accessing them).
+class Queue:
+    def __init__(self, contents):
+        self._hiddenlist = list(contents)
+    def push(self, value):
+        self._hiddenlist.insert(0, value)
+    def pop(self):
+        return self._hiddenlist.pop(-1)
+    def __repr__(self): # __repr__ : magic methos used for string representation of the instance
+        return "Queue({})".format(self._hiddenlist)
+queue = Queue([1, 2, 3])
+print(queue)
+queue.push(0)
+print(queue)
+queue.pop()
+print(queue)
+print(queue._hiddenlist)
+    # strongly private methods: have double underscores at the beginning of their names
+class Spam:
+    __egg = 7
+    def print_egg(self):
+        print(self.__egg)
+s = Spam()
+s.print_egg()
+print(s._Spam__egg)
+print(s.__egg)

@@ -1,5 +1,5 @@
 #!
-    #Git Command Manual I usually use
+    #Git Commands I usually use
     # RECIO, Angelo Rafael
 
     #NOTE TO SELF: use school account to join a project and experience "collaborative work"
@@ -15,8 +15,11 @@
         #Linux and MacOS uses LF only
             #this means that core.autocrlf = input
 
+git --verion #prints git version
 
+git init # initialize git in a repository/directory
     #CONFIG
+    
 git config --help # list all manuals of git (space for scroll down, q for quit)
 git config -h # shows short summary of manual of git
 git config --list #list all settings of git

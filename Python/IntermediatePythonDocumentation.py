@@ -18,36 +18,13 @@ print(nums.get(1)) #prints the value of the key"1"
 print(nums.get(6,3)) #can take two keys and prints next key as INT if first key is not found
 print(nums.get(8)) #prints "none" of no keys were found
 
-
-
-    #FILE HANDLING:
-    #open() - used to manipulate files
-    #SYNTAX: variable = open("filepath/filename.type", "mode")
-    #Alt Syntax: with open("filepath/filename.type", "mode") as f | f is the variable name
-    # we can specify the mode used to open a file
-        #WRITE
-f = open("Python/subfolder/filename.txt", "w") # W means write mode, for rewriting contents of a file, if file is not found, will make that file
-f.write("This has been added to the file.")
-#f.close() #closing file after a write deletes all content from current file, making a new one according to the new write
-        #READ
-f = open("Python/subfolder/filename.txt", "r") # r means read mode, for reading contents of a file, also the deafult mode
-print(f.read()) #print the read file, read()reads the file, you car read certain bytes of the file by giving numbers as arguments in the read()
-#print(f.readlines()) #readlines() - return a list which each element is a line in the file
-#for line in f: # use for loop to iterate through lines in the file
-    #print(line)
-#print("Done") # after reading all the contents of the file, it will return an empty string
-f.close()
-
-#file.open("textfile.txt", "a") # W means append mode, for adding new contents of a file
-
-#file.open("textfile.txt", "wb") # adding b opens ir in a binary mode, which is use for non-text file such as images and sound files
-
     # none -used to represent an absence of a value (similar to null in other languages)
     # is converted to FALSE in a Boolean Value
 #print(Boolean(None))
     # none object is returned by any funciton that doesn't explicitly return anything else
+
 def some_func():
-    print ("HI") 
+    #print ("HI") 
         #since no return statement was delcared a none object will print 
 var = some_func() # if called to print, only returns the "return" value
 #print(var) # prints all that can be printed even the lack of a return value 
@@ -115,3 +92,27 @@ libraries = {
     "and many more":""
 }
     ## pip is used to install third-party libraries (bash command: pip install <library-name>)
+
+
+
+    #FILE HANDLING:
+    #open() - used to manipulate files
+    #SYNTAX: variable = open("filepath/filename.type", "mode")
+    #Alt Syntax: with open("filepath/filename.type", "mode") as f | f is the variable name
+    # we can specify the mode used to open a file
+        #WRITE
+#f = open("Python/subfolder/filename.txt", "w") # W means write mode, for rewriting contents of a file, if file is not found, will make that file
+#f.write("This has been added to the file.")
+#f.close() #closing file after a write deletes all content from current file, making a new one according to the new write
+        #READ
+#f = open("Python/subfolder/filename.txt", "r") # r means read mode, for reading contents of a file, also the deafult mode
+#print(f.read()) #print the read file, read()reads the file, you car read certain bytes of the file by giving numbers as arguments in the read()
+#print(f.readlines()) #readlines() - return a list which each element is a line in the file
+#for line in f: # use for loop to iterate through lines in the file
+    #print(line)
+#print("Done") # after reading all the contents of the file, it will return an empty string
+#f.close()
+
+#file.open("textfile.txt", "a") # W means append mode, for adding new contents of a file
+
+#file.open("textfile.txt", "wb") # adding b opens ir in a binary mode, which is use for non-text file such as images and sound files

@@ -80,20 +80,43 @@ switch (true) {
      //FOR Loop: for (init;condition;increment/compound operators){statement/s}
     // Syntax: for(executed before the loop, loop condition, execute when condition ,after loop is executed)
 for (i=1;i<=5;i++) {
-    //console.log(i);
+//console.log(i);
 }
 
     // last argument can be optional as long as it is called/increment the values inside the loop
 var i = 6;
 for (;i<10;){
-    //console.log(i);
-    i++
+//console.log(i);
+i++
 }
 
     //WHILE Loop
     //Syntax: while(condition){codeblock}
 var i = 1
 while(i<=5){
-    console.log(i);
-    i++;
+//console.log(i);
+i++;
+}
+
+    //Do-WHILE Loop : Like a While Loop but will loop once before checking the condition
+    //syntax: do{codeblock}while(condition);
+var b = 1;
+do {
+//console.log(b);
+b++;
+} while (b < 5);
+  
+    //break; - used to jump out of a loop or to end a switch statement
+for (i=0;i<=10;i++){
+    if (i == 7){
+        break;
+    }
+    //console.log(i);
+}
+    //continue; - used to break one iteration in the loop and continues with the next iteration
+for(i=0;i<=10;i++){
+    if (i % 2 == 0){
+        continue;
+    }
+    //console.log(i)
 }
