@@ -120,3 +120,38 @@ for(i=0;i<=10;i++){
     }
     //console.log(i)
 }
+
+    //FUNCTIONS: used to call code that is repeated as many times as it is needed
+    //syntax: funciton name(parameter/s){code};
+function sayHello (name){
+    var greet = console.log("Hello, "+name);
+    return greet; //return is used to return a value that can be used in the future.
+}
+//sayHello("Angelo");
+//sayHello("Lianna");
+
+                            //there maybe Object oriented programming methods in the lines below
+
+    //OBJECTS: a list of values written as key:value pairs
+var me = {
+    name : "Angelo",
+    age : 20,
+    dumb : true
+}
+    //accessing object properties:
+var call = me.name;
+    //or
+var call2 = me['name'];
+//console.log(call); //prints Angelo
+//console.log(call2) //prints Angelo
+
+    //constructor: written function used to crate new objects
+function person(name,age,color){
+    this.name = name;
+    this.age = age;
+    this.color = color;
+}
+var p1 = new person("Angelo", 20, "gray"); //new objects
+var p2 = new person("Lianna", 21, "pink");
+console.log(p1.age); //prints p1's age
+console.log(p2.name); //prints p2's name
