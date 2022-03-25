@@ -112,8 +112,11 @@ print(evens) # prints [0, 4, 16, 36, 64]
 
     #TUPLES: Lists that can't be mutated but can be reassigned a new variable, can be used in for loops
     #Use tuples when data should not be changes
-rgb = ("red", "green", "blue")
-    #rgb[3] = "white" <= won't work, 'tuple' object does not support item assignment
+    #tuples are faster than lists but cannot be changed
+rgb = ("red", "green", "blue") #tuples can also not have parethesis
+emptyTPL = () #empty tuple created by empty parethesis
+print(rgb[0]) # access tuples with their index
+    #rgb[3] = "white" <= however, item reassignment won't work, 'tuple' object does not support item assignment
 rgb = ("orange", "yellow", "violet") #tuples can be reassign to a variable that holds a tuple
     # Tuple Unpacking : tuples can be unpacked
 l,m,*n,o = [1,2,3,4,5,6,7,8,9] ##l=1,m=2,0=4,n=everything else
@@ -161,6 +164,8 @@ companies.sort(key = sort_key, reverse = True)
 guests = ['James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer']
 #NOTE: Sorted() Alters the last call of the of the list including latest sorted() functions
 #sort_guest = guests.sort()
+
+    #list Slices: can be done in tuples too
 #sorted_guests2 = guests[1:4]  # <= shows list slice, first parameter = starting index, second paramemeter = ending index
 #sorted_guests3 = guests[-3:]  # negative first index refers to the arrangement in reverse
 #sorted_guests4 = guests[::3]  # third Parameter refers to intervals
