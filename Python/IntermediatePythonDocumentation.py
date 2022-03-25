@@ -13,6 +13,17 @@ nums = {
 #print("three" in nums) # prints False
 #print(4 not in nums) # prints True
 
+    #dictionary key can be assigned to different values. a new dictionary key can also be assigned a value, not just the ones that already exist
+squares = {
+    1:1,
+    2:4,
+    3:"error",
+    4:16
+}
+squares[8] = 64 #added in squares dictionary
+squares[3] = 9 #change key 3's Value
+print(squares) #{1: 1, 2: 4, 3: 9, 4: 16, 8: 64}
+
     ## get(): used to locate in dictionaries where pairs don't have indexes
 print(nums.get(1)) #prints the value of the key"1"
 print(nums.get(6,3)) #can take two keys and prints next key as INT if first key is not found
@@ -26,7 +37,7 @@ print(nums.get(8)) #prints "none" of no keys were found
 def some_func():
     #print ("HI") 
         #since no return statement was delcared a none object will print 
-var = some_func() # if called to print, only returns the "return" value
+    var = some_func() # if called to print, only returns the "return" value
 #print(var) # prints all that can be printed even the lack of a return value 
 
 
