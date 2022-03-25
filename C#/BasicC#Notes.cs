@@ -129,10 +129,25 @@ namespace Angelo{
                 //DO-WHILE Loop: like while loop but is guaranteed to execute one time
             int a = 0;
             do {
-                Console.WriteLine(a);
+                //Console.WriteLine(a);
                 a++;
             } while(a < 4); //if consition results False in the first instance, it will loop one time only
 
+                //BREAK : used to break loops and immediately move to the next statement 
+            int num2 = 0;
+            while(num2 < 10){
+                if (num2 == 3) //when the iteration increments == 3, break the loop
+                    break;
+                //Console.WriteLine(num2);
+                num2++;
+            }
+
+                //CONTINUE : used to terminate the loop according to conditions, then skips to the next loop
+            for (int w = 0; w < 10; w++){
+                if (w % 2 == 0) //if increment is divisible by two, terminate them and continue with the lop
+                    continue;
+                //Console.WriteLine(w);
+            }
         }
     }
 }
