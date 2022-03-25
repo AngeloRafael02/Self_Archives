@@ -124,18 +124,30 @@ class Queue:
     def __repr__(self): # __repr__ : magic methos used for string representation of the instance
         return "Queue({})".format(self._hiddenlist)
 queue = Queue([1, 2, 3])
-print(queue)
+print(queue) #Queue([1, 2, 3])
 queue.push(0)
-print(queue)
+print(queue) #Queue([0,1, 2, 3])
 queue.pop()
-print(queue)
-print(queue._hiddenlist)
+print(queue) #Queue([0,1, 2])
+print(queue._hiddenlist) # [0, 1, 2]
     # strongly private methods: have double underscores at the beginning of their names
 class Spam:
     __egg = 7
     def print_egg(self):
         print(self.__egg)
 s = Spam()
-s.print_egg()
-print(s._Spam__egg)
-print(s.__egg)
+s.print_egg() # 7
+
+    #CLASS METHODS: called by class which is passed to the cls parameter of the method
+    # - Marked with class method decorator (@classmethod)
+class Rectangle:
+    def __init__(self,width,height): #3. changed argument initialized
+        self.width = width
+        self.height = height
+    def calculate_area(self):   #4. initialized arguments calculated
+        return self.width * self.height
+    @classmethod
+    def new_square(cls, side_length): #2. argument is changed to fit 
+        return cls(side_length, side_length)
+square = Rectangle.new_square(5) #1. declares with a single argument
+print(square.calculate_area())
