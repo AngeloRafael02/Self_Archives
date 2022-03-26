@@ -165,4 +165,4 @@ function containsAll(arr, ...nums){
 }
 let x = [2,4,6,8,0];
 console.log(containsAll(x,2,4,6)); //prints True
-console.log(containsAll(x,6,4,9)); //prints False
+console.log(containsAll(x,6,4,9)); //prints
