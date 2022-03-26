@@ -139,6 +139,7 @@ s = Spam()
 s.print_egg() # 7
 
     #CLASS METHODS: called by class which is passed to the cls parameter of the method
+    # Syntax: @classmethod <linebreak> def functionname(cls,arguments):
     # - Marked with class method decorator (@classmethod)
 class Rectangle:
     def __init__(self,width,height): #3. changed argument initialized
@@ -149,5 +150,29 @@ class Rectangle:
     @classmethod
     def new_square(cls, side_length): #2. argument is changed to fit 
         return cls(side_length, side_length)
-square = Rectangle.new_square(5) #1. declares with a single argument
+square = Rectangle.new_square(5) #1. declares with a single argument, unction is called by class
 print(square.calculate_area())
+
+    #STATIC METHODS: does not have access to class level attributes, therefore it cannot modify the class state
+    # bound to class and nor the object of the class
+    # Syntax: @classmethod <linebreak> def functionname(cls,arguments):
+    # - Marked with class method decorator (@classmethod)
+from datetime import date
+class Student:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+    @classmethod
+    def fromBirthYear(cls,name,year):
+        return cls(name,date.today().year - year)
+    @staticmethod #doesn't interact with the class states, used for utility cases
+    def is_adult(age):
+        return age>18
+#Object is made and initialized
+person1 = Student('James',21)
+print(person1.age) #prints 21
+#Object is used in a class method function4
+person2 = Student.fromBirthYear('James',1996)
+print(person2.age) #prints 26(as of 2022)
+#Not an object but is called to now if its an adult.
+print(Student.is_adult(22))

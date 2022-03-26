@@ -150,6 +150,19 @@ var {m:foo, n:bar} = l; //assigned foo to have save value as "m"
     //you can also assign default values to variable, in case the value unpacked from the object is undefined
 var obj1 = {no:68, name:"jack"};
 let {no=36, age=21} = obj1;
-console.log(no); //prints 68 
-console.log(age); //prints 21
+//console.log(no); //prints 68 
+//console.log(age); //prints 21
 
+    //REST PARAMETER: used when you need to pass many arguments in a funciton
+    //syntax: function funciton name(...argument){}
+function containsAll(arr, ...nums){
+    for (let num of nums){
+        if (arr.indexOf(num) === -1){
+            return false;
+        }
+    }
+    return true;
+}
+let x = [2,4,6,8,0];
+console.log(containsAll(x,2,4,6)); //prints True
+console.log(containsAll(x,6,4,9)); //prints
