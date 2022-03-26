@@ -42,6 +42,14 @@ strlen = len(strArr) # prints 13
 strSlice = strArr[0:2] # prints "p" and "y"
 #words.isalpha() #Return True if the string is an alphabetic string, False otherwise
 
+    #String Formating: alternative way of embeding strings and non-string
+array = [4,5,6]
+msg = "Numbers: {0} {1} {2}".format(array[0],array[1],array[2])
+print(msg)
+    #string formatting can also be done with named arguments
+q  ="{x} {y}".format(y="there",x="Hello")
+print(q)
+
     #INTEGER
 integer = 420 
 bigNumber = 10_000_000_000 #_underscored to understand large numbers
@@ -103,7 +111,9 @@ list1.insert(2,2.5) #insert(order, item) inserts an item ina specific place of t
 del list1[2]   #del deletes item via its order
 popLastValue = list1.pop() #pop() removes last element from a list and returns it as its own element/object
 list1.remove(3) #remove() removes item by value
+
     #LIST COMPREHENSIONS are  a useful way to quickly create lists
+    #NOTE: Creating a list in a very extensice range will result in Memory Error
 cubes = [i**3 for i in range(5)] #lists the first 5 cubic numbers
 print(cubes) # prints [0, 1, 8, 27, 64]
 evens = [i**2 for i in range(10) if i**2 % 2 == 0]
