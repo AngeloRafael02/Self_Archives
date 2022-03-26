@@ -148,6 +148,11 @@ namespace Angelo{
                     continue;
                 //Console.WriteLine(w);
             }
+                //CONDITIONAL OPERATORS
+                //Syntax: condition ? expression : expression;
+            int r = 42;
+            string msg;
+            msg = (age >= 18) ? "Welcome" : "Sorry";
         }
     }
 }
