@@ -152,7 +152,9 @@ namespace Angelo{
                 //Syntax: condition ? expression : expression;
             int r = 42;
             string msg;
-            msg = (age >= 18) ? "Welcome" : "Sorry";
+            msg = (r >= 18) ? "Welcome" : "Sorry";
+            Console.WriteLine(msg);
+            
         }
     }
 }

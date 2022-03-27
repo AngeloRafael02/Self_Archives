@@ -94,6 +94,8 @@ spam > eggs
         # __iter__ for iteration over objects such as loops
         # __contains__ for in
 import random as rng
+
+from click import password_option
 class VagueList:        #To be studied
     def __init__(self,cont):
         self.cont=cont
@@ -175,4 +177,39 @@ print(person1.age) #prints 21
 person2 = Student.fromBirthYear('James',1996)
 print(person2.age) #prints 26(as of 2022)
 #Not an object but is called to now if its an adult.
-print(Student.is_adult(22))
+print(Student.is_adult(22)) #prints True
+
+    #PROPERTIES: provides a way in customizing access to instace attributes
+    #helps to access teh class methods as attributes (not need to use parenthesis ex. )
+class Pizza:
+    def __init__(self,toppings,number):
+        self.toppings = toppings
+        self.number = number
+    @property
+    def pineapple_allowed(self):
+        if self.number>18:
+            return True
+        else:
+            return False
+pizza = Pizza(["cheese","tomato"],12)
+print(pizza.pineapple_allowed) # does not need parethesis like "pizza.pineapple_allowed()", takes the argument from the object itself
+    # Properties can also be set by setter/getter functions
+class Pizza:
+    def __init__(self, toppings):
+        self.toppings = toppings
+        self._pineapple_allowed = False
+    @property
+    def pineapple_allowed(self):
+        return self._pineapple_allowed
+    @pineapple_allowed.setter
+    def pineapple_allowed(self, value):
+        if value:
+            password = input("Enter the password: ")
+            if password == "Sw0rdf1sh!":
+                self._pineapple_allowed = value
+            else:
+                raise ValueError("Alert! Intruder!")
+pizza = Pizza(["cheese", "tomato"])
+print(pizza.pineapple_allowed)
+pizza.pineapple_allowed = True
+print(pizza.pineapple_allowed) #To be investigatedd
