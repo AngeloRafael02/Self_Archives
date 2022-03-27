@@ -166,3 +166,11 @@ function containsAll(arr, ...nums){
 let x = [2,4,6,8,0];
 console.log(containsAll(x,2,4,6)); //prints True
 console.log(containsAll(x,6,4,9)); //prints
+
+    //SPREAD OPERATOR : used to pass the elements of an array as arguments in a function
+function add4numbers(w,x,y,z){
+    console.log(w+x+y+z);
+}
+var list = [1,2,3];
+add4numbers(...list,4);
+
