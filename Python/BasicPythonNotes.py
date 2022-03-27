@@ -50,11 +50,24 @@ print(msg)
 q  ="{x} {y}".format(y="there",x="Hello")
 print(q)
 
+    #String Functions
+print(", ".join(['spam','eggs','ham']))#joins([]) joins a list of strings with another strins as a seperator
+print("spam, eggs, ham".split(", ")) #split() turns a string into a list with a certain seperator
+print('Hello World'.replace('World', 'Earth')) #replace() replaces one substrinf of a string with another
+print('This is a Sentence'.startswith('This')) # startswith() determines the start of the string is a certain string
+print('This is a Sentence'.endswith('Sentence')) #endswith() determines the end of the string is it is a certain string
+
     #INTEGER
 integer = 420 
 bigNumber = 10_000_000_000 #_underscored to understand large numbers
 floatNumber = 619.00 #FLOAT: putting .0 at the end of the number
     #Operations: +-Addition --Subtraction *-multiplication //-division **-exponent %-modulus
+
+    #Numeric Functions
+print(min(1,2,3,4,0,2,1)) # min() finds the smallest number in an array
+print(max([1,2,3,4,0,2,1])) # max([]) finds the largest number in an array
+print(abs(-99)) # abs() finds the distance of a number from 0
+print(sum([1,2,3,4,5])) #sum([]) adds all the number in a list
 
     #CONSTANTS: written in ALL_CAPITAL_LETTERS with undersores if separating the words
     # All-caps to be treated by Programmers as Constant
@@ -118,6 +131,15 @@ cubes = [i**3 for i in range(5)] #lists the first 5 cubic numbers
 print(cubes) # prints [0, 1, 8, 27, 64]
 evens = [i**2 for i in range(10) if i**2 % 2 == 0]
 print(evens) # prints [0, 4, 16, 36, 64]
+
+    #LIST FUNCTIONS
+nums = [55,44,33,22,11]
+if all([i > 5 for i in nums]): # all() take a consition and determines it if it's true or false, if all consitions pass, returns true
+    print("All Larger than 5")
+if any([i % 2 == 0 for i in nums]): #any() take a consition and determines it if it's true or false, if one consitions pass, returns true
+    print("At least on is even")
+for v in enumerate(nums): # enumerate()
+    print(v)
 
 
     #TUPLES: Lists that can't be mutated but can be reassigned a new variable, can be used in for loops
