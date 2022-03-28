@@ -65,4 +65,52 @@ var framework = new Array(3); //<= Alternative Syntax
     //Array Properties & Methods
 console.log(courses.length); // .length - returns the number of elements
 var toLearn = courses.concat(framework); // .concat - concatenates arrays
-console.log(toLearn[5]);
+//console.log(toLearn[5]); //prints the 5 element of the joined array
+
+
+    //Associative Arrays: arrays with named indexes
+    //not built-in in Javascript but can be done
+var profile = []; //profile is now treated as an object instead of array
+profile["name"] = "Lianna";
+profile["age"] = 21;
+//console.log(profile["age"]); // prints 21
+    //NOTE: Objects are better then associative arrays
+
+
+    // CLASSES: used to create multiple objects with the same structure
+    //Classes can be assigned as variables, i.e. var dog = class mammal{}
+    //classes assigned as variables with no class name will get its variable name as its class name.
+class Rectangle{
+    constructor(height, length){ //constructor, used in creating and initializing a object created with the class
+        this.height = height;
+        this.length = length;
+    }
+    //prototype method: available to the objects in the class
+    getHeight(){ return this.height; };
+    getLength2x(){ return this.length * 2; };
+    //static functions: cannot be called through class instances, created for utility funciton
+    static ownFunc(a,b){
+        return a + b;
+    }
+}
+const square = new Rectangle(5,5);
+const poster = new Rectangle(2,3);
+console.log(poster.length); //prints length
+console.log(poster.getLength2x()); // prints 6
+console.log(Rectangle.ownFunc(2,2)); //prints 4, did not touch the constructor whatsoever
+
+    //INHERITANCE: use "extends " word to inherit a class's constructor
+class Parallelogram extends Rectangle{ //no need for constructor
+    getHeight2x(){
+        return super.getHeight() * 2; //parents methods is called using the speak method
+    }
+    area(){
+        return this.height * this.length;
+    }
+}
+let rect = new Parallelogram(4,7); //calls the parallelogram class that uses the Rectangle class
+console.log(rect.area());
+console.log(rect.getHeight2x()); //calls a method that calls from the parent's method.
+
+  
+    
