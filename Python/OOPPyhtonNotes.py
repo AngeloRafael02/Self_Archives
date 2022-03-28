@@ -212,4 +212,4 @@ class Pizza:
 pizza = Pizza(["cheese", "tomato"])
 print(pizza.pineapple_allowed)
 pizza.pineapple_allowed = True
-print(pizza.pineapple_allowed) #To be investigatedd
+print(pizza.pineapple_allowed) #To be investigated
