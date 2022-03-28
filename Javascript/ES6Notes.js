@@ -174,3 +174,37 @@ function add4numbers(w,x,y,z){
 var list = [1,2,3];
 add4numbers(...list,4);
 
+
+  
+
+    //MATH OBJECT: allow to perform mathematical tasks
+    //Math object has no constructor, no need to create a math object
+    // E = Euler's constant
+    // PI = returns the constant PI
+    // LN2 = Natural log of the value 2
+    // LN10 = NAtural Log of the value 10
+    // LOG2E = Base 2 log og Euler's constant (E)
+    // LOG10E = Base 10 log og Euler's constant (E)
+//console.log(Math.PI); //prints 3.141592653589793
+//console.log(Math.LN10);// prints 2.302585092994046
+    //Math Object Methods
+    //syntax:  var varname = Math.method(argument)
+    var number = Math.sin(30);
+    console.log(number); //prints -0.9880316240928618
+        //abs(x) - Absolute value of x
+        // acos(x) - arccosine of x, in radians
+        // asin(x) - arcsine of x, in radians
+        // atan(x) - arctangent of x, as an numeric value between -PI/2 and PI/2 radians
+        // atan2(y,x) - arctangent of the quotient of its arguments
+        // ceil(x) - returns x, rounded up to the nearest integer
+        // floor(x) - returns x, rounded down to the nearest integer
+        // log(x) - returns natural logarithm (base E) of x
+        // cos(x) - cosine of x, in radians
+        // sin(x) - sine of x, in radians
+        // tan(x) - tangent of x, in radians
+        // sqrt(x) - square root of x
+        // round(x) - sound x to the nearest integer
+        // pow(x,y) - returns the x to the power of y
+        // min(x,...) - returns the lowest value
+        // max(x,...) - returns the highest value
+    
