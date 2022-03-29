@@ -181,6 +181,7 @@ print(Student.is_adult(22)) #prints True
 
     #PROPERTIES: provides a way in customizing access to instace attributes
     #helps to access teh class methods as attributes (not need to use parenthesis ex. )
+    #properties are used to make certain attributes read-only
 class Pizza:
     def __init__(self,toppings,number):
         self.toppings = toppings
@@ -197,19 +198,19 @@ print(pizza.pineapple_allowed) # does not need parethesis like "pizza.pineapple_
 class Pizza:
     def __init__(self, toppings):
         self.toppings = toppings
-        self._pineapple_allowed = False
+        self._pineapple_allowed = False # 1)default Value 
     @property
     def pineapple_allowed(self):
         return self._pineapple_allowed
-    @pineapple_allowed.setter
+    @pineapple_allowed.setter # setter function sets the corresponding property's value. Getter gets the value
     def pineapple_allowed(self, value):
         if value:
             password = input("Enter the password: ")
-            if password == "Sw0rdf1sh!":
-                self._pineapple_allowed = value
+            if password == "Sw0rdf1sh!": # 2) if in correct consitions,
+                self._pineapple_allowed = value 
             else:
                 raise ValueError("Alert! Intruder!")
 pizza = Pizza(["cheese", "tomato"])
 print(pizza.pineapple_allowed)
-pizza.pineapple_allowed = True
-print(pizza.pineapple_allowed) #To be investigated
+pizza.pineapple_allowed = True # 3) value is changed
+print(pizza.pineapple_allowed) # 4) since correct consition, return value immediately
