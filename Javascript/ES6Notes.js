@@ -172,7 +172,42 @@ function add4numbers(w,x,y,z){
     console.log(w+x+y+z);
 }
 var list = [1,2,3];
-add4numbers(...list,4);
+//add4numbers(...list,4);
+
+    //ES6 MAP: used to hold key:value pairs.
+let map = new Map([['key1','value1'],['key2','value2']]);
+console.log(map.size); //prints 2 because there is 2 key:value pairs
+    // the keys can be any type, including functions, objects, and any primitive
+    // You can get the size of the map (console.log(map.size); )
+    // you can directly iterate from ma Map (loops)
+    // Performance  of the Map is better in scenarios involving frequent addition and removal of key:value Pairs
+
+    // MAP Methods:
+let map1 = new Map();
+map1.set('key1','value1').set('key2','value2'); // set(key,value) - add a specific kay:value pair to the Map
+console.log(map1.get('key1')); // get(key) - returns the value corresponding on the given key, undefined if not found
+console.log(map1.has('key2')); // has(key) - returns true if the key:value pair is found, otherwise false
+    // delete(key) - deletes a key;value pair according to the key given
+    // clear() - removes all key;value pairs off the Map   
+    // keys() - returns an iterator of keys in the Map for each element
+    // values() - returns an iterator of values in the Map for each element
+    // entries() - returns an iterator of array in th Map of each element
+for (let kv of map.entries())
+    console.log( kv[0] + ":" + kv[1]); //iterates both key and value, key first and then value
+
+    //ES6 SETS: used to hold unique values (no repetitions are allowed)
+    // duplicates will be counted as 1 value 
+let set = new Set ([1,2,4,2,59,9,4,9,1]);
+console.log(set.size); //prints 5 (unique values)
+        //some Sets Methods
+    // add(value) - adds value in a Set 
+    // has(value) - returns true if the value is found, otherwise false
+    // delete(value) - deletes a value from the Set
+    // clear() - removes all value off the Map
+    // values() - returns an iterator of values in the Set for each element
+
+
+
 
 
   
@@ -189,8 +224,8 @@ add4numbers(...list,4);
 //console.log(Math.LN10);// prints 2.302585092994046
     //Math Object Methods
     //syntax:  var varname = Math.method(argument)
-    var number = Math.sin(30);
-    console.log(number); //prints -0.9880316240928618
+var number = Math.sin(30);
+//console.log(number); //prints -0.9880316240928618
         //abs(x) - Absolute value of x
         // acos(x) - arccosine of x, in radians
         // asin(x) - arcsine of x, in radians
