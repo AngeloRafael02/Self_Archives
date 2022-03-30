@@ -3,10 +3,6 @@
 
     # This is a style of programming based on functions
     #EXAMPLE:
-
-from doctest import Example
-
-
 def apply_twice(func, arg):
     return func(func(arg))
 def add_five(x):
@@ -26,6 +22,9 @@ def polynomial(x):
 #print(polynomial(-4))
     #Lambda: only one line of code but can only do things that require a SINGLE expression
 #print((lambda x: x**2 + 5*x + 4)(-4))
+    #lambdas can be assigned to variables NOTE:rarely good to do this, better to use it in a def function
+double = lambda x: x * 2
+print(double(7))
 
     #map(function/lambda,argument): takes a function and an iterable as arguments.
     #named funciton:
