@@ -230,6 +230,14 @@ def func(x):  #assert example,
     print(x)
 #func(0) #goes to error
 #func(1) #lets print(x)
+    #COMMON EXCEPTIONS:
+        # ImportError - an import fails
+        # IndexError - a list is indexed with an out-of-index number
+        # NameError - an unknown variable is used
+        # SyntaxError - the code can't be Parsed Properly
+        # TypeError - function is called on a value of an inappropriate type
+        # Value - function is called on a value with appropriate type but with an inappropriate value 
+    #There are more builtin errors as well as in third-party libraries
 
     #Dictionary: collection of key:value pairs where each key is diagnosed with a value    JSON??
     #            the value can be a number, string, tuple or even another dictionary as long as its immutable

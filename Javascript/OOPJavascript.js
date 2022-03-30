@@ -33,7 +33,10 @@ console.log(p2.name); //prints p2's name\
 var John = {name: "John", age:25}
 var James = { //line breaks and indents don't matter
     name:"James",
-    age:21
+    age:21,
+    altname:function(){ //functions can be made inside objects
+        return this.name + this.age;
+    }
 }   //accessing Object properties:
 console.log(John.age)
 
@@ -44,6 +47,7 @@ function fish(name, color,number){
     this.color = color;
     this.number = number;
     this.twicer = twicer; //twicer function is called  to be used
+    
 }
 function twicer(){
     return this.number * 2;
@@ -85,6 +89,7 @@ class Rectangle{
         this.height = height;
         this.length = length;
     }
+    perimeter(){return (this.height*2)+(this.length*2)};
     //prototype method: available to the objects in the class
     getHeight(){ return this.height; };
     getLength2x(){ return this.length * 2; };
@@ -95,9 +100,10 @@ class Rectangle{
 }
 const square = new Rectangle(5,5);
 const poster = new Rectangle(2,3);
-console.log(poster.length); //prints length
-console.log(poster.getLength2x()); // prints 6
-console.log(Rectangle.ownFunc(2,2)); //prints 4, did not touch the constructor whatsoever
+//console.log(poster.perimeter()); //prints 20
+//console.log(poster.length); //prints length
+//console.log(poster.getLength2x()); // prints 6
+//console.log(Rectangle.ownFunc(2,2)); //prints 4, did not touch the constructor whatsoever
 
     //INHERITANCE: use "extends " word to inherit a class's constructor
 class Parallelogram extends Rectangle{ //no need for constructor
