@@ -130,5 +130,5 @@ function sayHello (name){
 //sayHello("Angelo");
 //sayHello("Lianna");
 
-                            //there maybe Object oriented programming methods in the lines below
+
 
