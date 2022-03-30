@@ -21,6 +21,10 @@ namespace Angelo{
         static void Sqr(ref int x){ // we can pass copies of an memories address into a formal parameter
             x = x * x;
         }
+        static void GetValues(out int x, out int y){ //we can also transfer data out of a method
+            x = 69;
+            y = 420;
+        }
             static void Main(string[] args){
                 sayHi();//call a method to the main method
                 sayHi();//can be done multiple times
@@ -30,11 +34,16 @@ namespace Angelo{
 
                 int res = Area(w: 5, h: 8); //Arguments can be rearranged as long as assigned correctly
                 Console.WriteLine(res);
-
+                
+                //PASSING BY REFERENCE
                 int a = 3; // variable name is "a"
                 Sqr(ref a); // "a"'s address is referenced to be used in a method that requires an "x" variable
                 Console.WriteLine(a); //returns new value from being passed down and processed by references
 
+                //PASSING BY OUTPUT
+                int b,c; //initialized Variables
+                GetValues(out b, out c); //calls a method's variables as values
+                Console.WriteLine(b + " "+ c); //returns results
             }   
     }
 }
