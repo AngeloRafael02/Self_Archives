@@ -25,6 +25,14 @@ namespace Angelo{
             x = 69;
             y = 420;
         }
+
+        //Overloaded Methods: method with the same num but different parameters
+        static void print(int d ){
+            Console.WriteLine("Value: "+ d + " ( Integer )");
+        }
+        static void print(string label, double d){
+            Console.WriteLine(label + d);
+        }
             static void Main(string[] args){
                 sayHi();//call a method to the main method
                 sayHi();//can be done multiple times
@@ -44,6 +52,11 @@ namespace Angelo{
                 int b,c; //initialized Variables
                 GetValues(out b, out c); //calls a method's variables as values
                 Console.WriteLine(b + " "+ c); //returns results
+                
+                //OVERLOADING METHODS: method with the same num but different parameters
+                //A way of overloading methods id to make each method have different parameters it can detect which will be used depending on the number of arguments
+                print(11);
+                print("Average:", 89.95);
             }   
     }
 }

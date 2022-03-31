@@ -207,7 +207,29 @@ console.log(set.size); //prints 5 (unique values)
     // values() - returns an iterator of values in the Set for each element
 
 
-
+    //ITERATORS
+    //[Symbol.iterator] is the default iterator for an object.
+    //for..of loops are based on this type of iterator ( manual for...of )
+myNumbers = {}; //1) create an object
+myNumbers[Symbol.iterator] = function() { //2) Make it Iterable
+    let n = 0;
+    done = false;
+    return {
+        next() {
+            n += 1;
+            if (n == 5) {done = true}
+            return {value:n, done:done};
+        }
+    };
+}
+let iterator = myNumbers[Symbol.iterator](); //3) Create an Iterator
+let text = "" //start of the loop
+while(true){
+    const result = iterator.next();
+    if (result.done) break;
+    text += result.value + ", "
+}
+console.log(text);
 
 
   

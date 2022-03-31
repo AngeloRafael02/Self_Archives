@@ -26,17 +26,19 @@ def polynomial(x):
 double = lambda x: x * 2
 print(double(7))
 
+    #MAP()
     #map(function/lambda,argument): takes a function and an iterable as arguments.
     #named funciton:
 def add_five(x):
     return x + 5
-nums = [15,25,35,45,55]
+nums = [15,25,35,45,55] #<+this is an iterable object
 result = list(map(add_five,nums))
 #print(result)
     #Lambda Syntax:
 #print(list(map(lambda x: x+5,nums)))
 
-    #filter(function,lambda) filters an iterable by leaving only the items that match the condition
+    #FILTER()
+    #filter(function/lambda,lambda) filters an iterable by leaving only the items that match the condition
 nums = [11,22,33,44,55]
 res = list(filter(lambda x: x%2==0,nums))
 #print(res)

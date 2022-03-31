@@ -214,7 +214,7 @@ Try:
         raise (kind of Error) #Raise: exceptions, raised as arguments that would give detail about them
     false statement
         assert (is this code returning a false) #assert used to check if a line of code os not working/is not true/does not make sense
-except:
+except: #exceptwith without ant exception will cath all errors
     print("An error occurred")
     raise # raise statement in except block re-raises what ever exception ocurred
     code if error 1 occurs
