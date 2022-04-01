@@ -232,6 +232,21 @@ while(true){
 console.log(text);
 
 
+    //GENERATORS
+    //uses yield(instead of return) as to not mutate local variables
+    // marked with an asterisk (*) after the function keyword
+function* idMaker(){
+    let index = 0;
+    while (index < 3)
+        yield index++;
+}
+var gen = idMaker();
+console.log(gen.next().value); //prints 1
+console.log(gen.next().value); //prints 2
+console.log(gen.next().value); //prints 3
+console.log(gen.next().value); //prints undefined
+
+
   
 
     //MATH OBJECT: allow to perform mathematical tasks
