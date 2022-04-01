@@ -37,3 +37,10 @@ var student2 = {
 };
 console.log(user.age);
 console.log(student1.message());
+//UNION used for declaring multiple data types
+var pageName = "one";
+//can be useful in null checking
+var errorMessage = null;
+var newAnimal = null;
+var popularTags = ['Dragon', "Coffee"];
+var dragonsTag = null;

@@ -33,6 +33,15 @@ namespace Angelo{
         static void print(string label, double d){
             Console.WriteLine(label + d);
         }
+
+        //RECURSIVE FUNCTIONS: functions that call themselves
+        static int factorial(int num){
+            if (num == 1){
+                return 1;
+            }
+            return num * factorial(num-1);
+        }
+
             static void Main(string[] args){
                 sayHi();//call a method to the main method
                 sayHi();//can be done multiple times
@@ -57,6 +66,9 @@ namespace Angelo{
                 //A way of overloading methods id to make each method have different parameters it can detect which will be used depending on the number of arguments
                 print(11);
                 print("Average:", 89.95);
+                
+                //Callling Recursive Function   
+                Console.WriteLine(factorial(5));
             }   
     }
 }
