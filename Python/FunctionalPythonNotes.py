@@ -47,7 +47,7 @@ res = list(filter(lambda x: x%2==0,nums))
 def countdown():
     i=5
     while i > 0:
-        yield i #yield is used to replace the return of a function to provide a result to its caller wotout destroying local variables
+        yield i #yield is used to replace the return of a function to provide a result to its caller without destroying local variables
                 # because they yield one item at a time, they don't have memory restrictions, meaning they can be infinite
         i -= 1
 for i in countdown():
