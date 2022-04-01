@@ -216,12 +216,14 @@ Try:
         assert (is this code returning a false) #assert used to check if a line of code os not working/is not true/does not make sense
 except: #exceptwith without ant exception will cath all errors
     print("An error occurred")
-    raise # raise statement in except block re-raises what ever exception ocurred
+    raise (kind of Error) # raise statement in except block re-raises what ever exception ocurred
     code if error 1 occurs
 except errorReason:
     code for error 2 occurs
 except Exception as error: #good practice to catch other general errors
     print(error)
+else:   #you can use else in exception handling. in this case it will only execute whe there are no errors found
+    print("something else)
 finally: #executes after the try clause and any except clause
     print('Executes no matte what')
 """
