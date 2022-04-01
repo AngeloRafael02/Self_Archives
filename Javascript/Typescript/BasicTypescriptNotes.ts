@@ -4,6 +4,7 @@
     //NOTE: typescript compiler needed to be installed in system.
     //Note: tsc BasicTypescriptNotes.ts -w :to automatically transpile Typescript to javascript
 
+
     //VARIABLES
 const isSingle:boolean = true //const: immutable variables
 var number:number = 68; // var is not recommended to be used
@@ -12,11 +13,13 @@ console.log(message);
 
     //NOTE: Define everything possible
 
+
     //FUNCTIONS
 const getFullName = (name:string,surname:string): string => { //parameters should also have their types
     return name + ' ' + surname;                   //^declare the return value a string
 }
 console.log(getFullName("Angelo","Recio"));
+
 
     //CREATING OBJECTS
     //You can declare type for each object properties
@@ -50,3 +53,30 @@ const student2:StudentInterface = {
 }
 console.log(user.age);
 console.log(student1.message());
+
+
+    //UNION used for declaring multiple data types
+let pageName: string | number  = "one"; 
+    //can be useful in null checking
+let errorMessage: string | null = null;
+
+interface AnimalInterface {
+    name:string,
+    population: string | number
+}
+let newAnimal: AnimalInterface | null = null;
+
+
+    //Type Aliases: for naming certain data types
+type ID = number 
+type username = String | number
+type numbers = Array<ID>
+type PopularTag = string
+type MaybePopularTag = string | null
+
+interface SocMed {
+    id: ID,
+    name: username
+}
+const popularTags:PopularTag[] = ['Dragon', "Coffee"];
+const dragonsTag: MaybePopularTag = null;
