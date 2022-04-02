@@ -34,21 +34,21 @@ const user2:{name:string, age:number} = { //of an object lacks a property, the t
     //Use INTERFACE to easily declare the types of the Objects
     //Note: for readability's sake, put INterface after name to be differentiated to classes
 interface StudentInterface { //Kind of like a constructor{}
-    name:string,
+    id:string,
     age:number,// mandatory by default
     email?:string, //< (?)after name means that it is optional
     message?():string
 }
 const student1:StudentInterface = { //instead of declaring each properties types, references an interface instead.
-    name:"Charles",
+    id:"Charles",
     age: 20 ,
     email:"something@gmail.com",
     message(){
-        return "Hello, " + name;
+        return "Hello, " + this.id;
     }
 }
 const student2:StudentInterface = {
-    name:"Neale",
+   id:"Neale",
     age: 20 //email is declares as an optional property, therefor it can be not declared in an object
 }
 console.log(user.age);
@@ -80,3 +80,35 @@ interface SocMed {
 }
 const popularTags:PopularTag[] = ['Dragon', "Coffee"];
 const dragonsTag: MaybePopularTag = null;
+
+
+    // VOID IN TYPESCRIPT
+    // Mostly used in function that don't have a return value.
+const doSomething = ():void => { // when we don't have return it is a void, can be changed when we actually return something in a functions
+    console.log("doSomething");
+}
+
+    //ANY IN TYPESCRIPT
+    // worst type in typescript
+let any: any = "foo" //used to opt out typescript checks
+
+
+    //NEVER IN TYPESCRIPT
+    //Function with never can't be executed to the end
+const NeverLand = ():never => {
+    throw "never"
+}
+
+
+    //UNKNOWN IN TYPESCRIPT
+let vAny:any = 10;
+let vUnknown:unknown = 10;
+
+let s1:string = vAny;
+//let s2:string = vUnknown; //Error: We can't assign unknown directly in other type
+    //If we were to change the type we must use TYPE ASSERTIONS
+let s2:string = vUnknown as string; //converts any type to another
+    //ANOTHER EXAMPLE
+let pageNumber: string = "10";
+    // to change one type to another, changes it to unknown first then to desired type
+let numericPageNumber: number = (pageName as unknown) as number;

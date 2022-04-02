@@ -1,9 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-// C# Documentation
-// By: RECIO, Angelo Rafael
+﻿    // See https://aka.ms/new-console-template for more information
+    // Basic C# Notes
+    // By: RECIO, Angelo Rafael
 
 //NOTE: Study dotnet commands in cmd
-//TEst other C# stuff with https://try.dot.net/
+//Test other C# stuff with https://try.dot.net/
 
 namespace Angelo{
     class Basics{

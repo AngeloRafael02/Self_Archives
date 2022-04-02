@@ -1,4 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿    // See https://aka.ms/new-console-template for more information
+    // C# Method Notes
+    // By: RECIO, Angelo Rafael
 
 namespace Angelo{
     class Methods{

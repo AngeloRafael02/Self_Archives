@@ -24,15 +24,15 @@ var user2 = {
     age: 31
 };
 var student1 = {
-    name: "Charles",
+    id: "Charles",
     age: 20,
     email: "something@gmail.com",
     message: function () {
-        return "Hello, " + name;
+        return "Hello, " + this.id;
     }
 };
 var student2 = {
-    name: "Neale",
+    id: "Neale",
     age: 20 //email is declares as an optional property, therefor it can be not declared in an object
 };
 console.log(user.age);
@@ -44,3 +44,15 @@ var errorMessage = null;
 var newAnimal = null;
 var popularTags = ['Dragon', "Coffee"];
 var dragonsTag = null;
+// VOID IN TYPESCRIPT
+// Mostly used in function that don't have a return value.
+var doSomething = function () {
+    console.log("doSomething");
+};
+//ANY IN TYPESCRIPT
+// worst type in typescript
+var any = "foo"; //used to opt out typescript checks
+//NEVER IN TYPESCRIPT
+var NeverLand = function () {
+    throw "never";
+};
