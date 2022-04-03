@@ -247,7 +247,20 @@ console.log(gen.next().value); //prints 3
 console.log(gen.next().value); //prints undefined
 
 
-  
+    //ES6 MODULES
+    //Considerations:
+        // maintainability - making improvements and expansions possible with minimal dependencies are good
+        // nameSpacing - Modules can be made for a private space for variables to lessen nameSpace pollution
+        // reusability - make the code reusable for for other projects
+    //EXPORT
+//export let sum = (x,y) =>{ return x + y;}
+    //IMPORT
+//import * as func from "BasicJavascriptNotes.js"
+//let fromModule = func.sum(2,2);
+//console.log(fromModule);
+    //NOTE: Modules only work with the HTTP(s) protocol.
+
+
 
     //MATH OBJECT: allow to perform mathematical tasks
     //Math object has no constructor, no need to create a math object
