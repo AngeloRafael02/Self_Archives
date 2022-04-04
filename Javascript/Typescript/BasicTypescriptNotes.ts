@@ -112,3 +112,12 @@ let s2:string = vUnknown as string; //converts any type to another
 let pageNumber: string = "10";
     // to change one type to another, changes it to unknown first then to desired type
 let numericPageNumber: number = (pageName as unknown) as number;
+
+
+
+    //TYPESCRIPT WORKING IN A DOM
+const someElement = document.querySelector(".foo");
+someElement.addEventListener('blur',(event)=>{
+    const target = event.target as HTMLInputElement
+    console.log('event', target.value)
+})

@@ -26,6 +26,21 @@ namespace Angelo {
                 return balance;
             }
         }
+        class Person{
+            //variables for constructor
+            private string name;
+            private int age;
+            private double weight;
+
+            public Person(string username, int youth, double mass){ //CONSTRUCTORS: called when objects are created/initialized
+                name = username;
+                age = youth;
+                weight = mass;
+            }
+            public string publicName(){
+                return name;
+            }
+        }
         static void Main(string[] args){
             Dog dog1 = new Dog();
             dog1.name = "pulong";
@@ -41,6 +56,10 @@ namespace Angelo {
             b.Withdraw(42);
             b.Deposit(13);
             Console.WriteLine(b.getBalance());
+
+            //CONSTRCUTORS
+            Person p1 = new Person("Angelo",21,67.5);
+            Console.WriteLine(p1.publicName());
         }
     }
 }
