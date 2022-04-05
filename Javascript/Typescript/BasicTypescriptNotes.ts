@@ -2,7 +2,7 @@
     //By: Angelo Rafael Recio
 
     //NOTE: typescript compiler needed to be installed in system.
-    //Note: tsc BasicTypescriptNotes.ts -w :to automatically transpile Typescript to javascript
+    //Note: tsc BasicTypeScriptNotes.ts -w :to automatically transpile Typescript to javascript
 
 
     //VARIABLES
@@ -115,9 +115,54 @@ let numericPageNumber: number = (pageName as unknown) as number;
 
 
 
+    //CLASSES IN TYPESCRIPT(sugar around prototypes)
+    //public,private,protected keywords only work on typescript. removed one transpiled to JavaScript
+interface UserInterface{
+    getFullName():string;
+}
+class User implements UserInterface{
+    protected firstName:string
+    //^ protected means that it is only allowed inside class and its children via inheritance
+    private lastName:string
+    //^ private means that we can only use it inside the class (can't also be accessed by intellisense)
+    readonly immutableString:string
+    //^ readonly can be used to make constants inside classes
+    static readonly maxAge = 50
+    //^static is only accessible with the actual class (User) itself
+
+    constructor(firstName:string, lastName:string){
+        this.firstName = firstName
+        this.lastName = lastName
+        this.immutableString = firstName
+    }
+
+    getFullName():string{
+        return this.firstName + " " + this.lastName
+    }
+}
+const user1 = new User("Angelo","Recio");
+console.log(user1.getFullName());
+console.log(User.maxAge);
+    //INHERITANCE
+class Admin extends User { //we can override or make new methods in inherited classes
+    private editor:string
+    setEditor(editor:string):void{ //new constructor
+        this.editor = editor
+    }
+    getEditor():string{ //new method
+        return this.editor
+    }
+}
+const admin = new Admin('Sir',"TwinkleBerry"); //already works because of the constructor inherited from User class
+console.log(admin.immutableString);
+const editor1 = admin.setEditor("Johnson");
+
+
+
+
     //TYPESCRIPT WORKING IN A DOM
-const someElement = document.querySelector(".foo");
-someElement.addEventListener('blur',(event)=>{
-    const target = event.target as HTMLInputElement
-    console.log('event', target.value)
-})
+//const someElement = document.querySelector(".foo");
+//someElement.addEventListener('blur',(event)=>{
+    //const target = event.target as HTMLInputElement
+    //console.log('event', target.value)
+//})

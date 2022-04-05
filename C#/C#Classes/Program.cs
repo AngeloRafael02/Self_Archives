@@ -29,6 +29,14 @@ namespace Angelo {
         class Person{
             //variables for constructor
             private string name;
+            public string Alias{ //PROPERTIES: accessed by its name just like any other public elements of the class
+                get{ return name; } //get{} & set{} are their own blocks you can put code into
+                set{ name = value; } //set, makes properties set by user
+                //Auto-implemented Properties Syntax : public string Alias { get; set; }
+            }
+            public string immutablestring{
+                get { return "Can't touch this";} //only a "get" in a property makes it "readonly" and cannot be mutated
+            }
             private int age;
             private double weight;
 
@@ -41,25 +49,32 @@ namespace Angelo {
                 return name;
             }
         }
-        static void Main(string[] args){
-            Dog dog1 = new Dog();
-            dog1.name = "pulong";
-            dog1.age = 5;
+        
+    
+            static void Main(string[] args){
+                Dog dog1 = new Dog();
+                dog1.name = "pulong";
+                dog1.age = 5;
 
-            Console.WriteLine(dog1.name);
-            Console.WriteLine(dog1.age);
+                Console.WriteLine(dog1.name);
+                Console.WriteLine(dog1.age);
 
-            //ENCAPSULATION: the idea of surrounding of entity for privacy
-            //also called "Information Hiding"
-            BankAccount b = new BankAccount();
-            b.Deposit(199);
-            b.Withdraw(42);
-            b.Deposit(13);
-            Console.WriteLine(b.getBalance());
+                //ENCAPSULATION: the idea of surrounding of entity for privacy
+                //also called "Information Hiding"
+                BankAccount b = new BankAccount();
+                b.Deposit(199);
+                b.Withdraw(42);
+                b.Deposit(13);
+                Console.WriteLine(b.getBalance());
 
-            //CONSTRCUTORS
-            Person p1 = new Person("Angelo",21,67.5);
-            Console.WriteLine(p1.publicName());
-        }
+                //CONSTRCUTORS
+                Person p1 = new Person("Angelo",21,67.5);
+                Console.WriteLine(p1.publicName());
+
+                //PROPERTIES
+                p1.Alias = "D";
+                Console.WriteLine(p1.Alias);
+                Console.WriteLine(p1.immutablestring);
+            }
     }
 }
