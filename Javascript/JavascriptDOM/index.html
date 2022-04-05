@@ -5,16 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>JavaScriptDOMNotes</title>
 </head>
 <body>
-    <h1></h1>
-    <h1></h1>
+    <h2></h2>
+    <h2></h2>
+    <div id="parent">
+        <p id="child"></p>
+        <p id="child"></p>
+    </div>
+    <a href="http://www.youtube.com/" target="_blank" rel="noopener noreferrer">Youtube</a>
+
+
     <script>
-        var arr = document.getElementsByTagName("h1");
-        for (var x = 0;x <arr.length; x++){
-            arr[x].innerHTML = "Hi There";
+            //SELECTING ELEMENTS
+            // "document" object lets you select desired HTML elements. Ways to get: getElementsBy<ID/ClassName/Name/TagName>
+            document.get
+        var arr = document.getElementsByTagName("h2"); //other
+        for ( var x = 0 ; x < arr.length ; x++){arr[x].innerHTML = "Hi There";
         }
+            //methods tha provide relationships in the DOM
+        function setText(){
+        var a = document.getElementById("parent");
+        var a1 = a.childNodes;
+        for ( var x=0 ; x < a1.length ; x++){a1[x].innerHTML = "hello"; }
+        }setTimeout(setText,2000);
+            //element.childNodes - returns an array of an element's child nodes
+            //element.firstChild - return the first child of an element
+            //element.lastChild - returns the last child of an element
+            //element.hasChildNodes - returns true of an element has child notes, otherwise false. (maybe for boolean related blocks)
+            //element.nextSibling - returns the next node at the same tree level
+            //element.previousSibling - returns the previous sibling at the same tree level
+            //element.parentNode - returns the parent node of an element
+
+
+            //CHANGING ATTRIBUTES: we can change html attrib utes in JavaScript
+        var link = document.getElementsByTagName('a');
+        link[0].href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            //CHANGING STYLES: HTML styles can also be changed in JavaScript using the 'style' method
+        link[0].style.color = '#6600FF';
     </script>
 </body>
 </html>
