@@ -246,8 +246,29 @@ console.log(gen.next().value); //prints 2
 console.log(gen.next().value); //prints 3
 console.log(gen.next().value); //prints undefined
 
+    
+    //BUILT-IN METHODS
+            //ARRAY ELEMENT FINDING
+        //legacy way 
+let res = [4,5,1,8,2,0].filter(function(x){ return x > 3; })[0];
+console.log(res);
+        //new syntax 
+let res1 = [4,5,1,8,2,0].find(x => x > 3);
+console.log(res1);
+            //REPEATING STRINGS
+        //legacy way
+console.log(Array(3+1).join("foo"));
+        //new Syntax
+console.log("foo".repeat(3));
+            //SEARCHING STRINGS
+        //legacy way
+console.log("Hello".indexOf("Hell")===0);
+        //new syntax
+console.log("Hello".startsWith("Hell",0));
+            //other string search keywords: endsWth, includes
 
-    //ES6 MODULES
+
+    //ES6 MODULES - NOTE: Modules only work with the HTTP(s) protocol.
     //Considerations:
         // maintainability - making improvements and expansions possible with minimal dependencies are good
         // nameSpacing - Modules can be made for a private space for variables to lessen nameSpace pollution
@@ -258,8 +279,6 @@ console.log(gen.next().value); //prints undefined
 //import * as func from "BasicJavascriptNotes.js"
 //let fromModule = func.sum(2,2);
 //console.log(fromModule);
-    //NOTE: Modules only work with the HTTP(s) protocol.
-
 
 
     //MATH OBJECT: allow to perform mathematical tasks
@@ -275,7 +294,7 @@ console.log(gen.next().value); //prints undefined
     //Math Object Methods
     //syntax:  var varname = Math.method(argument)
 var number = Math.sin(30);
-//console.log(number); //prints -0.9880316240928618
+console.log(number); //prints -0.9880316240928618
         //abs(x) - Absolute value of x
         // acos(x) - arccosine of x, in radians
         // asin(x) - arcsine of x, in radians
