@@ -21,6 +21,9 @@ C#/C#Methods/C#Methods.csproj
 C#/C#Classes/bin
 C#/C#Classes/obj
 C#/C#Classes/C#Classes.csproj
+C#/C#ArraysAndStrings/bin
+C#/C#ArraysAndStrings/obj
+C#/C#ArraysAndStrings/C#ArraysAndStrings.csproj
 
 # environment and cache files for python Flask
 .venv
