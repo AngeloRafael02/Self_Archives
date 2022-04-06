@@ -158,6 +158,36 @@ console.log(admin.immutableString);
 const editor1 = admin.setEditor("Johnson");
 
 
+    //GENERICS IN INTERFACES AND FUNCTIONS IN TYPESCRIPT
+    //generic data types  are written inside <>, T is default name
+    //better than any because we can "assign" what types will be used. Generics allow us to provide different data types (woks on functional programming)
+const addID = <T extends object>(obj:T) =>  {
+    const id = Math.random().toString(16); //<- fastest way to make random id
+    return {
+        ...obj,
+        id
+    }
+}
+    // we can an Interface to make generics
+interface genericInterface<T, V> {
+    name:string;
+    data:T; //generics which mean that "any" types can be used as long as it is declared in the object
+    meta:V;
+}
+const user3:genericInterface<{ meta:string }, string> = {
+    name: "Jack",
+    data: {meta: "foo"},
+    meta: "bar"
+}
+const user4:genericInterface<string[],number>={
+    name:'John',
+    data: ['foo','bar','baz'],
+    meta:69
+
+}
+const result = addID(user3);
+console.log(result);
+
 
 
     //TYPESCRIPT WORKING IN A DOM
