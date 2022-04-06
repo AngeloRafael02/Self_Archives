@@ -15,6 +15,17 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 //NOTE: typescript compiler needed to be installed in system.
 //Note: tsc BasicTypeScriptNotes.ts -w :to automatically transpile Typescript to javascript
 //VARIABLES
@@ -117,6 +128,22 @@ var Admin = /** @class */ (function (_super) {
 var admin = new Admin('Sir', "TwinkleBerry"); //already works because of the constructor inherited from User class
 console.log(admin.immutableString);
 var editor1 = admin.setEditor("Johnson");
+//GENERICS IN INTERFACES AND FUNCTIONS IN TYPESCRIPT
+//generic data types  are written inside <>, T is default name
+var addID = function (obj) {
+    var id = Math.random().toString(16); //<- fastest way to make random id
+    return __assign(__assign({}, obj), { id: id });
+};
+var user3 = {
+    name: "Jack",
+    data: { meta: "foo" }
+};
+var user4 = {
+    name: 'John',
+    data: ['foo', 'bar', 'baz']
+};
+var result = addID(user3);
+console.log(result);
 //TYPESCRIPT WORKING IN A DOM
 //const someElement = document.querySelector(".foo");
 //someElement.addEventListener('blur',(event)=>{
