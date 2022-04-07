@@ -130,20 +130,41 @@ console.log(admin.immutableString);
 var editor1 = admin.setEditor("Johnson");
 //GENERICS IN INTERFACES AND FUNCTIONS IN TYPESCRIPT
 //generic data types  are written inside <>, T is default name
+//better than any because we can "assign" what types will be used. Generics allow us to provide different data types (woks on functional programming)
 var addID = function (obj) {
     var id = Math.random().toString(16); //<- fastest way to make random id
     return __assign(__assign({}, obj), { id: id });
 };
 var user3 = {
     name: "Jack",
-    data: { meta: "foo" }
+    data: { meta: "foo" },
+    meta: "bar"
 };
 var user4 = {
     name: 'John',
-    data: ['foo', 'bar', 'baz']
+    data: ['foo', 'bar', 'baz'],
+    meta: 69
 };
 var result = addID(user3);
 console.log(result);
+//ENUMS in TYPESCRIPT; enumerables
+var statuses = {
+    notStarted: 0,
+    inProgress: 1,
+    done: 2
+};
+var status2Enum;
+(function (status2Enum) {
+    status2Enum[status2Enum["NotStarted"] = 0] = "NotStarted";
+    status2Enum[status2Enum["AboutToStart"] = 1] = "AboutToStart";
+    status2Enum["InProgress"] = "In Progress";
+    status2Enum["Done"] = "Done"; //2
+})(status2Enum || (status2Enum = {}));
+var shouldReturn1 = status2Enum.Done; //<- enum being called as a data type
+console.log(shouldReturn1);
+shouldReturn1 = status2Enum.NotStarted;
+console.log(shouldReturn1);
+console.log(status2Enum.InProgress); //<- enum being called as an object
 //TYPESCRIPT WORKING IN A DOM
 //const someElement = document.querySelector(".foo");
 //someElement.addEventListener('blur',(event)=>{
