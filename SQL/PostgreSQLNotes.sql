@@ -12,7 +12,7 @@
 
     --\d                diaplay tables of db including BIGSERAL
     --dt                diplay tables of db excluding BIGSERAL
-    --\d+ table_name    show a table's cloumns
+    --\d+ table_name    show a table's columns
     --dv                displays vies of the database
 
     --pg_dump: creates backup of database to another directory/disk/etc.
@@ -62,29 +62,39 @@ CREATE OR REPLACE VIEW commandname AS (SQL_command)
 DROP VIEW commandname;
 
     --UPDATE: Update row or properties
-UPDATE tablename SET column1 = 'newValue1', column2 = 'newValue2' WHERE condition;
+UPDATE tablename SET column1 = 'newValue1', column2 = 'newValue2',... WHERE condition;
 
     --SELECT TOP/LIMIT:limit output to a number of rows
 SELECT * FROM tablename LIMIT number;
 SELECT * FROM tablename LIMIT(SELECT count(*) FROM tablename)*0.01; -- LIMIT via Percentage
 SELECT * FROM tablename LIMIT (SELECT (COUNT(*) * 0.10) :: INTEGER FROM tablename); -- LIMIT via Percentage
                                                 -- ^- percentage(decimal value)
-    --Basic Commands
+        --Basic Commands
 SELECT * FROM tablename; -- Sellect All columns from a table
-SELECT * FROM tablename OFFSET rownumber; -- Select All from a table starting from a specific row. Maybe a PostgreSQL exclusive
 SELECT column1, column2,... FROM tablename; -- Columns can be many
+    --OFFSET
+SELECT * FROM tablename OFFSET rownumber; -- Select All from a table starting from a specific row. Maybe a PostgreSQL exclusive
+    --LIMIT
+SELECT * FROM tablename LIMIT 5; 
+    --DISTINCT
 SELECT DISTINCT column1 FROM tablename; --DISTINT removes duplicate values
-SELECT * FROM tablename WHERE column1 IN ('value1', 'valu2', 'value3',...) -- Select all with multiple values
+
+    --WHERE
 SELECT * FROM tablename WHERE column1 = 'string'/number; -- SELECT all with a scecific value from a column
-                                         ^ -- can be comparison operators (<, > , <=, etc.)
-SELECT * FROM tablename WHERE column1 = 'value1' AND column2 = 'value2'; -- Select all that has 2 cpecific rwuirements from seperate columns                                
-SELECT * FROM tablename WHERE date_of_birth BETWEEN DATE 'year-month-day' AND 'year1-month1-day1'; --SELect between specific dates.
+                                      ^ -- can be other comparison operators (<, > , <=, etc.)
+    --WHERE...IN
+SELECT * FROM tablename WHERE column1 IN ('value1', 'valu2', 'value3',...) -- Select all with multiple values
+    --WHERE...AND
+SELECT * FROM tablename WHERE column1 = 'value1' AND column2 = 'value2'; -- Select all that has 2 cpecific rwuirements from seperate columns   
+    --WHERE...BETWEEN                             
+SELECT * FROM tablename WHERE date_of_birth BETWEEN DATE 'year-month-day' AND 'year1-month1-day1'; --Select between specific dates.
                                                         ^ -- Data format, optional 
+    --WHERE...OR
 SELECT * FROM tablename WHERE column1 = 'value1' OR column1 = 'value2' OR ... --Select all with numeroes value in a column
 SELECT * FROM tablename WHERE column1 = 'value1' AND  (column2 = 'value2' or column2 = 'value3');
 SELECT * FROM tablename WHERE column1 = NULL; -- NULL: when theres is no value 
 
-    --LIKE
+    --LIKE (case-sensitive), use ILIKE to make it not case-sensitive
 SELECT * FROM tablename WHERE column1 LIKE '%scpecificValue' -- Select all where an colum value is LIKE a certain value, % = any character, ____ = any character as loing as the underscore
 SELECT * FROM tablename WHERE CustomerName LIKE 'a%'	--Finds any values that starts with "a"
 SELECT * FROM tablename WHERE CustomerName LIKE '%a'	--Finds any values that ends with "a"
@@ -92,6 +102,14 @@ SELECT * FROM tablename WHERE CustomerName LIKE '%or%'	--Finds any values that h
 SELECT * FROM tablename WHERE CustomerName LIKE '_r%'	--Finds any values that have "r" in the second position
 SELECT * FROM tablename WHERE CustomerName LIKE 'a__%'	--Finds any values that starts with "a" and are at least 3 characters in length
 SELECT * FROM tablename WHERE ContactName LIKE 'a%o'	--Finds any values that starts with "a" and ends with "o"
+    --UNDERSCORE can repalce wildcards (one character per underscore)
+SELECT * FROM tablename WHERE ContactName LIKE = '__________berg'
+
+    --GROUP BY: used to know the frequency of each unique value 
+SELECT column1, COUNT(*) FROM tablename GROUP BY column1 ORDER BY column1;
+    --GROUP BY...HAVING : extra "filetring" adter aggregation
+SELECT column1, COUNT(*) FROM tablename GROUP BY column1 HAVING COUNT(*) > 5 ORDER BY column1;
+                                                                    --   ^can be other condition
 
     --FUNCTIONS
 SELECT UPPERCASE(column2) AS column2 FROM tablename

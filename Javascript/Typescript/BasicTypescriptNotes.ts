@@ -188,6 +188,29 @@ const user4:genericInterface<string[],number>={
 const result = addID(user3);
 console.log(result);
 
+    //ENUMS in TYPESCRIPT; enumerables
+const statuses ={ //<- not using enumerables
+    notStarted:0,
+    inProgress:1,
+    done:2
+}
+enum status2Enum {
+    NotStarted, //automatically has an index,0
+    AboutToStart,//1
+    InProgress = 'In Progress', //thigh we can assign their own index with strings
+    Done = 'Done' //2
+}
+let shouldReturn1:status2Enum = status2Enum.Done //<- enum being called as a data type
+console.log(shouldReturn1);
+shouldReturn1 = status2Enum.NotStarted;
+console.log(shouldReturn1);
+console.log(status2Enum.InProgress); //<- enum being called as an object
+    //enums can be used as value and a data type
+        //enums can also be used in interfaces to provide what can only be its data
+interface Task {
+    id:string;
+    status:status2Enum; //<- called to make status only have enums values
+}
 
 
     //TYPESCRIPT WORKING IN A DOM
