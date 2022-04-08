@@ -155,6 +155,13 @@ SELECT column,column1 FROM  tablename UNION SELECT column, column1 FROM tablenam
     --UPDATE: Update row/s  via a contition
 UPDATE tablename SET column = 'value2',... WHERE condition;
 
+    --Make Column constrain NOT NULL and Vice Versa
+ALTER TABLE users ALTER COLUMN email DROP NO NULL;
+ALTER TABLE users ALTER COLUMN email SET NO NULL;
+
+    --Change column data type
+ALTER TABLE table_name ALTER COLUMN column1 TYPE datatype USING experssion
+    -- EXAMPLE: ALTER TABLE weapons ALTER COLUMN domainname TYPE integer USING domainname::integer
 
 
 
