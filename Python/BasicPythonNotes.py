@@ -122,7 +122,8 @@ print(f"the Product is {answer}")"""
     # str(val)  #returns string of a value
 
 
-    #LIST: Arrays
+    #LIST: "Arrays" that can have several different data types
+    # make object "plural" when naming the variable
     # Use list when collection of  data doe snot need random access.
     # Usewhen you need a simple iterable collection that is modified frequently
 list1 = [1,2,3,4,6] #1d list
@@ -132,8 +133,8 @@ print(list1[2]) #prints specific value on list
 print(list1[-1]) #prints specific item in reverse order
 
 list1[4] = 5 #change a value from the list
-list1.append(6) # append(item) adds a value on the list
-list1.insert(2,2.5) #insert(order, item) inserts an item ina specific place of the list
+list1.append(6) # append(item) adds a value on the list at the end of the list
+list1.insert(2,2.5) #insert(order, item) inserts an item in a specific place of the list
 del list1[2]   #del deletes item via its order
 popLastValue = list1.pop() #pop() removes last element from a list and returns it as its own element/object
 list1.remove(3) #remove() removes item by value
