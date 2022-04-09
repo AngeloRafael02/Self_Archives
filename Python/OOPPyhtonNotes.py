@@ -95,7 +95,6 @@ spam > eggs
         # __contains__ for in
 import random as rng
 
-from click import password_option
 class VagueList:        #To be studied
     def __init__(self,cont):
         self.cont=cont
