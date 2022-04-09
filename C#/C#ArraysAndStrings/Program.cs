@@ -32,6 +32,18 @@ namespace Angelo{
             foreach (int i in b){
                 Console.WriteLine(i);
             }
+
+
+                //MULTIDIMENSIONAL ARRAYS
+                // the number of commans in between the brackets indicate the dimension of the array
+            int[ , ] someNums = { {2, 3}, {5, 6}, {4, 6} }; 
+            for (int k = 0; k < 3; k++) {
+                for (int j = 0; j < 2; j++) {
+                    Console.Write(someNums[k, j]+" ");
+                }
+                Console.WriteLine();
+            }
+            
         }
     }
 }
