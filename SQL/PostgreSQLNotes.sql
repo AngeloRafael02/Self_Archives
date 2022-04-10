@@ -1,6 +1,6 @@
     --NOTE: This file is NOT to be executed to any program. This file is a Documentation of lessons.
 
-    --POSTGRESQL
+        --POSTGRESQL commands
     --\copyright        for distribution terms
     --\h                for help with SQL commands
     --\?                for help with psql commands
@@ -21,8 +21,7 @@
     --pg_dump -U username -W -F t dbname > filepath\dbname.file <-SAMPLE
     --                       ^= specifies file format(c:custom-format archive file format, d:directory-format archive, t:tar, pplain-text SQL script file)
 
-    --Basics
-
+        --Basic SQL
     --CREATE TABLE: create a tble fr a database
 CREATE TABLE (tablename){ --CREATE Table with its columns
     id BIGSERIAL NOT NULL PRIMARY KEY, --PRIMARY KEY:used to identify a row uniquely in a table, SERIAL/BIGSERIAL: auto-increments
@@ -94,6 +93,7 @@ SELECT * FROM tablename WHERE column1 = 'value1' OR column1 = 'value2' OR ... --
 SELECT * FROM tablename WHERE column1 = 'value1' AND  (column2 = 'value2' or column2 = 'value3');
 SELECT * FROM tablename WHERE column1 = NULL; -- NULL: when theres is no value 
 
+    --WILDCARD
     --LIKE (case-sensitive), use ILIKE to make it not case-sensitive
 SELECT * FROM tablename WHERE column1 LIKE '%scpecificValue' -- Select all where an colum value is LIKE a certain value, % = any character, ____ = any character as loing as the underscore
 SELECT * FROM tablename WHERE CustomerName LIKE 'a%'	--Finds any values that starts with "a"
@@ -107,9 +107,9 @@ SELECT * FROM tablename WHERE ContactName LIKE = '__________berg'
 
     --GROUP BY: used to know the frequency of each unique value 
 SELECT column1, COUNT(*) FROM tablename GROUP BY column1 ORDER BY column1;
-    --GROUP BY...HAVING : extra "filetring" adter aggregation
+    --GROUP BY...HAVING : extra "filetring"/conditions after aggregation
 SELECT column1, COUNT(*) FROM tablename GROUP BY column1 HAVING COUNT(*) > 5 ORDER BY column1;
-                                                                    --   ^can be other condition
+                                                                    --   ^can be other conditions
 
     --FUNCTIONS
 SELECT UPPERCASE(column2) AS column2 FROM tablename
@@ -118,8 +118,13 @@ SELECT UPPERCASE(column2) AS column2 FROM tablename
     --SQRT(column) - returns square root of the given value
     --SUM(column) - returns the total of the column's values
     --MIN(column) - returns the smallest value among the column
+SELECT MIN(price) FROM tablename --Returns lowest price in the table
+SELECT maker, model, min(price) from car Group BY make,model; --returns the minimum price model of each maker
     --MAX(column) - returns the largest value among r=the column
+SELECT MAX(price) FROM tablename --Returns highest price in the table
     --AVG(column) - returns the avreage of all the values among the column
+SELECT AVG(price) FROM tablename -- returns average value in the table
+SELECT ROUND(AVG(price)) FROM tablename -- returns average value in the table rounded up
     --COUNT(column) - returns the number of rows/items
 SELECT COUNT(*) FROM tablename --shows number of rows of a table
 

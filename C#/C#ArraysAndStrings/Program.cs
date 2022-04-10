@@ -43,6 +43,15 @@ namespace Angelo{
                 }
                 Console.WriteLine();
             }
+
+                //JAGGED ARRAYS: arrays with element as arrays
+            int[][] jaggedArr = new int[][]{
+                new int[] {1,8,2,7,9},
+                new int[] {2,4,6},
+                new int[] {33,42}
+            };
+            int x = jaggedArr[2][1]; //index 2 - list, index 1 item on the list
+            Console.WriteLine(x);
             
         }
     }

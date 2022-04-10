@@ -14,6 +14,11 @@
         <p id="child"></p>
         <p id="child"></p>
     </div>
+    <div id="demo">some content</div>
+    <div id="parent1"> 
+        <p id="child1">text node to be removed</p>
+        <p id="child2">text node to be replaced</p>
+    </div>
     <a href="http://www.youtube.com/" target="_blank" rel="noopener noreferrer">Youtube</a>
 
 
@@ -44,6 +49,36 @@
         link[0].href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
             //CHANGING STYLES: HTML styles can also be changed in JavaScript using the 'style' method
         link[0].style.color = '#6600FF';
+
+            //ADDING & REMOVING ELEMENTS
+        window.onload = function(){
+            //ADDING ELEMENTS
+            //create a new paragraph tag with content inside
+            var p = document.createElement("p");
+            var node = document.createTextNode("some new text");
+            p.appendChild(node); //append p to have the contents inside(in its child)
+
+            var div = document.getElementById("demo"); //getting element with "demo" id name
+            div.appendChild(p); //append it so to have a child node according to the given argument.
+           //Methods:
+                // element.cloneNode() - clones the element and returns the resulting COde
+                // document.createElement(element) - creates a new element node
+                // document.createTextNote("text"/variable with text) - creates a new text node
+
+            //REMOVING ELEMENTS
+            var parent1 = document.getElementById("parent1");
+            var child1 = document.getElementById("child1");
+            parent1.removeChild(child1);
+
+            //REPLACING ELEMENTS
+            var p1 = document.createElement("p");
+            var node2 = document.createTextNode("Text that replace");
+            p1.appendChild(node2);
+
+            var child2 = document.getElementById("child2"); //gran node to be replaced
+            parent1.replaceChild(p1, child2);
+
+        }
     </script>
 </body>
 </html>
