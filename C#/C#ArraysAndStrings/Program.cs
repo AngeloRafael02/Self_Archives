@@ -53,6 +53,15 @@ namespace Angelo{
             int x = jaggedArr[2][1]; //index 2 - list, index 1 item on the list
             Console.WriteLine(x);
             
+
+                //Arrays Properties - used to work in arrays
+            int[ ] arr1 = {2,4,7};
+            Console.WriteLine(arr1.Length); //returns thenumber of values.  can be used in for loops to know how many time to iterate
+            Console.WriteLine(arr1.Rank); //returns the number of dimensions of the array
+            Console.WriteLine(arr1.Max()); //max() returns the biggest value in the array
+            Console.WriteLine(arr1.Min()); //min() returns the lowest value in the array
+            Console.WriteLine(arr1.Sum()); //sum() returns the sum of all values in an array
+
         }
     }
 }
