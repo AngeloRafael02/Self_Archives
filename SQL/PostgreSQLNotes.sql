@@ -117,6 +117,8 @@ SELECT UPPERCASE(column2) AS column2 FROM tablename
     --LOWER(column) - converts all leters on the specified strings to LOWERCASE
     --SQRT(column) - returns square root of the given value
     --SUM(column) - returns the total of the column's values
+SELECT SUM(price) FROM tablename --returns the sum of the entire price column
+SELECT maker, SUM(price), FROM tablename GROUP BY make; --returns the sum of each makers' price
     --MIN(column) - returns the smallest value among the column
 SELECT MIN(price) FROM tablename --Returns lowest price in the table
 SELECT maker, model, min(price) from car Group BY make,model; --returns the minimum price model of each maker
@@ -127,6 +129,19 @@ SELECT AVG(price) FROM tablename -- returns average value in the table
 SELECT ROUND(AVG(price)) FROM tablename -- returns average value in the table rounded up
     --COUNT(column) - returns the number of rows/items
 SELECT COUNT(*) FROM tablename --shows number of rows of a table
+
+    --ARITHMETIC OPERATIONS
+SELECT 10 + 2; --returns 12
+SELECT 10 - 2; --returns 8
+SELECT 10 *  2; --returns 20
+SELECT 10 / 2 --returns 5
+SELECT 10^2; --returns 100 (power)
+SELECT 5!; --returns 25 (factorial)
+SELECT 10 % 2 --returns 0 (modulus)
+                            -- v-arithmetic operation made to make a clumn and return 10% discount on price, ROUNDED in 2 decimal places
+SELECT id, make, model,price, ROUND(price * .10,2) FROM table;
+                                                    --  V- return the value after discount subtraction
+SELECT id, make, model,price, ROUND(price * .10,2),ROUND( price - ( price * .10 ) , 2 ) FROM table;
 
     --SUBQUERIES : Query inside a Query
 SELECT * FROM tablename WHERE column1 IN ("value1","value2",...) --Select all with numeroes value in a column

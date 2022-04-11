@@ -19,6 +19,8 @@
         <p id="child1">text node to be removed</p>
         <p id="child2">text node to be replaced</p>
     </div>
+    <button onclick="show()">Click Me</button><br>
+    <button id="EListen">Click me Too</button><br>
     <a href="http://www.youtube.com/" target="_blank" rel="noopener noreferrer">Youtube</a>
 
 
@@ -78,7 +80,36 @@
             var child2 = document.getElementById("child2"); //gran node to be replaced
             parent1.replaceChild(p1, child2);
 
+            //EVENT LISTENER: attach an event handler to an element without overwriting existing handlers, ( can be used for multiple function called in one click)
+            var button2 = document.getElementById("EListen");
+            button2.addEventListener("click",show2);
+                //parameter: event - "on", function without ()
+            function show2(){
+                alert(Math.random());
+                button2.removeEventListener("click",show2); //removes eventListener, making function proc only one time.
+            }    
+
+            
+
+
         }
+                //EVENTS: used to execute javascript via HTML elements
+                    // onclick - occurs when a user click on an element 
+                    // onload - occurs when an object has loaded (when user enters the page)
+                    // onunload - occurs hwn a page has unloaded (for <body>) (when user leaves the page)
+                    // onchange - occurs when content from form element, the selection, or a checked state have changed.
+                    // onmouseover - occurs when the pointer is moved to an element or its children
+                    // onmouseout - occurs when the pointer is moved out to an element or its children
+                    // onmousedown -  occurs when the user presses a mouse button over an element (hold click)
+                    // onmouseup - occurs when the user releases a mouse button over an element (end hold)
+                    // onblur - occurs when an element loses focus
+                    // onfocus - occurs when an element gets focus
+                //EXAMPLE
+                function show(){
+                    alert("this text was made by a function called by 'onclick' ")
+                }
+
+                
     </script>
 </body>
 </html>
