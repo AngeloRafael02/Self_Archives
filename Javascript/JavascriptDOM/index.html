@@ -89,9 +89,6 @@
                 button2.removeEventListener("click",show2); //removes eventListener, making function proc only one time.
             }    
 
-            
-
-
         }
                 //EVENTS: used to execute javascript via HTML elements
                     // onclick - occurs when a user click on an element 
@@ -108,8 +105,12 @@
                 function show(){
                     alert("this text was made by a function called by 'onclick' ")
                 }
-
-                
+        
+            // EVENT PROPAGATION
+            // two ways of event propagation: Bubbling(innermost element are handled first then the outer), Capturing(opposite of Bubbling)
+            // addEventListener("event",function,false), false by default, meaning bubbling is used
+            // addEventListener("event",function,true), it declared tue, uses capturing method instead
+            // useful when the same event is handle for multiple elements in the DOM hierarchy
     </script>
 </body>
 </html>
