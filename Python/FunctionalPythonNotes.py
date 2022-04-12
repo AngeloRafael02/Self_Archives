@@ -71,13 +71,13 @@ def print_words():
     #conventional way off calling an object funciton
 decorated = decor(print_words) #declaring a function with an argument as an object
 decorated() #call the object
-    #wrapping a function with a decorator vie the @ and the decorator's name
+    #wrapping a function with a decorator via the @ and the decorator's name
 @decor
 def print_words2():
     print("Hi")
 print_words2() 
 
-    #RECURSION: when a returnstatement calls another function using its previously solved argument
+    #RECURSION: when a return statement calls another function using its previously solved argument
     #Example1
 def factorial(x): #(1) let say x = 5
     if x == 1:
