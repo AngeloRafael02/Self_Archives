@@ -62,6 +62,24 @@ namespace Angelo{
             Console.WriteLine(arr1.Min()); //min() returns the lowest value in the array
             Console.WriteLine(arr1.Sum()); //sum() returns the sum of all values in an array
 
+                //STRING PROPERTIES
+            string example = "some text";
+            Console.WriteLine(example);
+            Console.WriteLine(example[3]); // Strings are also arrays, each characters has it own index
+            Console.WriteLine(example.Length); // return the total number of characters
+            Console.WriteLine(example.IndexOf('t')); // returns the idex of a given character
+            example = example.Insert(0, "This is "); //inserts a new character/string at a given index
+            Console.WriteLine(example);
+            example = example.Replace("This is ", "I am "); //replace a substring the matches the given with a new string
+            Console.WriteLine(example);
+            if (example.Contains("some")){ //returns true if string has a certain characters/sunstring
+                Console.WriteLine("found 'some'");
+            }
+            example = example.Remove(4); //
+            Console.WriteLine(example);
+            example = example.Substring(2);
+            Console.WriteLine(example);
+
         }
     }
 }
