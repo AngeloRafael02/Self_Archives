@@ -9,6 +9,13 @@ namespace Angelo {
         class Dog {
             public string? name; //non Nullable field to be studied
             public int age;
+
+            public Dog(){
+                Console.WriteLine("Dog Constructor");
+            }
+            ~Dog(){ //DESTRUCTOR ( ~Method(){} ) - used when the program ends to close files/release memory
+                Console.WriteLine("Dog Destructor used");
+            }
             
         }
         class BankAccount{
@@ -75,6 +82,8 @@ namespace Angelo {
                 p1.Alias = "D";
                 Console.WriteLine(p1.Alias);
                 Console.WriteLine(p1.immutablestring);
+
+                //DESTRUCTORS: useful for realeasing resources before coming out of the program (closing files,releasing memory etc.)
             }
     }
 }
