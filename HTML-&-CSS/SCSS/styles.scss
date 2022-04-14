@@ -1,0 +1,54 @@
+/*  SCSS NOTES
+    By: Recio, Angelo Rafael
+*/
+
+//VARIABLES
+//define primary colors to become variable for easier use in the futures
+$primary_1: #a2b9bc; //these variables are in a global scope
+$primary_2: #b2ad7f;
+$primary_3: #878f99;
+$mainFont: #4f4f4f;
+
+//MIXINS groups of properties for easy access of all properties
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+}
+@mixin cool-button($color, $bg) { //Mixins can also have argument to give variety in the structure
+    display: flex;
+    color: $color;
+    background-color: $bg;
+}
+
+//we can the call those variables
+body {
+    $p_color: black !global; // use global keyboard for scope to widen 
+    font-family: 'Courier New', Courier, monospace;
+    background-color: $primary_1; // here you can put an inline comment
+
+    //we can also nest elements
+    a{
+        color: $p_color; // viable used with a global scope
+    }
+    button{
+        font-weight: bold;
+        &:hover{ //we can also nest processes
+            color: #878f99;
+        }
+        .success{
+            color: antiquewhite;
+        }
+    }
+    p{
+        color: $mainFont;
+    }
+    .card{
+        @include flex-column(); //a mixin was called to the .card class to use all of it properties
+    }
+    .btn-orange{
+        @include cool-button(black, orange) //a mixin is called as well as given arguments
+    }
+}
+
+
