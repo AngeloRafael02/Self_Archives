@@ -9,8 +9,8 @@ namespace Angelo {
         class Dog {
             public string? name; //non Nullable field to be studied
             public int age;
-
-            public Dog(){
+                public static string pet = "Pulong"; //static code are accessible in the class without using an object
+            public Dog(){ //
                 Console.WriteLine("Dog Constructor");
             }
             ~Dog(){ //DESTRUCTOR ( ~Method(){} ) - used when the program ends to close files/release memory
@@ -58,7 +58,7 @@ namespace Angelo {
         }
         
     
-            static void Main(string[] args){
+            static void Main(string[] args){ //static member can be accessed directly using the class names without an object
                 Dog dog1 = new Dog();
                 dog1.name = "pulong";
                 dog1.age = 5;
@@ -84,6 +84,10 @@ namespace Angelo {
                 Console.WriteLine(p1.immutablestring);
 
                 //DESTRUCTORS: useful for realeasing resources before coming out of the program (closing files,releasing memory etc.)
+
+                //STATIC: static code are accessible in the class without using an object
+                //static can also access static methods only
+                Console.WriteLine(Dog.pet);
             }
     }
 }
