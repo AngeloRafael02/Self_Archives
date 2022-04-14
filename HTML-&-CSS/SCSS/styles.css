@@ -1,0 +1,32 @@
+/*  SCSS NOTES
+    By: Recio, Angelo Rafael
+*/
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #a2b9bc;
+}
+body a {
+  color: black;
+}
+body button {
+  font-weight: bold;
+}
+body button:hover {
+  color: #878f99;
+}
+body button .success {
+  color: antiquewhite;
+}
+body p {
+  color: #4f4f4f;
+}
+body .card {
+  display: flex;
+  flex-direction: column;
+  background-color: grey;
+}
+body .btn-orange {
+  display: flex;
+  color: black;
+  background-color: orange;
+}/*# sourceMappingURL=styles.css.map */
