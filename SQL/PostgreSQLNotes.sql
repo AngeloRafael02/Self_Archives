@@ -118,7 +118,7 @@ SELECT UPPERCASE(column2) AS column2 FROM tablename
     --SQRT(column) - returns square root of the given value
     --SUM(column) - returns the total of the column's values
 SELECT SUM(price) FROM tablename --returns the sum of the entire price column
-SELECT maker, SUM(price), FROM tablename GROUP BY make; --returns the sum of each makers' price
+SELECT maker, SUM(price), AS newColumnName FROM tablename GROUP BY make; --returns the sum of each makers' price + new column name
     --MIN(column) - returns the smallest value among the column
 SELECT MIN(price) FROM tablename --Returns lowest price in the table
 SELECT maker, model, min(price) from car Group BY make,model; --returns the minimum price model of each maker
@@ -129,6 +129,9 @@ SELECT AVG(price) FROM tablename -- returns average value in the table
 SELECT ROUND(AVG(price)) FROM tablename -- returns average value in the table rounded up
     --COUNT(column) - returns the number of rows/items
 SELECT COUNT(*) FROM tablename --shows number of rows of a table
+    --COALESCE(column) - return the first argument(value) that is not null/appears true
+SELECT COALESCE(null,null,1) AS Number; --return the 3rd argument which is present
+SELECT COALESCE(email, 'Not Provided') FROM perrson --code replaces rows with no email (null) with 'Not provided'
 
     --ARITHMETIC OPERATIONS
 SELECT 10 + 2; --returns 12
