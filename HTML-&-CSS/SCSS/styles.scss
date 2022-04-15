@@ -3,6 +3,10 @@
 */
 
 //VARIABLES
+//IMPORT: transfer other scss code to main scss file.
+@import "module";
+
+
 //define primary colors to become variable for easier use in the futures
 $primary_1: #a2b9bc; //these variables are in a global scope
 $primary_2: #b2ad7f;
@@ -34,9 +38,11 @@ body {
     button{
         font-weight: bold;
         &:hover{ //we can also nest processes
+            @extend button; // EXTEND: used to inherit other class's properties
             color: #878f99;
         }
         .success{
+            @extend button;
             color: antiquewhite;
         }
     }

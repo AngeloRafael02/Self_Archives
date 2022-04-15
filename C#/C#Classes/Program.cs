@@ -57,8 +57,9 @@ namespace Angelo {
             }
         }
         
-    
-            static void Main(string[] args){ //static member can be accessed directly using the class names without an object
+            //static member can be accessed directly using the class names without an object
+            //a static class can only contain static members, you cannot instantiate an object ofa  static class
+            static void Main(string[] args){ 
                 Dog dog1 = new Dog();
                 dog1.name = "pulong";
                 dog1.age = 5;
@@ -88,6 +89,36 @@ namespace Angelo {
                 //STATIC: static code are accessible in the class without using an object
                 //static can also access static methods only
                 Console.WriteLine(Dog.pet);
+
+                //Static methods and properties availble in C#
+                //MATH
+                    Console.WriteLine(Math.PI); //returns the PI constant
+                    Console.WriteLine(Math.E); //Returns Natural logarithmic Base e
+                 int num1 = 2;
+                 int num2 = 20;
+                    Console.WriteLine(Math.Max(num1,num2)); //returns highest value
+                    Console.WriteLine(Math.Min(num1,num2)); //returns lowest value
+                    Console.WriteLine(Math.Abs(-420)); //returns absolute value 
+                    Console.WriteLine(Math.Sin(35)); //returns the sine of a value
+                    Console.WriteLine(Math.Cos(35)); //returns the cosine of a value
+                    Console.WriteLine(Math.Pow(2,5)); //returns the power of a value with its exponenet as a second argument
+                    Console.WriteLine(Math.Round(123.76)); //return the decimal value rounded to the nearest integer
+                    Console.WriteLine(Math.Sqrt(16)); //returns the square root of a value
+                //ARRAY
+                int[] arr = {2,3,1,4};
+                    Array.Reverse(arr); //arr = {4,1,3,2}
+                    Array.Sort(arr);    //arr = {1,2,3,4}
+                //STRING
+                string s1 = "some text";
+                string s2 = "another text";
+                    String.Concat(s1,s2); //combines the string
+                    String.Equals(s1,s2); //returns if equal, (false)
+                //DATETIME
+                DateTime localDate = DateTime.Now;   //represents the current date & time
+                    Console.WriteLine(localDate);
+                DateTime Today = DateTime.Today; //represents the current day
+                    Console.WriteLine(Today);
+                
             }
     }
 }
