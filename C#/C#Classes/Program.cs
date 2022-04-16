@@ -46,11 +46,11 @@ namespace Angelo {
             }
             private int age;
             private double weight;
-
+            private readonly string name = "john"; //READONLY: modifier the prevents a member of a class from being modified after construction
             public Person(string username, int youth, double mass){ //CONSTRUCTORS: called when objects are created/initialized
-                name = username;
-                age = youth;
-                weight = mass;
+                this.name = username; //"this" keyword is is used inside the class and refers to the current instance of the class
+                this.age = youth;
+                this.weight = mass;
             }
             public string publicName(){
                 return name;
