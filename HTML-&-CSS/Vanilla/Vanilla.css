@@ -1,0 +1,15 @@
+/*Basic CSS NOTES BY: Angelo Rafael Recio*/
+html{
+    font-family: 'Courier New', Courier, monospace; /*font-family sets the fonts used by the page, if the first one does no exist, use seconnd value    */
+}
+p{
+    font-size: 100px;
+    font-weight: 200; /*font-weight: used for the thickness of the font*/
+    color: darkgray; /*Also accents Hex values or RGB values*/
+}
+.div1{
+    text-align: center; /*Align Text horizontally*/
+    vertical-align:middle; /*Aligns text vertically*/
+    /*both properties take baseline,sub,super,% and px values*/
+}
+/*next is about text decoration*/
