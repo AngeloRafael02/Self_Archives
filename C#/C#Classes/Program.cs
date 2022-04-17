@@ -46,7 +46,7 @@ namespace Angelo {
             }
             private int age;
             private double weight;
-            private readonly string name = "john"; //READONLY: modifier the prevents a member of a class from being modified after construction
+            private readonly string somename = "john"; //READONLY: modifier the prevents a member of a class from being modified after construction
             public Person(string username, int youth, double mass){ //CONSTRUCTORS: called when objects are created/initialized
                 this.name = username; //"this" keyword is is used inside the class and refers to the current instance of the class
                 this.age = youth;
@@ -54,6 +54,13 @@ namespace Angelo {
             }
             public string publicName(){
                 return name;
+            }
+        }
+        class Clients{
+            private string[] nameList = new string[10];
+            public string this[int index]{
+                get{return nameList[index];}
+                set{nameList[index]=value;} 
             }
         }
         
@@ -119,6 +126,15 @@ namespace Angelo {
                 DateTime Today = DateTime.Today; //represents the current day
                     Console.WriteLine(Today);
                 
+                //INDEXERS: allows objects to be indexed like an array
+                string normalString = "I am a string";
+                char letter = normalString[5];
+                Console.WriteLine(letter);
+                //from class Client{}
+                Clients c = new Clients();
+                c[0]="dave";
+                c[1]="brian";
+                Console.WriteLine(c[1]);
             }
     }
 }
