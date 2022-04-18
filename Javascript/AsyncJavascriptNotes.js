@@ -1,33 +1,99 @@
     //Async Javascript Notes
     //By: Angelo Rafael Recio
 
-    //javascript funciton are executed by the order they ar called, not the sequence they are defined
+    //javascript function are executed by the order they ar called, not the sequence they are defined
 function madeFirst(){
     console.log("hi");
 }
 function madeSecond(){
     console.log("hello");
 }
-madeSecond();//made seconds was called first
+madeSecond();//madeFirst was "read" first but madeSeconds was called first
 madeFirst();
 
 
     //JAVASCRIPT CALLBACKS: a call back is a function passed as an argument to another function.
-function isEven(number) {
-    return number % 2 == 0;
-    }
-      
-function filterer(numbers, fn) {
-    let results = [];
-    for (const number of numbers) {
-        if (fn(number)) {
-        results.push(number);
+let stocks = {
+    Fruits: ["strawberry","grapes","bananas","apple"],
+    liquid: ["water","ice"],
+    holder: ["cone","cup","stick"],
+    toppings: ["chocolate", "peanuts"]
+};
+// 1st Function
+let order = (fruit_name, call_production) =>{
+    setTimeout(function(){
+        console.log(`${stocks.Fruits[fruit_name]} was selected`)
+    // Order placed. Call production to start
+        call_production();
+    },2000)
+    };
+    // 2nd Function
+    let production = () =>{
+        setTimeout(()=>{
+          console.log("production has started")
+          setTimeout(()=>{
+            console.log("The fruit has been chopped")
+            setTimeout(()=>{
+              console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} Added`)
+              setTimeout(()=>{
+                console.log("start the machine")
+                setTimeout(()=>{
+                  console.log(`Ice cream placed on ${stocks.holder[1]}`)
+                  setTimeout(()=>{
+                    console.log(`${stocks.toppings[0]} as toppings`)
+                    setTimeout(()=>{
+                      console.log("serve Ice cream")
+                    },2000)
+                  },3000)
+                },2000)
+              },1000)
+            },1000)
+          },2000)
+        },0000)   
+      };
+    // Trigger 👇
+//order(0, production);
+    //THIS IS CALLED CALLBACK HELL, we dont want that
+    //thats why we use PROMISES to escape callback Hell
+    //Previous function but in Promises format: using same stocks variables
+let is_shop_open = true;
+let order1 = ( time, work ) => {
+    return new Promise( ( resolve, reject )=>{
+        if( is_shop_open ){
+        setTimeout(() => {
+            resolve(work() )
+        }, time);
         }
+        else{
+        reject( console.log("Our shop is closed") )
+        }
+    })
     }
-    return results;
-}
-let numbers = [1, 2, 4, 7, 3, 5, 6, 8];
-console.log(filterer(numbers, isEven)); //uses a function as one of the arguments 
+    //Function was called here -V
+order1(2000,()=>console.log(`${stocks.Fruits[0]} was selected`))
+.then(()=>{
+    return order(0000,()=>console.log('production has started'))
+})
+.then(()=>{
+    return order(2000, ()=>console.log("Fruit has been chopped"))
+})
+.then(()=>{
+    return order(1000, ()=>console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} added`))
+})
+.then(()=>{
+    return order(1000, ()=>console.log("start the machine"))
+})
+.then(()=>{
+    return order(2000, ()=>console.log(`ice cream placed on ${stocks.holder[1]}`))
+})
+.then(()=>{
+    return order(3000, ()=>console.log(`${stocks.toppings[0]} as toppings`))
+})
+.then(()=>{
+    return order(2000, ()=>console.log("Serve Ice Cream"))
+})
+
+    
 
 
     //ASYNCHRONOUS 

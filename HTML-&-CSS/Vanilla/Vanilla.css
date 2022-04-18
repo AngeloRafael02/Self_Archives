@@ -6,6 +6,7 @@ p{
     font-size: 35px;
     font-weight: 200; /*font-weight: used for the thickness of the font*/
     color: gray; /*Also accents Hex values or RGB values*/
+    text-indent: 60px; /* it is the indent of the beginning of the sentence/string*/
 }
 .div1{
     text-align: center; /*Align Text horizontally*/
@@ -22,3 +23,7 @@ p{
 .sliced{
     text-decoration: line-through;
 }
+a{
+    text-shadow: 5px 2px 4px grey; /*respective parameters: x-axis, y-axis, blur, color*/
+}
+/*next is text transform*/
