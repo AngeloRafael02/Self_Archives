@@ -73,6 +73,15 @@
         <h3>section for styling</h3>
         <p class="sliced">I am sliced by a line</p>
     </article>
+    <article>
+        There are two ways to specify source file's URL:
+        <audio src="filename" controls></audio> <!--Using the source attribute-->
+        <audio controls autoplay loop> <!--controls:controls should be displayed | autoplay:plays as soon as its ready | loop:auto replay when finished-->
+            <source src="filename" type="audio/mpeg"><!--using the source element-->
+            <source src="filename" type="audio/ogg"><!--source element can be linked  to different audio files. the browser will use the 1st recognized format-->
+            Audio is not available in your browser <!--called of no formats are compatible-->
+        </audio>
+    </article>
     <footer>
 
     </footer>
