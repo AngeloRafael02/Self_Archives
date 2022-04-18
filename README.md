@@ -24,9 +24,15 @@ Languages Currently Documented:
         - Data Science: Basics of NumPy, PanDa, MatplotLib
         - Functional Python
         - Object Oriented Programming Python (OOP)
+        - Python File Handling
         - Flask Python
     - Javascript
         - Basic Javascript
+            - OOP Javascript
+            - Async Javascript
+            - DOM Manipulation
+            - Typescript
+            - NodeJS
         - ES6 
     - SQL 
         - PostgeSQL
