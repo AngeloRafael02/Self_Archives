@@ -1,0 +1,15 @@
+NOTES: 
+
+The angular CLI can make component automatically
+
+parts of the app as of writing:
+
+> .vscode : is you can configure the VSCode Extension, way of launch, and other configurations
+> node_modules/ : a repository responsible for the 3rd party libraries used in the app
+> src/ : a repository responsible to the actual coding of the app.
+    > app/
+    > asset/
+> .browserslistrc :  dotfile responsible for the build system to adjust CSS and JS output to support the specified browsers
+> .gitignore : dotfile responsible for files not to be tracked byg gitignore
+> package.json : file responsible for developer scripts as well as dependencies
+> tsconfig.jason : file responsible for typescript configurations
