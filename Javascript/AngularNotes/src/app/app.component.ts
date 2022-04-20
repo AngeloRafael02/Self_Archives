@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularNotes';
+  currentItem = "help";
+
+  
+  greet(){
+    alert("Hello Angelo");
+  }
+ 
+
 }
