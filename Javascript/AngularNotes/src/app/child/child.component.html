@@ -1,3 +1,10 @@
 <p>child works!</p>
 <p>Today's message: {{text}}</p>
+<p>{{"Today's message: " + text}}</p> <!--double brackets can concatenate strings-->
+<p>{{text.length + text.toUpperCase()}}</p> <!--double brackets can also use javascript properties and methods -->
+<p>{{2+2}}</p> <!--double brackets can evaluate expressions-->
+<p>{{greetUser()}}</p> <!--double brackets can also take class methods-->
+<!--Binding cannot take assignments, 
+    nor access to global JS variables like window, screen, etc. just do it in the component.ts file and bind it to the HTML-->
+<p>{{SiteURL}}</p>
 <button (click)="callParentGreet()">Greet</button>
