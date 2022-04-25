@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-import { ChildComponent } from './child/child.component';
-import { Child1Component } from './child1/child1.component'
-import { Child2Component } from './child2/child2.component';
+import { ChildComponent } from './componentbasic/child.component';
+import { Child1Component } from './propertybind/child1.component'
+import { Child2Component } from './classbind/child2.component';
+import { StylebindComponent } from './stylebind/stylebind.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { Child2Component } from './child2/child2.component';
     AppComponent,
     ChildComponent,
     Child1Component,
-    Child2Component
+    Child2Component,
+    StylebindComponent,
   ],
   imports: [
     BrowserModule
