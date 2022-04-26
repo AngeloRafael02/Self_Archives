@@ -7,6 +7,7 @@ import { ChildComponent } from './componentbasic/child.component';
 import { Child1Component } from './propertybind/child1.component'
 import { Child2Component } from './classbind/child2.component';
 import { StylebindComponent } from './stylebind/stylebind.component';
+import { EventbindComponent } from './eventbind/eventbind.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { StylebindComponent } from './stylebind/stylebind.component';
     Child1Component,
     Child2Component,
     StylebindComponent,
+    EventbindComponent,
   ],
   imports: [
     BrowserModule
