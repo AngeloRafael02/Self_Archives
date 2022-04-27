@@ -39,3 +39,7 @@ ToDoList.txt
 
 # VS Code settings
 .vscode/
+
+#TypescriptTest File
+Javascript/TypeScript/TypescriptTest.js
+Javascript/TypeScript/TypescriptTest.ts
