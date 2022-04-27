@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -8,6 +9,9 @@ import { Child1Component } from './propertybind/child1.component'
 import { Child2Component } from './classbind/child2.component';
 import { StylebindComponent } from './stylebind/stylebind.component';
 import { EventbindComponent } from './eventbind/eventbind.component';
+import { TemplatereferenceComponent } from './templatereference/templatereference.component';
+import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
+import { ClockComponent } from './clock/clock.component';
 
 
 @NgModule({
@@ -18,9 +22,13 @@ import { EventbindComponent } from './eventbind/eventbind.component';
     Child2Component,
     StylebindComponent,
     EventbindComponent,
+    TemplatereferenceComponent,
+    TwowaybindingComponent,
+    ClockComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
