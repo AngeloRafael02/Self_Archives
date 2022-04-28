@@ -12,6 +12,7 @@ import { EventbindComponent } from './eventbind/eventbind.component';
 import { TemplatereferenceComponent } from './templatereference/templatereference.component';
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 import { ClockComponent } from './clock/clock.component';
+import { NgIfComponent } from './ng-if/ng-if.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { ClockComponent } from './clock/clock.component';
     TemplatereferenceComponent,
     TwowaybindingComponent,
     ClockComponent,
+    NgIfComponent,
   ],
   imports: [
     BrowserModule,
