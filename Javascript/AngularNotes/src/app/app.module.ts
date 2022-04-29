@@ -13,6 +13,7 @@ import { TemplatereferenceComponent } from './templatereference/templatereferenc
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 import { ClockComponent } from './clock/clock.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { NgIfComponent } from './ng-if/ng-if.component';
     TwowaybindingComponent,
     ClockComponent,
     NgIfComponent,
+    NgSwitchComponent,
   ],
   imports: [
     BrowserModule,
