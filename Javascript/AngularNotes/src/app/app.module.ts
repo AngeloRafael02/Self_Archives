@@ -14,6 +14,7 @@ import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component'
 import { ClockComponent } from './clock/clock.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { NgSwitchComponent } from './ng-switch/ng-switch.component';
     ClockComponent,
     NgIfComponent,
     NgSwitchComponent,
+    NgForComponent,
   ],
   imports: [
     BrowserModule,
