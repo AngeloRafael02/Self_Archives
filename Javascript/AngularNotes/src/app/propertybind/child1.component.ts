@@ -13,10 +13,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Child1Component implements OnInit {
 
-  name = "child1";
+  name:string = "child1";
   //NOTE: ATTRIBUTE-Initialized once in the HTML, never to be changes, PROPERTY; can be changed
-  public myID = 'testId'; //PROPERTY BINDING: using [] or "bind-<attribute>" to bind attribute to an value inside the HTML tag, or use interpolation instead
-  public isDisabled = false;
+  public myID:string = 'testId'; //PROPERTY BINDING: using [] or "bind-<attribute>" to bind attribute to an value inside the HTML tag, or use interpolation instead
+  public isDisabled:boolean = false;
   constructor() { }
 
   ngOnInit(): void {

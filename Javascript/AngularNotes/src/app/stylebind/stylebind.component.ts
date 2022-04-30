@@ -10,9 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StylebindComponent implements OnInit {
   //STYLE BINDING
-  public text = "StyleBind"
-  public hasError = false; //sample
-  public color = 'orange'; //sample2
+  public text:string = "StyleBind"
+  public hasError:boolean = false; //sample
+  public color:string = 'orange'; //sample2
   public titleStyles = { //sample3
     color:"blue",
     fontStyle: "italic",

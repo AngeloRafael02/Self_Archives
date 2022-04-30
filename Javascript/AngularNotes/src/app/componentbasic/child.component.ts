@@ -16,7 +16,7 @@ export class ChildComponent implements OnInit {
   
   public SiteURL = window.location.href;
 
-  @Input() text = "";
+  @Input() text:string = "";
 
   @Output() greetEvent = new EventEmitter();
   callParentGreet(){

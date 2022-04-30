@@ -23,9 +23,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgIfComponent implements OnInit {
 
-  variable = true; //variables can be used to bind to the ngIf directive
-  variable2=false;
-  displayName = true;
+  variable:boolean = true; //variables can be used to bind to the ngIf directive
+  variable2:boolean =false;
+  displayName:boolean  = true;
   constructor() { }
 
   ngOnInit(): void {

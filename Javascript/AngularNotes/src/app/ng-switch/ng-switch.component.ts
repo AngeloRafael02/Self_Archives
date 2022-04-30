@@ -15,7 +15,7 @@ import { Component, OnInit } from '@angular/core';
 export class NgSwitchComponent implements OnInit {
 
 
-  public color = "blue";
+  public color:string = "blue";
   constructor() { }
 
   ngOnInit(): void {
