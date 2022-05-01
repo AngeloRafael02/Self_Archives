@@ -1,5 +1,5 @@
 {{ title }} 
-<app-child [text]="currentItem" (greetEvent)="greet()" ></app-child>
+<app-child></app-child>
 <div class="app-child1"></div>
 <app-child2></app-child2>
 <app-stylebind></app-stylebind>
@@ -10,3 +10,6 @@
 <app-ng-if></app-ng-if>
 <app-ng-switch></app-ng-switch>
 <app-ng-for></app-ng-for>
+<!--                                                             v-bind @Input() ([childVariable]="parentVariable") -->
+<app-component-interaction (childEvent)="message=$event" [parentData]="name"></app-component-interaction>{{message}}
+<!--                         ^-bind @Output()(child event to parent message)                                                  -->
