@@ -9,19 +9,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-  public name = "user";
+  public name:string = "user";
   greetUser(){
     return "Hello, " + this.name;
   }
-  
-  public SiteURL = window.location.href;
-
-  @Input() text:string = "";
-
-  @Output() greetEvent = new EventEmitter();
-  callParentGreet(){
-    this.greetEvent.emit();
-  }
+  public text:string= "Angelo"
+  public SiteURL:string = window.location.href;
 
   constructor() { }
 

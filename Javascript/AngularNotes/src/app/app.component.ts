@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularNotes';
-  currentItem = "help";
+  public title:string = 'AngularNotes';
 
+  public currentItem:string = "help";
+
+  public name:string = "Angelo";
+
+  public message:string ="";
   
   greet(){
     alert("Hello Angelo");
