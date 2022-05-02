@@ -7,9 +7,11 @@
 <app-templatereference></app-templatereference> <br>
 <app-twowaybinding></app-twowaybinding>
 <app-clock></app-clock>
+<app-timer></app-timer>
 <app-ng-if></app-ng-if>
 <app-ng-switch></app-ng-switch>
 <app-ng-for></app-ng-for>
 <!--                                                             v-bind @Input() ([childVariable]="parentVariable") -->
 <app-component-interaction (childEvent)="message=$event" [parentData]="name"></app-component-interaction>{{message}}
 <!--                         ^-bind @Output()(child event to parent message)                                                  -->
+<app-pipes></app-pipes>
