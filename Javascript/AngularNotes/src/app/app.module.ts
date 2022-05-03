@@ -18,6 +18,8 @@ import { NgForComponent } from './ng-for/ng-for.component';
 import { ComponentInteractionComponent } from './component-interaction/component-interaction.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { TimerComponent } from './timer/timer.component';
+import { ServiceSampleComponent } from './service-sample/service-sample.component';
+import { ServiceSampleService } from './service-sample.service';
 
 
 @NgModule({
@@ -37,12 +39,13 @@ import { TimerComponent } from './timer/timer.component';
     ComponentInteractionComponent,
     PipesComponent,
     TimerComponent,
+    ServiceSampleComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ServiceSampleService], //<- A service file
   bootstrap: [AppComponent]
 })
 export class AppModule { }
