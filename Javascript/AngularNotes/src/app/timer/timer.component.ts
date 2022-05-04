@@ -2,46 +2,59 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-timer',
-  template: `<p>{{numHour}}:{{numMinute}}:{{numSecond}}</p>`,
+  template: `<p>{{mainTimer()}}</p>`,
   styles: [``]
 })
 export class TimerComponent implements OnInit {
-
+  
+  public clsDay:string = "";
+  public clsHour:string = "";
+  public clsMinute:string = "";
+  public clsSecond:string = "";
+  
+  private now = new Date();
 
   constructor() { 
-
+    this.TimerReset(this.now)
   }
   ngOnInit(): void {
-
+    setInterval(()=>{
+      this.mainTimer();
+    },1000);
   }
-  
-  private getResetDay():Date{
-    var now:Date = new Date();
-        var ResetDay = new Date();
-            ResetDay.setDate(now.getDate() + (8 - 1 - now.getDay() + 7) % 7 + 1); //Monday
-            ResetDay.setHours(4, 0, 0, 0); //4:00 AM
-        return ResetDay;
+
+  private TimerReset(now:Date):Date{
+    var ResetDay = new Date();
+        ResetDay.setDate(now.getDate() + (8 - 1 - now.getDay() + 7) % 7 + 1);
+        ResetDay.setHours(4,0,0,0);
+    return ResetDay;
   }
-  private now:number = new Date().getTime();
-  private deadLine:number = new Date(this.getResetDay()).getTime();
-  private gap:number = this.deadLine - this.now;
+  public mainTimer():string{
+    const now:number  = new Date().getTime();
+    const deadline:number = new Date(this.TimerReset(this.now)).getTime();
+    const gap:number = deadline - now;
 
-  private second:number = 1000;
-  private minute:number = this.second * 60;
-  private hour:number = this.minute * 60;
-  private day:number = this.hour * 24;
+    const second:number = 1000;
+    const minute:number = second * 60;
+    const hour:number = minute * 60;
+    const day:number = hour * 24;
 
-  public numDay:number = Math.floor(this.gap / this.day);
-  public numHour:number = Math.floor((this.gap % this.day) / this.hour);
-  public numMinute:number = Math.floor((this.gap % this.hour) / this.minute);
-  public numSecond:number = Math.floor((this.gap % this.minute) / this.second);
+    const numDay:number = Math.floor(gap / day);
+    const numHour:number = Math.floor((gap % day) / hour);
+    const numMinute:number = Math.floor((gap % hour) / minute);
+    const numSecond:number = Math.floor((gap % minute) / second)+1;
 
-    //NOTE: figure out how to loop this properties, make the structure similar to the clock component?
-  public strDay:string = this.numDay.toLocaleString();
-  public strHour:string = this.numHour.toLocaleString();
-  public strMinute:string = this.numMinute.toLocaleString();
-  public strSecond:string = this.numSecond.toLocaleString();
+    this.clsDay = numDay.toLocaleString();
+    this.clsHour = numHour.toLocaleString();
+      this.clsHour = numHour < 10 ? '0' + this.clsHour : this.clsHour;
+      this.clsHour = numHour == 10 ? '00' : this.clsHour;
+    this.clsMinute = numMinute.toLocaleString();
+      this.clsMinute = numMinute < 10 ? '0' + this.clsMinute : this.clsMinute;
+      this.clsMinute = numMinute == 60 ? '00' : this.clsMinute;
+    this.clsSecond = numSecond.toLocaleString();
+      this.clsSecond = numSecond < 10 ? '0' + this.clsSecond : this.clsSecond;
+      this.clsSecond = numSecond == 60 ? '00' : this.clsSecond;
 
-  
-
+    return this.clsDay + ":" + this.clsHour + ":" + this.clsMinute + ":" + this.clsSecond;
+  }
 }
