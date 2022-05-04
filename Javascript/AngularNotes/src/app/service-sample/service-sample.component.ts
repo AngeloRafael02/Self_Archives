@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { peopleInterface } from '../people';
 import { ServiceSampleService } from '../service-sample.service';
 
 @Component({
@@ -12,11 +13,12 @@ import { ServiceSampleService } from '../service-sample.service';
 })
 export class ServiceSampleComponent implements OnInit {
 
-  public peoples:any[] = [];
+  public peoples:peopleInterface[] = [];
   constructor(public _sampleService:ServiceSampleService) { }
 
   ngOnInit(): void {
-    this.peoples = this._sampleService.getList();
+    this._sampleService.getList()
+        .subscribe(data => this.peoples = data);
   }
 
 }

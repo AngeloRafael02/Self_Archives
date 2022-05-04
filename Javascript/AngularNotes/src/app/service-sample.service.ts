@@ -1,17 +1,18 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { peopleInterface } from './people';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceSampleService {
 
-  constructor() { }
+  private _url:string = "/assets/data/people.json";
 
-  getList(){
-    return [
-      {"id":1,"name":"Markus","age":18},
-      {"id":2,"name":"Angel","age":20},
-      {"id":3,"name":"Gary","age":19}
-    ];
+  constructor(private http:HttpClient) { }
+
+  getList():Observable<peopleInterface[]>{
+    return this.http.get<peopleInterface[]>(this._url);
   }
 }
