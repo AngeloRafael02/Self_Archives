@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
@@ -19,7 +20,9 @@ import { ComponentInteractionComponent } from './component-interaction/component
 import { PipesComponent } from './pipes/pipes.component';
 import { TimerComponent } from './timer/timer.component';
 import { ServiceSampleComponent } from './service-sample/service-sample.component';
+
 import { ServiceSampleService } from './service-sample.service';
+
 
 
 @NgModule({
@@ -43,7 +46,8 @@ import { ServiceSampleService } from './service-sample.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ServiceSampleService], //<- A service file
   bootstrap: [AppComponent]
