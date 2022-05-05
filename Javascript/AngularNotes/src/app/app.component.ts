@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ServiceSampleService} from './service-sample.service'
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,9 @@ export class AppComponent {
   greet(){
     alert("Hello Angelo");
   }
- 
+  
+  constructor(private ServiceSampleService:ServiceSampleService){
+
+  }
 
 }

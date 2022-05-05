@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { ServiceSampleService } from './service-sample.service';
+import { AppRoutingModule,routingComponents } from './app-routing.module';
 
 import { ChildComponent } from './componentbasic/child.component';
 import { Child1Component } from './propertybind/child1.component'
@@ -20,9 +22,7 @@ import { ComponentInteractionComponent } from './component-interaction/component
 import { PipesComponent } from './pipes/pipes.component';
 import { TimerComponent } from './timer/timer.component';
 import { ServiceSampleComponent } from './service-sample/service-sample.component';
-
-import { ServiceSampleService } from './service-sample.service';
-
+import { RoutingSampleComponent } from './routing-sample/routing-sample.component';
 
 
 @NgModule({
@@ -43,11 +43,13 @@ import { ServiceSampleService } from './service-sample.service';
     PipesComponent,
     TimerComponent,
     ServiceSampleComponent,
+    routingComponents, //RoutingSampleComponent. Everytime we add a new component  we can just specify on the routing.module.ts
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [ServiceSampleService], //<- A service file
   bootstrap: [AppComponent]
