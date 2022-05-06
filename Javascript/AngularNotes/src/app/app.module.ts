@@ -23,6 +23,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { TimerComponent } from './timer/timer.component';
 import { ServiceSampleComponent } from './service-sample/service-sample.component';
 import { RoutingSampleComponent } from './routing-sample/routing-sample.component';
+import { WildcardRouteComponent } from './wildcard-route/wildcard-route.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { RoutingSampleComponent } from './routing-sample/routing-sample.componen
     PipesComponent,
     TimerComponent,
     ServiceSampleComponent,
-    routingComponents, //RoutingSampleComponent. Everytime we add a new component  we can just specify on the routing.module.ts
+    routingComponents,
+    WildcardRouteComponent, //RoutingSampleComponent. Every time we add a new component  we can just specify on the routing.module.ts
   ],
   imports: [
     BrowserModule,
