@@ -23,17 +23,17 @@
 
         --Basic SQL
     --CREATE TABLE: create a tble fr a database
-CREATE TABLE (tablename){ --CREATE Table with its columns
+CREATE TABLE tablename ( --CREATE Table with its columns
     id BIGSERIAL NOT NULL PRIMARY KEY, --PRIMARY KEY:used to identify a row uniquely in a table, SERIAL/BIGSERIAL: auto-increments
     profile_pic BYTEA NOT NULL,--more info in uploading binary data: https://www.postgresql.org/docs/7.4/jdbc-binary-data.html#:~:text=To%20insert%20an%20image%2C%20you,%2C%20%3F)%22)%3B%20ps.
     username VARCHAR(50) NOT NULL UNIQUE, -- UNIQUE: no same data
     birthday DATE NOT NULL--YYYY-MM-DD format
     time_of_access TIME NOT NULL, --HH:MM:SS format
     contactNumber INTEGER NOT NULL, -- INT nomlar sizewd, can be signed or unsigned
-    bio TEXT, -- large amount of text data
+    bio TEXT, -- lar\dtge amount of text data
     email VARCHAR(50) DEFAULT,
     isbanned BOOLEAN -- boolean: true or false
-}; 
+); 
     --More data types here => https://www.postgresql.org/docs/9.5/datatype.html
     --More SQL constraints => https://www.w3schools.com/sql/sql_constraints.asp 
 
