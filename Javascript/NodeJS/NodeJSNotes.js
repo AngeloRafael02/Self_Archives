@@ -6,16 +6,33 @@
 
 console.log('Hello World');
 
-    //global - namespace to put when a variable is ti be used throughout the file
-console.log(global.luckyNum);
+    //global - namespace to put when a variable is to be used throughout the file
+console.log(global.luckyNum); //prints undefined
 global.luckyNum = "68";
-console.log(global.luckyNum);
+console.log(global.luckyNum); //prints 68
+
+    //CONCEPTS TO UNDERSTAND
+    //NORMAL FUNCTION STATEMENT:
+function normal(){ console.log("I'm from a Normal function"); }
+normal();
+    //FUNCITON EXPRESSION:
+var func = function(){ console.log("I'm from a function expression "); }
+func()
+    //Sample of a function taking another function
+function callFunction( anotherFunction ){ anotherFunction(); }
+callFunction(func)
+
+    //MODULES AND REQUIRE()
+    //used for "connecting" other modules or using third-party JS packages.
+var module1 = require('./test')
+console.log(module1(5))
 
     //process - access to the current running Node Process
 console.log(process.platform);
 
     //NodeJS is non-blocking, which mean you can make as many request as you want
     // its the reason NodeJs is used in apps with high throughput like web servers
+
 
     //EventListening = use global namespace"process" and on() to listen to the event
             //V-EVENT
@@ -34,6 +51,7 @@ eventEmitter.emit('called'); //event is called using its custom event called "ca
 eventEmitter.emit('called'); //event is called twice
     //NOTE: making your code event driven can be very useful in CPU intensive apps
 
+    
     //FILE SYSTEM: NodeJs has a file system module (fs) for reading, creating,updating and deleting files and its content
 const { readFile, readFileSync} = require('fs') //If the function ends with a "sync", it is blocking
     //BLOCKING
@@ -46,6 +64,7 @@ readFile('Self_Archives/Javascript/NodeJS/test.txt', 'utf8', (err,txt)=>{
 });
 console.log("do this ASAP"); //In Non blocking Code, its reads the callback, executes the rest of the script, hen finally runs the callback after the file has been read
     
+
     //PROMISES : asynchronous, non-blocking
 //const { readFile } = require('fs').promises;
 //async function hello(){
