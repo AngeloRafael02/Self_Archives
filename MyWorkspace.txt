@@ -1,5 +1,8 @@
 localhost address of each app framework:
+
 Angular - https://localhost:4200
 ASP.NET MVC - https://localhost:7261/ or http://localhost:5112
 NodeJS - http://localhost:8080 or http://localhost:8081
 PostgreSQl: - https://localhost:5432 or https://localhost:5434
+ExpressJS - https://localhost:3000
+NestJS - https://localhost:3030

@@ -1,0 +1,12 @@
+
+HTTP (Hypertext Transfer Protocol):
+    application level TCP/IP Protocol based on communication protocol used to deliver data
+such as HTML files, image files, query results, etc. 
+    Basic Features:
+        > Connectionless - request are made from independent new connections and then disconnects afterwards, this is repeated.
+        > Media independent - any type of data can be send as long as both client and server knows how to handle the data content.
+        > Stateless - Neither client nor server can retain each other's information in between request and response.
+
+HTTP/1.0 - uses new connection every request/response exchange
+HTTP/1.1 - connection may be used one or more times
+
