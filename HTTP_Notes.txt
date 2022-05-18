@@ -10,3 +10,14 @@ such as HTML files, image files, query results, etc.
 HTTP/1.0 - uses new connection every request/response exchange
 HTTP/1.1 - connection may be used one or more times
 
+PARAMETERS
+    HTTP Version: uses a (major).(minor) scheme to indicate versions of the protocol
+        Example - HTTP/1.0 
+    Uniform Resource Identifiers: formatted, case-sensitive string containing name location etc. to identify a resource
+        General URI Syntax: "http:" "//" (host) (":" port) ( Absolute path ( "?" query))
+        Example: http://abc.com/characters/?lvl=4
+    Date/Time Formats: All HTTp date/time stamps MUST be represented in Greenwich Mean Time (GMT). 
+        Any of these 3 representations are allowed:
+            Sun, 06 Nov 1994 08:49:37 GMT  ; RFC 822, updated by RFC 1123
+            Sunday, 06-Nov-94 08:49:37 GMT ; RFC 850, obsoleted by RFC 1036
+            Sun Nov  6 08:49:37 1994       ; ANSI C's asctime() format
