@@ -20,18 +20,27 @@ var func = function(){ console.log("I'm from a function expression "); }
 func()
     //Sample of a function taking another function
 function callFunction( anotherFunction ){ anotherFunction(); }
-callFunction(func)
+callFunction(func);
 
     //MODULES AND REQUIRE()
     //used for "connecting" other modules or using third-party JS packages.
-var module1 = require('./test')
-console.log(module1(5))
+var module1 = require('./ModuleTest');
+console.log(module1.adder(5,2));
+console.log(module1.pi*2);
 
     //process - access to the current running Node Process
 console.log(process.platform);
 
+
+
     //NodeJS is non-blocking, which mean you can make as many request as you want
     // its the reason NodeJs is used in apps with high throughput like web servers
+
+
+
+
+
+
 
 
     //EventListening = use global namespace"process" and on() to listen to the event
