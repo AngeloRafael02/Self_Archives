@@ -24,8 +24,14 @@ app.post('/',function(req,res){ //a POST request will send the following:
     //There are cases where Static routes are viable such as the root URL of pages. However, using dynamic routes allows us to pass parameters and process base on them 
 app.get('/id/:id',function(req,res){
     res.send("current id according to route: " + req.params.id);
-});
-    //type any string on the URL address and it will be passed as a string for the page 
+}); //type any string on the URL address and it will be passed as a string for the page 
+
+
+    //PATTERN MATCHED ROUTES
+    //you can use regex to limit the URL Parameter matching
+app.get('/id/regex/:id([0-9]{5})', function(req,res){
+    res.send('id:' + req.params.id);
+}); //current regex only lets 5 numbers as route, goes 404 otherwise
 
 
     //ROUTERS: to separate routes from the main JS file we can use Express.Router() (seen on the ModuleTest.j)
