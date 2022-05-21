@@ -49,3 +49,10 @@ HTTP Methods
     CONNECT - Establish a tunnel to the server identified by a given URI
     OPTION - Describes the communication options for the target resource
     TRACE - performs a message loop-back test along th path of the target source
+
+HTTP Status Codes
+    1xx: Informational - request has been received and the process is continuing
+    2xx: Success - Action was successfully received understood, and accepted
+    3xx: Redirection - I means further action must be taken in order to complete the request
+    4xx: Client Error - request contains incorrect syntax or cannot be fulfilled
+    5xx: Server Error - the Server failed to fulfill an apparently valid request
