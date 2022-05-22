@@ -39,6 +39,8 @@ const test = require('./ModuleTest.js')
 app.use('/module',test);
     //now you can make separate routes be grouped into separate files. 
     //you can now access routes from other files 
-
+    
+    //MIDDLEWARE: functions that have access to the request object (req), the Object response (res), and the next middleware function in the applications request/response cycle
+    //Go to MiddlewareDemo.js
 
 app.listen(3000);
