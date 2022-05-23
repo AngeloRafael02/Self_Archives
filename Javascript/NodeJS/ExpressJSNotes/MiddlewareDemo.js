@@ -30,6 +30,7 @@ app.get('/child2', ShowOrder,function (req,res,next) {
     res.send("child2 page");
 })
 
+
 //middlewares that can be called 
 function logger(req,res,next) { //another example of middleware
     console.log(req.originalUrl)
