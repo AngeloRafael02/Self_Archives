@@ -40,7 +40,19 @@ app.use('/module',test);
     //now you can make separate routes be grouped into separate files. 
     //you can now access routes from other files 
     
+
     //MIDDLEWARE: functions that have access to the request object (req), the Object response (res), and the next middleware function in the applications request/response cycle
     //Go to MiddlewareDemo.js
+
+
+    // TEMPLATING: used to remove the cluttering of our server code with HTML
+    // PUG - Templating engine for ExpressJS, we need to install is as a dependency (npm install --save pug)
+    // To use it, no need for require() use app.set()
+app.set('view engine', 'pug');
+app.set('views','./views');
+    //route of pugDemo.pug
+app.get('/first_template', function(req, res){
+    res.render('first_view');
+});
 
 app.listen(3000);
