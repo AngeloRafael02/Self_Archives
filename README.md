@@ -4,7 +4,7 @@ may also serve as backup when i don't remember certain syntaxes of certain langu
 
 ## Note/s
 - Indented comments and inline comments are meant to not be uncommented. 
-- Comments not indented and containing a possible line of code can be 
+- Comments not indented and containing a possible line of code can be used to display outputs
 - Uncomment a comment to make an output of an example in the code
 
 ### Contents
