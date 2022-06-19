@@ -39,7 +39,7 @@ app.get("/OneToOne",async function (req,res) {
     const UserRepository = AppDataSource.getRepository(Users)
     const MetadataRepository = AppDataSource.getRepository(User_Metadata)
     
-    const savedUser = await UserRepository.find()
+    const savedUser = await UserRepository.find({relations:{metadata:true}})
     const savedMetadata = await MetadataRepository.find({where:{id:1}})
     res.json(savedUser)
     console.log("All User's Metadata: ", savedMetadata)
