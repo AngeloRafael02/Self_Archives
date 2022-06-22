@@ -3,9 +3,10 @@ import express from "express";
 import { AppDataSource } from "./DataSource";
 import { Users } from "./models/User";
 import { User_Metadata } from "./models/User_metadata";
-
+import { BasicCRUDRoute } from "./Routes/basicCRUD";
 const app = express();
 app.use(express.json());
+
 
 AppDataSource.initialize(
     ).then(()=>{
@@ -44,6 +45,7 @@ app.get("/OneToOne",async function (req,res) {
     res.json(savedUser)
     console.log("All User's Metadata: ", savedMetadata)
 })
+app.use('/BasicCRUD', BasicCRUDRoute)
 
 
 

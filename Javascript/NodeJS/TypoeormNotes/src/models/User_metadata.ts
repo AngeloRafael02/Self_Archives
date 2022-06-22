@@ -17,7 +17,7 @@ export class User_Metadata{
     nationality:string
     
     //@OneToOne((()=>Users)) //this is a unidirectional relationship to another Entity/Model
-    @OneToOne(() => Users ,(user)=>user.metadata) //this is for binding bidirectionally 
+    @OneToOne(() => Users ,(user)=>user.metadata,) //this is for binding bidirectionally 
     @JoinColumn()
     user:Users
 }

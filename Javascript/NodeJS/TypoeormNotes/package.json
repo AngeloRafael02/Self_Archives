@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "npx ts-node ./src/index.ts",
-    "serve2":"nodemon ./src/index.ts"
+    "serve2": "nodemon ./src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,7 @@
     "express": "^4.18.1",
     "pg": "^8.7.3",
     "postgres": "^3.2.4",
+    "random": "^3.0.6",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.3.6"
   },
