@@ -32,7 +32,11 @@ Languages Currently Documented:
             - Async Javascript
             - DOM Manipulation
             - Typescript
+                - TypeORM
+                - Angular
             - NodeJS
+                - ExpressJS
+                - NestJS
         - ES6 
     - SQL 
         - PostgeSQL
