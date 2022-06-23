@@ -186,5 +186,7 @@ ALTER TABLE users ALTER COLUMN email SET NO NULL;
 ALTER TABLE table_name ALTER COLUMN column1 TYPE datatype USING experssion
     -- EXAMPLE: ALTER TABLE weapons ALTER COLUMN domainname TYPE integer USING domainname::integer
 
-
-
+ --Shows Tables and their contraint names
+SELECT table_name,constraint_name
+FROM information_schema.constraint_table_usage
+WHERE table_name IN ('users', 'user_metadata');
