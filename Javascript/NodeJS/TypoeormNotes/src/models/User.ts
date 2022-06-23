@@ -1,5 +1,4 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToOne } from "typeorm"
-import { User_Metadata } from "./User_metadata"
 
 
 @Entity()
@@ -25,8 +24,4 @@ export class Users {
 
     @Column()
     is_married:Boolean
-
-    @OneToOne(()=>User_Metadata, (userMetadata)=>userMetadata.user , { cascade: true, onDelete: 'CASCADE' }) //this is for binding bidirectionally 
-    metadata:User_Metadata
-
 }
