@@ -1,7 +1,6 @@
 import { AppDataSource } from "../DataSource";
 import "reflect-metadata";
-import { Users } from "../models/User";
-import { User_Metadata } from "../models/User_metadata";
+import { Users } from "../models/User"
 import express from "express";
 
 
@@ -11,7 +10,7 @@ BasicCRUDRoute.route('/')
 
     .get(async function getAllUsers(req,res) {
         const UserRepository = AppDataSource.getRepository(Users)        
-        const savedUser = await UserRepository.find({relations:{metadata:true}})
+        const savedUser = await UserRepository.find()
         res.json(savedUser)
     })
 
@@ -23,7 +22,6 @@ BasicCRUDRoute.route('/')
             const randomArray = Array.from(
               { length: myLength }, () => chars[Math.floor(Math.random() * chars.length)]
             );
-          
             const randomString = randomArray.join("");
             return randomString;
         };
@@ -36,23 +34,15 @@ BasicCRUDRoute.route('/')
         newUser.income = Math.floor(Math.random()*100000) + 10000;
         newUser.is_married = false;
 
-        const userMetadata = new User_Metadata();
-        userMetadata.height = Math.floor(Math.random()*200) + 100;
-        userMetadata.weight = Math.floor(Math.random() * 500) + 50;
-        userMetadata.nationality = "Confidential";
-        userMetadata.user = newUser;
-
         const UserRepository = AppDataSource.getRepository(Users);
         await UserRepository.save(newUser).then(()=>{
-            console.log("User has been Saved");
+            console.log(`
+            New User has been saved:\b
+            First Name: ${newUser.first_name}\b
+            Last Name: ${newUser.last_name}\b
+            Description: ${newUser.description}`);
         });
-        
-        const MetadataRepository = AppDataSource.getRepository(User_Metadata);
-        await MetadataRepository.save(userMetadata).then(()=>{
-            console.log("User's MetaData has been Saved");
-            
-        });
-        res.send(`User ${newUser.first_name}  ${newUser.last_name} and the MetaData has been saved`);
+        res.send(`User ${newUser.first_name}  ${newUser.last_name} has been saved`);
     })
     
     .put(async function ChangeUserData(req,res) {
@@ -76,6 +66,10 @@ BasicCRUDRoute.route('/')
     })
 
     .delete(async function RemoveAUser(req,res) {
-        
+       await AppDataSource.getRepository(Users)
+            .createQueryBuilder().delete()
+            .from(Users).where("id = :id", { id: 1 })
+            .execute().then(()=>{console.log("User has been removed")});
+            res.send("Delete Method Successful");
     })
 
