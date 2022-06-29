@@ -2,9 +2,9 @@ import "reflect-metadata";
 import express from "express";
 import { AppDataSource } from "./DataSource";
 import { BasicCRUDRoute } from "./Routes/basicCRUD";
+
 const app = express();
 app.use(express.json());
-
 
 AppDataSource.initialize()
     .then(()=>{console.log("Database Connected Successfully");})
