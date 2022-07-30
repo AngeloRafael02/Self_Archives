@@ -1,6 +1,6 @@
     #Requirements: NumPy, Pandas, MAtplotlib, and conda environment
 
-import numpy as np # provides array structure for performing operations with data, MORE coompact than lists
+import numpy as np # provides array structure for performing operations with data, MORE compact than lists
 import pandas as pd #PanDa = Panel Data: for reading and extracting data from files, transform it, analyze it, and more.
 import matplotlib.pyplot as plt
 
