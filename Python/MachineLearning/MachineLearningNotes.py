@@ -35,3 +35,10 @@ arr = df[['Pclass','Fare','Age']].values[:10] # Selects the first 10 rows of the
 mask = arr[:,2] < 18 # Selects the boolean values of the third column that are less than 18
 print(arr[mask]) # Prints the values of the array that are less than 
 print(mask.sum()) # Prints the number of values that are less than 18
+
+import matplotlib.pyplot as plt
+plt.scatter(df['Age'], df['Fare'], c=df['Pclass']) # Plots the Age vs Fare
+plt.plot([0,80],[85,5]) # Plots a line between 0 and 80, and 85 and 5
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.savefig('Python/MachineLearning/charts/AgeVsFare.png') # Saves the chart as a PNG
