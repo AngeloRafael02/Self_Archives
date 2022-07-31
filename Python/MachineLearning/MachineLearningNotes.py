@@ -42,3 +42,12 @@ plt.plot([0,80],[85,5]) # Plots a line between 0 and 80, and 85 and 5
 plt.xlabel('Age')
 plt.ylabel('Fare')
 plt.savefig('Python/MachineLearning/charts/AgeVsFare.png') # Saves the chart as a PNG
+
+    # TERMS
+    # Supervised Learning - having historical data used to inform the model
+        # Classification - the model is trained to predict the class of an object (non-numerical Value)   
+        # Regression - the model is trained to predict the value of an object (numerical Value)  
+
+    # Logic Regression Model
+    # Logic Regression is a supervised learning model that is used to predict the value of a target variable based on the values of one or more input variables.
+    # The equation for calculation the score of a logic regression model is: 1/(1+e^(ax + by + c)) <also called the sigmoid function>
