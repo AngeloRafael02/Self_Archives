@@ -41,7 +41,7 @@ plt.scatter(df['Age'], df['Fare'], c=df['Pclass']) # Plots the Age vs Fare
 plt.plot([0,80],[85,5]) # Plots a line between 0 and 80, and 85 and 5
 plt.xlabel('Age')
 plt.ylabel('Fare')
-plt.savefig('Python/MachineLearning/charts/AgeVsFare.png') # Saves the chart as a PNG
+plt.savefig('charts/AgeVsFare.png') # Saves the chart as a PNG
 
     # TERMS
     # Supervised Learning - having historical data used to inform the model
@@ -51,3 +51,28 @@ plt.savefig('Python/MachineLearning/charts/AgeVsFare.png') # Saves the chart as 
     # Logic Regression Model
     # Logic Regression is a supervised learning model that is used to predict the value of a target variable based on the values of one or more input variables.
     # The equation for calculation the score of a logic regression model is: 1/(1+e^(ax + by + c)) <also called the sigmoid function>
+
+    # Preparing Data for Model (using the same titanic.csv)
+from sklearn.linear_model import LogisticRegression
+    # First, we need to make all our columns numerical
+df['male'] = df['Sex'] == 'male'
+    # Then, take all the feature and create a numpy array by taking all the columns we are interested in and using the values method to convert it to numpy array and store it in 'X'
+X = df[['Pclass','male','Age','Siblings/Spouses','Parents/Children','Fare']].values
+    # Next, we take the target and Store it in 'Y'
+Y = df['Survived'].values
+    # Then, instantiate 'LogisticRegression' and use the fit method to build the model
+model = LogisticRegression()
+model.fit(X,Y)
+print(model.coef_) # Prints the coefficients of the model
+print(model.intercept_) # Prints the intercept of the model
+    # Use Predict method to make predictions
+print(model.predict([[3, True, 22.0, 1, 0, 7.25]])) # Predicts the first passenger in the dataset
+    # Predict the first 5 rows of data (X[:5]) and compare it to the target array (Y[:5])
+print(model.predict(X[:5]))
+print(Y[:5])
+    # Make an accuracy score by creating an array that has the target values 
+y_pred = model.predict(X)
+    # Then create an array of the boolean values of whether or not the prediction is correct
+print(str((Y == y_pred).sum()) +'/'+ str(len(Y))) # Prints the number of correct predictions
+print((Y == y_pred).sum()/len(Y)) # Prints the accuracy of the model
+print(model.score(X,Y)) # Prints the accuracy of the model (same as above)
