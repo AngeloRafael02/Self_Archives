@@ -1,5 +1,4 @@
 import pandas as pd
-from sklearn import metrics
 from sklearn.datasets import load_breast_cancer
 from sklearn.linear_model import LogisticRegression
 
@@ -26,3 +25,9 @@ print(model.score(X, y))
             # false positive (FP) - datapoint is predicted positvely and is actually negative
             # true negative (TN) - datapoint is predicted negatively and is actually negative
             # false negative (FP) - datapoint is predicted negatively and is actually positive
+        # Precision - refers to the percentage of positive results which are relevant and recall to the percentage of positive cases correctly classified.
+            # Precision Equation: Positives Predicted Correctly / All Positive Predictions || TP/(TP+FP)
+        # Recall - a measure of how many of the positive cases the model can recall.
+            # Recall Equation: Positives Predicted Correctly / All Positive Cases || TP/(TP+FN)
+        # Precision and Recall Trade-Off
+            # Building Models can be made by increasing recall while lowering precision or vice versa, it depends on the dataset on how we adjust it 
