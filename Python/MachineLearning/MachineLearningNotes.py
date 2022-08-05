@@ -63,7 +63,7 @@ Y = df['Survived'].values
     # Then, instantiate 'LogisticRegression' and use the fit method to build the model
 model = LogisticRegression()
 model.fit(X,Y)
-print(model.coef_) # Prints the coefficients of the model
+print(model.coef_) # Prints the coefficients of the model                      
 print(model.intercept_) # Prints the intercept of the model
     # Use Predict method to make predictions
 print(model.predict([[3, True, 22.0, 1, 0, 7.25]])) # Predicts the first passenger in the dataset
@@ -76,3 +76,29 @@ y_pred = model.predict(X)
 print(str((Y == y_pred).sum()) +'/'+ str(len(Y))) # Prints the number of correct predictions
 print((Y == y_pred).sum()/len(Y)) # Prints the accuracy of the model
 print(model.score(X,Y)) # Prints the accuracy of the model (same as above)
+
+    # Notable Terms
+        # Overfitting - occurs when the model is too complex to be useful, and is not able to generalize to new data.
+            # https://api.sololearn.com/DownloadFile?id=3781 - in this link the is a picture of a overfitting graph 
+    # To give the model a fair assessment we need to know how the model performs on new data.
+        # the standard ratio of test data to training data is 70-80 : 20-30
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, Y)
+
+print("Whole Dataset: ", X.shape, Y.shape) # Prints the shape of the array (rows, columns)
+print("Training set:", X_train.shape, y_train.shape)
+print("Test set:", X_test.shape, y_test.shape)
+
+    #Training and Testing the Model
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+model1 = LogisticRegression()
+model1.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+print("accuracy:", accuracy_score(y_test, y_pred))
+print("precision:", precision_score(y_test, y_pred))
+print("recall:", recall_score(y_test, y_pred))
+print("f1 score:", f1_score(y_test, y_pred))
