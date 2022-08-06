@@ -49,3 +49,13 @@ print("Confusion Matrix:  \n" + str(confusion_matrix(y,y_pred)) + "\n") #NOTE:th
             # https://api.sololearn.com/DownloadFile?id=3781 - in this link the is a picture of a overfitting graph 
     # To give the model a fair assessment we need to know how the model performs on new data.
         # the standard ratio of test data to training data is 70-80 : 20-30
+
+    # Using a Random State
+from sklearn.model_selection import train_test_split
+
+A = [[1, 1], [2, 2], [3, 3], [4, 4]]
+b = [0, 0, 1, 1]
+
+A_train, A_test, b_train, b_test = train_test_split(A, b, random_state=27) # train_test-split() outputs are randomly split, random_state is a parameter that determines the random seed for the split.
+print('A_train', A_train)
+print('A_test', A_test)
