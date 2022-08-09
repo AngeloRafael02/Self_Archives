@@ -13,6 +13,7 @@ Languages Currently Documented:
         - Vanilla HTML
         - Vanilla CSS
         - Bootstrap CSS
+        - SCSS
     - Bash
         - Windows CMD Commands
         - Git Commands
@@ -26,6 +27,7 @@ Languages Currently Documented:
         - Object Oriented Programming Python (OOP)
         - Python File Handling
         - Flask Python
+        - Machine Learning: Scikit-Learn
     - Javascript
         - Basic Javascript
             - OOP Javascript
@@ -37,9 +39,11 @@ Languages Currently Documented:
             - NodeJS
                 - ExpressJS
                 - NestJS
+            - TensorFlowJS
         - ES6 
-    - SQL 
+    - Databases 
         - PostgeSQL
+        - MongoDB
 
 Other Documentations
     - Front-end Framework CDNs
