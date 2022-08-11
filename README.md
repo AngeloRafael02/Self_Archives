@@ -47,3 +47,5 @@ Languages Currently Documented:
 
 Other Documentations
     - Front-end Framework CDNs
+    - HTTP Notes
+    - Personal Workspace Environment Notes
