@@ -41,5 +41,24 @@ public class Basics{
         int y = 6;
         y+=x;
         System.out.println(y);
+
+        //String Concatenation
+        String firstName ="Angelo Rafael ";
+        String lastName = "Recio";
+        System.out.println(firstName + lastName);
+
+
+
+        //CONDITIONALS AND LOOPS
+
+        //If-Else: can be Nested
+        if (firstName == "Angelo Rafael ") {
+            System.out.println("nice");
+        }else if(firstName == "Something Else"){
+            System.out.println("still nice");
+        } else {
+            System.out.println("Not Nice");
+        }
+
     }
 }
