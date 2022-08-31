@@ -60,5 +60,28 @@ public class Basics{
             System.out.println("Not Nice");
         }
 
+        //Switch: can be used in multiple numerical value returns
+        int z = 90;
+        switch(z){
+            case 89:
+                System.out.println("A");
+                break;
+            case 90:
+                System.out.println("B");
+                break;
+            case 91:
+                System.out.println("C");
+                break;
+            default:
+                System.out.println("Null");
+        }
+        //ALTERNATE SWITCH SYNTAX: (Switch Expression)
+        int day = 2;
+        String dayType = switch (day) {
+            case 1,2,3,4,5 -> "Working Day";
+            case 6,7 -> "Weekend";
+            default -> "invalid";
+            };
+        System.out.println(dayType);
     }
 }
