@@ -83,5 +83,29 @@ public class Basics{
             default -> "invalid";
             };
         System.out.println(dayType);
+
+        //While Loop
+        int a = 5;
+        while (a != 0) {
+            System.out.println("Hello");
+            if(a == 3){
+                break; //BREAK is used to abruptly end a loop because of a given condition
+            }
+            a--;
+        }
+        //For Loop
+        //Syntax: (initial value, condition, increment/decrement statement)
+        for(int b = 2; b <= 10; b += b){
+            if(b == 4){
+                continue; // CONTINUE is Used to skip a certain condition in a loop
+            }
+            System.out.println(b);
+        }
+        //Do-While Loop: Runs the code once before testing condition for iteration
+        int c  = 1;
+        do{
+            System.out.println(c);
+            c++;
+        }while(c < 5);
     }
 }
