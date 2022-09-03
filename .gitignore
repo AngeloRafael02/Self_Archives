@@ -1,3 +1,4 @@
+
 #Big Libraries
 Python/MachineLearning/sklearn-venv
 Python/MachineLearning/charts
@@ -14,6 +15,8 @@ pieplot.png
 areaplot.png
 scatterplot.png
 areaplotWithLegends.png
+Java/Basics.class
+Java/Arrays.class
 
 # generated directories
 C#/C#Basics/bin/
