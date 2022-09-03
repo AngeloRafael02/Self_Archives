@@ -14,5 +14,18 @@ public class Arrays {
         System.out.println(someNames[0]);
         System.out.println(someNames.length); //use "length" property to sum up the number of values in the array 
 
+        //For Loop an Array
+        int[] myArr = {1,2,3,4,5,6,7,8,9,10,9,8,7,6,5,4,3,2,1};
+        int sum=0;
+        for(int x=0; x<myArr.length; x++) {
+            sum += myArr[x];
+        }
+        System.out.println(sum);
+        //Better Code: Using a foreach loop
+        int[] primes = {2, 3, 5, 7};
+        for (int t: primes) {
+            System.out.println(t); 
+        }
+
     }
 }
