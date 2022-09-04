@@ -27,5 +27,12 @@ public class Arrays {
             System.out.println(t); 
         }
 
+        //Multi-Dimensional Arrays can be made by declaring the variable and it dimension by the number of brackets
+        int[][] multiArray = { {1, 2, 3}, {4, 5, 6} }; //two brackets in the variable declares a two-dimensional Array
+        System.out.println(multiArray[0][2]); 
+        //Alternative initialization syntax
+        int array[][] =  {{3, 5, 8}, {7, 54, 1, 12, 4}}; 
+        System.out.println(array[0][2]);
+
     }
 }
