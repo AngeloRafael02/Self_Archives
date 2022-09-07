@@ -1,5 +1,9 @@
     // Java Class/OOP Notes
     class Animal {
+        String color; //<- these are Attributes, Basically variables declared ina class
+        String name; // Their value can be declared one an object is created, but it's value is null before that
+        int Age;
+
         void bark() {
             System.out.println("Woof-Woof");
         }
@@ -19,5 +23,7 @@ class OOP{
             System.out.println(basicAdder(12, 3));
             Animal dog = new Animal(); // Other classes can be used as ling as it is declared as its own variable.
             dog.bark();
+            dog.name = "Pulong";
+            System.out.println(dog.name + " is the Name of my Dog");
         }
 }
