@@ -3,7 +3,7 @@
 
 	// CMD Basic Commands
 	// iverilog -> keyword used to compile modules into a new separate mudle that can be run.
-		// SYNTAX for compiling froma file: iverilog -o <moduleName> <fileName>
+		// SYNTAX for compiling from a file: iverilog -o <moduleName> <fileName>
 	// vvp -> keyword used to run a compiled module
 		// SYNTAX: vvp <compiledModuleName>
 
