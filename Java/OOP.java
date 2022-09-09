@@ -1,11 +1,13 @@
     // Java Class/OOP Notes
     class Animal {
-        String color; //<- these are Attributes, Basically variables declared ina class
+        String color; //<- these are Attributes, Basically variables declared ina class, public in default
         String name; // Their value can be declared one an object is created, but it's value is null before that
         int Age;
+        private String nickName = "Dick"; //private  is an access modifiers that means that mean that it cannot be used itself outside the class, unless allowed to by means
 
         void bark() {
             System.out.println("Woof-Woof");
+            System.out.println(nickName);
         }
     }
 
