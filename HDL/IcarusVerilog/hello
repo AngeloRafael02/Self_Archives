@@ -7,14 +7,36 @@
 :vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
 :vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
 :vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
-S_0000020cc73f25e0 .scope module, "hello" "hello" 2 1;
+S_00000174c4e02940 .scope module, "hello" "hello" 2 10;
  .timescale 0 0;
-    .scope S_0000020cc73f25e0;
+v00000174c4e02ad0_0 .var "end_time", 63 0;
+v00000174c4e02b70_0 .var/real "floatNumber", 0 0;
+v00000174c4e02c10_0 .var/i "sample", 31 0;
+v00000174c4dede10_0 .var "testString", 32 0;
+    .scope S_00000174c4e02940;
 T_0 ;
-    %vpi_call 2 4 "$display", "Hello, World" {0 0 0};
-    %vpi_call 2 5 "$finish" {0 0 0};
+    %pushi/vec4 1, 0, 32;
+    %store/vec4 v00000174c4e02c10_0, 0, 32;
+    %pushi/real 1685774663, 4067; load=3.14000
+    %pushi/real 2852127, 4045; load=3.14000
+    %add/wr;
+    %store/real v00000174c4e02b70_0;
+    %pushi/vec4 40, 0, 64;
+    %store/vec4 v00000174c4e02ad0_0, 0, 64;
+    %pushi/vec4 1952805748, 0, 33;
+    %store/vec4 v00000174c4dede10_0, 0, 33;
     %end;
     .thread T_0;
+    .scope S_00000174c4e02940;
+T_1 ;
+    %vpi_call 2 21 "$display", "Hello, World" {0 0 0};
+    %vpi_call 2 22 "$display", v00000174c4e02c10_0 {0 0 0};
+    %vpi_call 2 23 "$display", v00000174c4e02b70_0 {0 0 0};
+    %vpi_call 2 24 "$display", v00000174c4e02ad0_0 {0 0 0};
+    %vpi_call 2 25 "$display", v00000174c4dede10_0 {0 0 0};
+    %vpi_call 2 26 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
 # The file index is used to find the file name in the following table.
 :file_names 3;
     "N/A";

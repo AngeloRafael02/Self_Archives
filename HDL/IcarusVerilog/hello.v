@@ -8,17 +8,22 @@
 		// SYNTAX: vvp <compiledModuleName>
 
 module hello;
+  //VARIABLES
+  //Variable Syntax: <Data Type> <VariableName> - <Value>;
+  integer sample = 1; // integer = used to store whole number values\
+  real floatNumber = 3.14; // real used to store floating point values
+  time end_time = 40; //time = used to store simulation time quantities, use "realtime" to store floating poit quantities
+  reg [8*4:0] testString  = "test"; //reg = used to store string values 
+    //reg syntax: reg[byte amount:]
+
   initial 
     begin
       $display("Hello, World");
+      $display(sample);
+      $display(floatNumber);
+      $display(end_time);
+      $display(testString);
       $finish;
     end
 endmodule
 
-module goodbye;
-  initial 
-    begin
-      $display("Goodbye");
-      $finish;
-    end
-endmodule
