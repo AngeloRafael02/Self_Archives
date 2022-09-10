@@ -6778,3 +6778,5 @@ Javascript/TensorFlow.js/node_modules/yargs-parser/build/lib/yargs-parser-types.
 Javascript/TensorFlow.js/node_modules/yargs-parser/build/lib/yargs-parser.js
 Java/OOP.class
 Java/Animal.class
+HDL/IcarusVerilog/testingModule
+HDL/IcarusVerilog/testVerilog.v
