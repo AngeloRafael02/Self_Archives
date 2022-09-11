@@ -9,6 +9,15 @@
             System.out.println("Woof-Woof");
             System.out.println(nickName);
         }
+
+        //SETTER & GETTER - used to effectively protect data when creating classes, used in ENCAPSULATIONS
+        private String Word;
+        public void setWord(String input){ //setter - starts with 'set', takes a parameter and assigns it to the attribute.
+                this.Word = input;
+        }
+        public String getWord(){ //getter = starts with 'get', returns the value of the attribute.
+            return Word;
+        }
     }
 
 class OOP{
@@ -23,9 +32,14 @@ class OOP{
             firstMethod("This String Comes from a methods outside the main method");
             firstMethod("This String Comes from a methods outside the main method again"); // methods can be called as many as you want
             System.out.println(basicAdder(12, 3));
+            
             Animal dog = new Animal(); // Other classes can be used as ling as it is declared as its own variable.
             dog.bark();
             dog.name = "Pulong";
             System.out.println(dog.name + " is the Name of my Dog");
+
+            dog.setWord("Hello");
+            System.out.println(dog.getWord());
+
         }
 }
