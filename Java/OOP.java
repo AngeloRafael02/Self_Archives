@@ -18,6 +18,16 @@
         public String getWord(){ //getter = starts with 'get', returns the value of the attribute.
             return Word;
         }
+
+        //CONSTRUCTORS used to provide initial values for object attributes. Has no return Type. must be the same name as the class
+            //NOTES: a class can have many constructors with different parameters, just use setter methods inside the constructors to set attributes
+        public String ScientificName;
+        public int numberOfLegs;
+        Animal(String Species, int legs) {
+            ScientificName = Species;
+            numberOfLegs = legs;
+            this.setWord(Species); // a setter may be used to set new attribute values
+        }
     }
 
 class OOP{
@@ -33,13 +43,18 @@ class OOP{
             firstMethod("This String Comes from a methods outside the main method again"); // methods can be called as many as you want
             System.out.println(basicAdder(12, 3));
             
-            Animal dog = new Animal(); // Other classes can be used as ling as it is declared as its own variable.
-            dog.bark();
-            dog.name = "Pulong";
-            System.out.println(dog.name + " is the Name of my Dog");
+            //creating a new object using a constructor
+            Animal dinosaur = new Animal("Nigersaurus",4); // Other classes can be used as ling as it is declared as its own variable.
+            dinosaur.bark();
+            dinosaur.name = "Pulong";
+            System.out.println(dinosaur.name + " is the Name of my Dog");
 
-            dog.setWord("Hello");
-            System.out.println(dog.getWord());
+            dinosaur.setWord("Hello");
+            System.out.println(dinosaur.getWord());
+
+            //creating a new object using a constructor
+            Animal pig = new Animal("Sus", 4);
+            System.out.println(pig.ScientificName);
 
         }
 }
