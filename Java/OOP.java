@@ -1,4 +1,5 @@
     // Java Class/OOP Notes
+    
     class Animal {
         String color; //<- these are Attributes, Basically variables declared ina class, public in default
         String name; // Their value can be declared one an object is created, but it's value is null before that
@@ -55,6 +56,16 @@ class OOP{
             //creating a new object using a constructor
             Animal pig = new Animal("Sus", 4);
             System.out.println(pig.ScientificName);
+
+            //MATH Class
+            int num1 = Math.abs(-10); //abs() methods returns the absolute value of the argument
+            System.out.println(num1);
+            double bigNumber = 7.342;
+            System.out.println(Math.ceil(bigNumber)); //ceil() method returns the arguments as rounded up
+            System.out.println(Math.floor(bigNumber));//floor() method returns the arguments as rounded down
+            System.out.println(Math.max(10,20)); //max() returns the bigger value
+            System.out.println(Math.min(10,20)); //min() returns the smaller value
+            System.out.println(Math.pow(10,20)); //pow() returns the power of a the number. Argument(base, exponent)
 
         }
 }
