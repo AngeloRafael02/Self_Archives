@@ -32,6 +32,7 @@
     }
 
 class OOP{
+    //declaring a method "static" means that the method belongs to the class
     static void firstMethod(String sentenceString){ //methods are functions that can be called to the entry point
             //A method is void when it does not return anything
         System.out.println(sentenceString);
@@ -39,6 +40,7 @@ class OOP{
     static int basicAdder(int a, int b){
         return a+b;
     }
+    public static final double PI = 3.14; //final keyword marks a variable constant, can only be assigned once
         public static void main(String[] args){ //<- this is the main entry point of the program
             firstMethod("This String Comes from a methods outside the main method");
             firstMethod("This String Comes from a methods outside the main method again"); // methods can be called as many as you want
@@ -67,5 +69,7 @@ class OOP{
             System.out.println(Math.min(10,20)); //min() returns the smaller value
             System.out.println(Math.pow(10,20)); //pow() returns the power of a the number. Argument(base, exponent)
 
+
+            System.out.println(PI);
         }
 }
