@@ -1,5 +1,7 @@
     // Java Class/OOP Notes
     
+    import Packages.Dinosaurs;
+
     class Animal {
         String color; //<- these are Attributes, Basically variables declared ina class, public in default
         String name; // Their value can be declared one an object is created, but it's value is null before that
@@ -69,7 +71,10 @@ class OOP{
             System.out.println(Math.min(10,20)); //min() returns the smaller value
             System.out.println(Math.pow(10,20)); //pow() returns the power of a the number. Argument(base, exponent)
 
-
             System.out.println(PI);
+            
+            //this is how you initialize class from other packages
+            Dinosaurs TRex = new Dinosaurs();
+            System.out.println(TRex.fromDinosaurs());
         }
 }
