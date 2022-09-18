@@ -9,10 +9,25 @@ class Animal {
     public void eat() {
         System.out.println("Animal eats");
     }
+    public void makeSound(){
+        System.out.println("Grrrr");
+    }
 }
+/*
+ * Polymorphism, which refers to the idea of "having many forms", occurs when there is a 
+ * hierarchy of classes related to each other through inheritance. TLDR: one method, many different implementations
+ */
 class Dog extends Animal {
     Dog() {
         legs = 4;
+    }
+    public void makeSound(){
+        System.out.println("Woof!");
+    }
+}
+class Cat extends Animal {
+    public void makeSound(){
+        System.out.println("Meow!");
     }
 }
 
@@ -36,5 +51,10 @@ public class OOP2{
 
         Dog d = new Dog();
         d.eat();
+
+        Animal a = new Dog();
+        Animal b = new Cat();
+        a.makeSound();
+        b.makeSound();
     }
 }
