@@ -1,3 +1,5 @@
+
+
 //FURTHER NOTES ON CLASSES
 
 /* INHERITANCE is the process that enables one class to acquire the properties (methods and variables) of another.
@@ -26,9 +28,18 @@ class Dog extends Animal {
     }
 }
 class Cat extends Animal {
+    //OVERRIDING: When a subclass defines the behavior of the parents methods with new expressions
     public void makeSound(){
         System.out.println("Meow!");
     }
+    // 
+    /*Rules for Overriding:
+     * Should have the same return type and arguments
+     * The access level cannot be more restrictive than the overridden method's access level 
+     * A method declared final or static cannot be overridden
+     * If a method cannot be inherited, it cannot be overridden
+     * Constructors cannot be overridden
+     */
 }
 
 public class OOP2{
@@ -43,6 +54,14 @@ public class OOP2{
             
         }
         return balance;
+    }
+
+    // OVERLOADING: When methods have the same name, but different parameters. Here, we overload the adds method to work with other data types
+    int adds(int a, int b){
+        return a + b;
+    }
+    double adds(double a, double b){
+        return a + b;
     }
 
     public static void main(String[] args){
