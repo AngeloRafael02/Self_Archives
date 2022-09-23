@@ -6,17 +6,19 @@
  * With inheritance, the information is placed in a more manageable, hierarchical order.
  * NOTES: Private Methods cannot be inherited
  */
-class Animal {
+abstract class Animal {
     protected int legs;
     public void eat() {
         System.out.println("Animal eats");
     }
-    public void makeSound(){
-        System.out.println("Grrrr");
-    }
+    abstract void makeSound(); //this method is declared but its implementation is not, thanks to abstraction
+    /* ABSTRACTION - provides the outside world with only essential information, 
+     * in a process of representing essential features without including implementation details.
+     * In this example the abstract method only tells its return type but the bock of code inside can be changed according to the child class
+     */
 }
 /*
- * Polymorphism, which refers to the idea of "having many forms", occurs when there is a 
+ * POLYMORPHISM, which refers to the idea of "having many forms", occurs when there is a 
  * hierarchy of classes related to each other through inheritance. TLDR: one method, many different implementations
  */
 class Dog extends Animal {
