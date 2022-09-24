@@ -17,10 +17,24 @@ abstract class Animal {
      * In this example the abstract method only tells its return type but the bock of code inside can be changed according to the child class
      */
 }
+interface fish{
+    /* INTERFACE - completely abstract classes contain abstract methods
+     * Cannot contain constructor. Can extends other interfaces. numerous interface can  e implemented in a class
+     */
+    public void speak();
+}
 /*
  * POLYMORPHISM, which refers to the idea of "having many forms", occurs when there is a 
  * hierarchy of classes related to each other through inheritance. TLDR: one method, many different implementations
  */
+class Tuna extends Animal implements fish{
+    public void speak(){
+        System.out.println("bblblblbllbbllblblb");
+    }
+    void makeSound() {
+        System.out.println("I said I can't talk!");
+    }
+}
 class Dog extends Animal {
     Dog() {
         legs = 4;
@@ -43,6 +57,8 @@ class Cat extends Animal {
      * Constructors cannot be overridden
      */
 }
+
+
 
 public class OOP2{
     /*ENCAPSULATION
@@ -77,5 +93,8 @@ public class OOP2{
         Animal b = new Cat();
         a.makeSound();
         b.makeSound();
+
+        Tuna BlackFin = new Tuna();
+        BlackFin.speak();
     }
 }
