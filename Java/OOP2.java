@@ -75,10 +75,10 @@ public class OOP2{
     }
 
     // OVERLOADING: When methods have the same name, but different parameters. Here, we overload the adds method to work with other data types
-    int adds(int a, int b){
+    static int adds(int a, int b){
         return a + b;
     }
-    double adds(double a, double b){
+    static double adds(double a, double b){
         return a + b;
     }
 
@@ -93,6 +93,10 @@ public class OOP2{
         Animal b = new Cat();
         a.makeSound();
         b.makeSound();
+
+        // TYPE CASTING: Assigning a value of one type to a variable of another type 
+        float sound = (float) adds(2, 8);
+        System.out.println(sound);
 
         Tuna BlackFin = new Tuna();
         BlackFin.speak();
