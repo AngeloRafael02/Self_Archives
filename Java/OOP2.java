@@ -11,6 +11,7 @@ abstract class Animal {
     public void eat() {
         System.out.println("Animal eats");
     }
+
     abstract void makeSound(); //this method is declared but its implementation is not, thanks to abstraction
     /* ABSTRACTION - provides the outside world with only essential information, 
      * in a process of representing essential features without including implementation details.
@@ -94,9 +95,12 @@ public class OOP2{
         a.makeSound();
         b.makeSound();
 
+
         // TYPE CASTING: Assigning a value of one type to a variable of another type 
-        float sound = (float) adds(2, 8);
-        System.out.println(sound);
+        float floatedInt = (float) adds(2, 8);
+        int intedFloat = (int) adds(3.20, 3.20);
+        System.out.println(floatedInt);
+        System.out.println(intedFloat);
 
         Tuna BlackFin = new Tuna();
         BlackFin.speak();
