@@ -59,7 +59,18 @@ class Cat extends Animal {
      */
 }
 
-
+class Parent{
+    String name;
+    void method(){
+        System.out.println("Method from Parent");
+    }
+}
+class Child extends Parent{
+    int id;
+    void method(){
+        System.out.println("Method from Child");
+    }
+}
 
 public class OOP2{
     /*ENCAPSULATION
@@ -95,7 +106,6 @@ public class OOP2{
         a.makeSound();
         b.makeSound();
 
-
         // TYPE CASTING: Assigning a value of one type to a variable of another type 
         float floatedInt = (float) adds(2, 8);
         int intedFloat = (int) adds(3.20, 3.20);
@@ -104,5 +114,19 @@ public class OOP2{
 
         Tuna BlackFin = new Tuna();
         BlackFin.speak();
+
+        // UP CASTING: typecasting a child object to a parent object
+        Parent p  = new Child();
+        p.name = "Angelo";
+        System.out.println(p.name);
+        p.method();
+
+        // DOWN CASTING:  typecasting a parent object to a child object
+        Child c = (Child)p;
+        c.id = 1;
+        System.out.println(c.name);
+        System.out.println(c.id);
+        c.method();
+
     }
 }
