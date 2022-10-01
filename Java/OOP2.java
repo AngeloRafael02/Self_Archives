@@ -102,7 +102,12 @@ public class OOP2{
         d.eat();
 
         Animal a = new Dog();
-        Animal b = new Cat();
+        Animal b = new Cat(){
+            //OVERRIDE: used to change the methods of an object without changing the class itself
+            @Override public void makeSound(){
+                System.out.println("The MakeSound method has been overridden");
+            }
+        };
         a.makeSound();
         b.makeSound();
 
