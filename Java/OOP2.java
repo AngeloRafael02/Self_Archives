@@ -60,7 +60,18 @@ class Cat extends Animal {
 }
 
 class Parent{
+    void useBrain(String Thought){
+        Brain brainCell = new Brain();
+        brainCell.think(Thought);
+    }
+    private class Brain {
+        //NESTED CLASS - Java supports nested classes that can be instantiated through parent methods and other methods.
+        public void think(String idea) {
+            System.out.println("Thinking about " + idea);
+        }
+    }
     String name;
+
     void method(){
         System.out.println("Method from Parent");
     }
@@ -133,5 +144,7 @@ public class OOP2{
         System.out.println(c.id);
         c.method();
 
+        Parent Dad = new Parent();
+        Dad.useBrain("Beer");
     }
 }
