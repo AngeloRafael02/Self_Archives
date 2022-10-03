@@ -60,6 +60,7 @@ class Cat extends Animal {
 }
 
 class Parent{
+
     void useBrain(String Thought){
         Brain brainCell = new Brain();
         brainCell.think(Thought);
@@ -146,5 +147,10 @@ public class OOP2{
 
         Parent Dad = new Parent();
         Dad.useBrain("Beer");
+
+        Parent Mom = new Parent();
+        Parent Mom2 = new Parent();
+        // equals() - used to compare two objects;
+        System.out.println(Mom2.equals(Mom));
     }
 }
