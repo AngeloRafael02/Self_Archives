@@ -105,6 +105,12 @@ public class OOP2{
     static double adds(double a, double b){
         return a + b;
     }
+    //ENUMS - special type used to define a series of constants
+    enum Jobs{
+        SOLDIER,
+        SALESMAN,
+        FARMER
+    }
 
     public static void main(String[] args){
         System.out.print(balance);
@@ -152,5 +158,20 @@ public class OOP2{
         Parent Mom2 = new Parent();
         // equals() - used to compare two objects;
         System.out.println(Mom2.equals(Mom));
+
+        Jobs job1 = Jobs.SALESMAN;
+        switch(job1){
+            case SOLDIER:
+                System.out.println("Security"); 
+                break;
+            case FARMER:
+                System.out.println("Agriculture"); 
+                break;
+            case SALESMAN:
+                System.out.println("Business"); 
+                break;
+            default:
+                System.out.println(("What"));
+        }
     }
 }
