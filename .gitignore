@@ -6786,3 +6786,6 @@ Java/Child.class
 Java/OOP2.class
 Java/Others.class
 Java/javaSwing.class
+Java/Threads.class
+.gitignore
+Java/Loader.class
