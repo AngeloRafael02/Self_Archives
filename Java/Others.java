@@ -14,6 +14,7 @@ public class Others {
     }
     public static void main(String[] args){
         //EXCEPTION HANDLING - Exceptions can be caught using the try-catch block
+        // Exception types: checked(checked when compiling), unchecked(checked on runtime)
         try { 
             //try - this is where the actual code is placed
             int a[] = new int[2];
