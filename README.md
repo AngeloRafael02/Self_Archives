@@ -28,6 +28,10 @@ Languages Currently Documented:
         - Python File Handling
         - Flask Python
         - Machine Learning: Scikit-Learn
+    - Java 
+        - Basic Java
+        - OOP
+        - Jav Swing
     - Javascript
         - Basic Javascript
             - OOP Javascript
@@ -44,6 +48,8 @@ Languages Currently Documented:
     - Databases 
         - PostgeSQL
         - MongoDB
+    - HDL
+        - Verilog
 
 Other Documentations
     - Front-end Framework CDNs
