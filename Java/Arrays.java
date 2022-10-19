@@ -1,3 +1,7 @@
+
+//ArrayList - one o the many classes used to store and manipulate groups of objects
+import java.util.ArrayList;
+
 public class Arrays {
     public static void main(String[] args){
         //Array, a collection of variables of the same type
@@ -33,6 +37,20 @@ public class Arrays {
         //Alternative initialization syntax
         int array[][] =  {{3, 5, 8}, {7, 54, 1, 12, 4}}; 
         System.out.println(array[0][2]);
+
+        //Calling an ArrayList: 
+            //put inside the "<>" what data type to store in the ArrayList,"any" type when not declared
+            //put inside the "()" how many should be stored in the ArrayList, limitless when not declared
+        ArrayList colors = new ArrayList<>();
+        colors.add("Red"); //add() - method used to add into ArrayList
+        colors.add(1);
+        colors.add("Blue");
+        colors.remove("Blue"); //remove() - method used to remove from ArrayList
+        System.out.println(colors);
+        System.out.println(colors.get(0)); // get() - method used to return a specific element via calling its index
+        System.out.println(colors.contains("Red")); // contains() - used to prove if a specific input is in the element
+        System.out.println(colors.size()); // size() - used to return the number of items in the array
+
 
     }
 }
