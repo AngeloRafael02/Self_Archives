@@ -1,6 +1,8 @@
 
 //ArrayList - one o the many classes used to store and manipulate groups of objects
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.HashMap;
 
 public class Arrays {
     public static void main(String[] args){
@@ -39,6 +41,7 @@ public class Arrays {
         System.out.println(array[0][2]);
 
         //Calling an ArrayList: 
+            //used better for STORING and ACCESSING data
             //put inside the "<>" what data type to store in the ArrayList,"any" type when not declared
             //put inside the "()" how many should be stored in the ArrayList, limitless when not declared
         ArrayList colors = new ArrayList<>();
@@ -50,6 +53,30 @@ public class Arrays {
         System.out.println(colors.get(0)); // get() - method used to return a specific element via calling its index
         System.out.println(colors.contains("Red")); // contains() - used to prove if a specific input is in the element
         System.out.println(colors.size()); // size() - used to return the number of items in the array
+
+        //Calling a LinkedList: 
+            //used better for MANIPULATING DATA, like numerous inserts and deletes
+            //put inside the "<>" what data type to store in the ArrayList,"any" type when not declared
+            //you cannot specify the initial capacity in a LinkedList
+        LinkedList fishes = new LinkedList<>(); 
+        fishes.add("nemo");
+        fishes.add(89);
+        fishes.add("dori");
+        fishes.remove("dori");
+        System.out.println(fishes);
+        System.out.println(fishes.get(0));
+        System.out.println(fishes.contains("nemo"));
+        System.out.println(fishes.size());
+
+        //HashMap is used for storing data collections as key and value pairs.
+        HashMap<String,Integer> dict = new HashMap<>();
+        dict.put("One", 1); //put() - to insert data
+        dict.put("Two", 2);
+        dict.put("Three",3);
+        System.out.println(dict);
+        System.out.println(dict.get("One")); //get() - to get a certain data
+        System.out.println(dict.containsKey("One")); //containsKey() -  return true is a key exists in the HashMap
+        System.out.println(dict.containsValue(1)); //containsValue() -  return true is a Value exists in the HashMap
 
 
     }
