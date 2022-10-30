@@ -3,6 +3,8 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 public class Arrays {
     public static void main(String[] args){
@@ -77,6 +79,22 @@ public class Arrays {
         System.out.println(dict.get("One")); //get() - to get a certain data
         System.out.println(dict.containsKey("One")); //containsKey() -  return true is a key exists in the HashMap
         System.out.println(dict.containsValue(1)); //containsValue() -  return true is a Value exists in the HashMap
+        
+        // Sets - Collection of Distinct Values 
+        // a HashSet can be used to Implement Sets (Does not retain Order)
+        HashSet<String> set1 = new HashSet<String>();
+        set1.add("A");
+        set1.add("B");
+        set1.add("C");
+        System.out.println(set1);
+        System.out.println(set1.size());
+        // LinkedHashSet - retains order
+        LinkedHashSet<String> set2 = new LinkedHashSet<String>();
+        set2.add("A");
+        set2.add("B");
+        set2.add("C");
+        System.out.println(set2);
+
 
 
     }
