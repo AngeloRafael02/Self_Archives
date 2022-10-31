@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.Collections;
 
 public class Arrays {
     public static void main(String[] args){
@@ -55,6 +56,14 @@ public class Arrays {
         System.out.println(colors.get(0)); // get() - method used to return a specific element via calling its index
         System.out.println(colors.contains("Red")); // contains() - used to prove if a specific input is in the element
         System.out.println(colors.size()); // size() - used to return the number of items in the array
+
+        ArrayList Animals = new ArrayList<>();
+        Animals.add("Dog");
+        Animals.add("Cat");
+        Animals.add("Aardvark");
+        Animals.add("Goldfish");
+        Collections.sort(Animals); //Collections.sort() - used to arrange ArrayList Elements
+        System.out.print(Animals);
 
         //Calling a LinkedList: 
             //used better for MANIPULATING DATA, like numerous inserts and deletes
