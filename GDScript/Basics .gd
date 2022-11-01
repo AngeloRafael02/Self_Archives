@@ -1,15 +1,15 @@
-  # DGScript Basics
+  # GDScript Basics
   # By: Angelo Rafael F. Recio
 
-    # DGScript - Similar to Python with some typescript influences
+    # GDScript - Similar to Python with some typescript influences
 
-    #Variables
-export var age:int = 21;
+    #Variables (Scalar )
+export var age:int = 21; # int range - -9223372036854775808 to 9223372036854775808
 const NAME = "Angelo";
 var arr:int[] = [1,2,3,4];
 var dictionary = {a:1, b:2}
 var typed_var: int;
-var inferred_type: = "String"
+var inferred_type: = "String" #type is inferred according to given value
 
     #Enums
 enum {UNIT_NEUTRAL, UNIT_ENEMY, UNIT_ALLY}
@@ -24,9 +24,9 @@ func functionOne(pamam1,param2):
   var local_var  = 5
   
   # If-Elif-Else syntax
-  if param1 < loval_var:
+  if param1 < local_var:
     print(param1)
-  elif param2 > loval_var++:
+  elif param2 > local_var++:
     print(param2)
   else 
     print("???")
