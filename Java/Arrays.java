@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Collections;
+import java.util.Iterator;
 
 public class Arrays {
     public static void main(String[] args){
@@ -103,6 +104,20 @@ public class Arrays {
         set2.add("B");
         set2.add("C");
         System.out.println(set2);
+
+        //Iterators - used in loops, at each iteration of the loop you can access the corresponding list element
+        LinkedList<String> listSample = new LinkedList<String>();
+        listSample.add("Hi");
+        listSample.add("Does");
+        listSample.add("This");
+        listSample.add("Work?");
+        System.out.println(listSample);
+        Iterator<String> it = listSample.iterator();
+        while(it.hasNext()){
+            String value = it.next();
+            System.out.println(value);
+        }
+
 
 
 
