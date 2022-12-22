@@ -1,6 +1,8 @@
 package fileHandling;
 import java.io.File;
 import java.util.Scanner;
+import java.util.Formatter; //Used to Create and Read on files
+
 public class fileHandling {
     public static void main(String[] args) {
         try {
@@ -16,8 +18,9 @@ public class fileHandling {
               }
             sc.close();
         }
-        } catch (Exception e) { //Cathc can be used incase the file does not Exist
+        } catch (Exception e) { //Catch can be used incase the file does not Exist
             System.out.println(e);
         
     }
+}
 }
