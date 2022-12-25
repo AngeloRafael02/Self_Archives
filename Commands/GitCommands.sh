@@ -67,6 +67,10 @@ git push origin HEAD:master --force-with-lease # will avoid pushing code if it w
     #ALIAS = make shortcuts of git commands and store them in the config file
 git config --global alias.ac "commit -am" # makes a shortcut ("git ac" is now the shortcut command got "git commit am")
 
+    #Safety percaustion before a GIT PULL
+git gc --prune=now # Cleanup unnecessary files and optimize the local repository
+git remote prune origin # manage set of tracked repositories
+
     #.gitignore - file that can say what files should not be tracked by git
     #to add files, put the name of the file insid ethe .gitignore including file type.: temp.py
     #to add directories, input the name of the directory then put a "/" afterwards: subfolder/
