@@ -40,3 +40,7 @@ TCP    [::]:3000              [::]:0                 LISTENING       5468
 taskkill /PID 5468 /F
    :: This output will emerge
 SUCCESS: The process with PID 5468 has been terminated. 
+
+      ::ADMIN COMMANDS
+      ::sfc /scannow  - system scan used to verify  and find any integrity violations
+sfc /scannow 
