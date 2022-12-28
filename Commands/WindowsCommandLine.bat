@@ -5,11 +5,14 @@
    ::NOTE: some information/tasks are for the administrator only
    :: to run with adminsitrator priviledges run CMD as Administrator (type CMD, then ctrl+shift+Enter)
 
-help ::displays a list of main command lines
-help <command> :: displays the commands functions and some documentations
-<command> /? :: alternative syntax
-
-cls ::Clearscreen
+   ::help - displays a list of main command lines
+help 
+   :: displays the commands functions and some documentations
+help <command> 
+   :: alternative syntax
+<command> /? 
+   ::Clearscreen
+cls 
 systeminfo ::list system info
 
 cd filename or fileaddress ::change directory, you can use absolute and relative paths
