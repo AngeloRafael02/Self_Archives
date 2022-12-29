@@ -38,3 +38,11 @@ mv <fileName> <AbsolutePath>/<newFileName> # move file and rename file
 head <filename> # read first 10 lines of a file
 head -<number> <fileName> #read first lines depending on number
 tail <fileName> # read the last 10 lines of a file
+    # concatinate files
+cat <filename> <filename2> ... # prints and concatinates all contents of file
+cat <filename> <filename2> ... > <newFile> # prints and concatinates all contents of file then extracts it into a new file
+cat > <newFile> #Create file and add test to it (press ctrl + d to quit)
+cat <filename> > <filename2> #copy and rename a file
+
+more <filename> 
+less <filename> # more and less commands help you navigate in big files

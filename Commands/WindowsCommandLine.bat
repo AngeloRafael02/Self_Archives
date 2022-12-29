@@ -5,11 +5,14 @@
    ::NOTE: some information/tasks are for the administrator only
    :: to run with adminsitrator priviledges run CMD as Administrator (type CMD, then ctrl+shift+Enter)
 
-help ::displays a list of main command lines
-help <command> :: displays the commands functions and some documentations
-<command> /? :: alternative syntax
-
-cls ::Clearscreen
+   ::help - displays a list of main command lines
+help 
+   :: displays the commands functions and some documentations
+help <command> 
+   :: alternative syntax
+<command> /? 
+   ::Clearscreen
+cls 
 systeminfo ::list system info
 
 cd filename or fileaddress ::change directory, you can use absolute and relative paths
@@ -40,3 +43,7 @@ TCP    [::]:3000              [::]:0                 LISTENING       5468
 taskkill /PID 5468 /F
    :: This output will emerge
 SUCCESS: The process with PID 5468 has been terminated. 
+
+      ::ADMIN COMMANDS
+      ::sfc /scannow  - system scan used to verify  and find any integrity violations
+sfc /scannow 
