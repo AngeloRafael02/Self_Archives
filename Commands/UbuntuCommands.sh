@@ -46,3 +46,13 @@ cat <filename> > <filename2> #copy and rename a file
 
 more <filename> 
 less <filename> # more and less commands help you navigate in big files
+
+cal #displays calendar
+
+    # WAYS TO SYSTEM SHUTDOWN
+halt        #Brings the system down immediately
+init 0      #Powers off the system using predefined scripts to synchronize and clean up the system prior to shutting down
+init 6      #Reboots the system by shutting it down completely and then restarting it
+poweroff    #Shuts down the system by powering off
+reboot      #Reboots the system	
+shutdown    #Shuts down the system
