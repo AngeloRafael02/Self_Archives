@@ -1,6 +1,8 @@
+#! /bin/sh
     #Ubuntu Notes
 
-man <comman> #manual command, shoes the purpose of a certain command
+sudo <command> #SuperUsedDO, prefix command, elevates a command to admin priviliedges
+man <command> #manual command, shoes the purpose of a certain command
     #DIRECTORY HANDLING
     #ChangeDirectory
 cd #puts you in your home directory
@@ -48,6 +50,10 @@ more <filename>
 less <filename> # more and less commands help you navigate in big files
 
 cal #displays calendar
+
+    # NETWORK
+ifconfig # old way of chowing network details
+ip a # show / manipulate routing, network devices, interfaces and tunnels
 
     # WAYS TO SYSTEM SHUTDOWN
 halt        #Brings the system down immediately
