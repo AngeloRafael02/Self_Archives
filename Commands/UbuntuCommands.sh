@@ -2,6 +2,10 @@
     #Ubuntu Notes
 
 sudo <command> #SuperUsedDO, prefix command, elevates a command to admin priviliedges
+sudo apt update #Checks for updates on packages
+sudo apt upgrade -y # Upgrades the packages, -y flag => yes to all prompts
+sudo systemctl status <packageName> # Checks if a packafe is running
+
 man <command> #manual command, shoes the purpose of a certain command
     #DIRECTORY HANDLING
     #ChangeDirectory
