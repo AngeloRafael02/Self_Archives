@@ -6,7 +6,12 @@ sudo apt update #Checks for updates on packages
 sudo apt upgrade -y # Upgrades the packages, -y flag => yes to all prompts
 sudo systemctl status <packageName> # Checks if a packafe is running
 
-man <command> #manual command, shoes the purpose of a certain command
+    #INFO DISPLAY
+uname -r # Displays Kernel Version
+df -f # Displays disk usage
+cat /proc/meminfo # Displays memory info
+timedatectl status # Displays Time
+man <command> #manual command, shows the purpose of a certain command
     #DIRECTORY HANDLING
     #ChangeDirectory
 cd #puts you in your home directory
