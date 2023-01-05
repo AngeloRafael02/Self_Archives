@@ -10,13 +10,17 @@ sudo systemctl status <packageName> # Checks if a packafe is running
 uname -r # Displays Kernel Version
 df -f # Displays disk usage
 cat /proc/meminfo # Displays memory info
+cat /etc/shells # Displays supported shell types
+echo <option> <string> # outouts desired text
 timedatectl status # Displays Time
 man <command> #manual command, shows the purpose of a certain command
+
     #DIRECTORY HANDLING
     #ChangeDirectory
 cd #puts you in your home directory
 cd <path> #puts you in a specific directory, can be absolutre or relative
 cd .. #puts you in the current directory's parent directory
+
     #Directory Contents
 dir #shows current directory name
 ls #shows current directory contents
