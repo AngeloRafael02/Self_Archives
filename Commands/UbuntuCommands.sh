@@ -16,6 +16,11 @@ timedatectl status # Displays Time
 man <command> #manual command, shows the purpose of a certain command
 
     #DIRECTORY HANDLING
+    #Change Permission (Also applies with files)
+chmod <class><operator><permission> <fileName>
+	# WHERE: Class -> u-user, g=group o=other, a=all
+	#	 operator -> + = add permission, - = remove permission
+	#	 permission -> r=read, w=write, x=exrcute/run
     #ChangeDirectory
 cd #puts you in your home directory
 cd <path> #puts you in a specific directory, can be absolutre or relative
