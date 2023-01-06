@@ -47,6 +47,7 @@ git commit --amend --no-edit # add files to the commit and uses the previous com
 
     #REVERT
 git revert 59e174f #revert recent commits
+git revert --staged <fileName/s> # revert git add
 
     #LOG
 git log #list the recent commits
