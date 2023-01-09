@@ -1,5 +1,5 @@
 #! /bin/sh
-    #Ubuntu Notes
+    #Bash Scripting Notes
 
 sudo <command> #SuperUsedDO, prefix command, elevates a command to admin priviliedges
 sudo apt update #Checks for updates on packages
