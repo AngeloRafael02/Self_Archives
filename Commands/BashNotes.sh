@@ -9,3 +9,21 @@ echo "File Name = "$0
 echo "User = "$USER
 echo "Hostname = "$HOSTNAME
 echo "First Argument/Input = "$1  #Arguments/Inputs are reserved for number variables ($1,$2,$3,...)
+	# Script Input (Use read to take inputs and store them as variables while a script is ongoing)
+echo "Enter First Input:"
+read first_Input 
+echo "First Input: "$first_Input
+		#NOTE: You can take the input and not store it in a custom variable, just use the REPLY variable)
+echo "Enter Second Input: "
+read
+echo  "Second Input: "$REPLY
+		# Uding the PROMPT by uding thr -p command line
+read -p "Enter Third Input: "  third_Input
+echo  "Third Input: "$third_Input
+                # add -s flag to hide input
+read -sp "Enter Fourth Hidden Input: " fourth_Input
+echo  "Fourth Input: "$fourth_Input
+		# add -a flag to to read multiple inputs using an array
+echo "Enter Multiple Inputs"
+read -a fifth_Input
+echo  "Fifth Input: ${fifth_Input[1]}"
