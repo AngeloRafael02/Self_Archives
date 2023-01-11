@@ -18,8 +18,8 @@
 git --verion #prints git version
 
 git init # initialize git in a repository/directory
+
     #CONFIG
-    
 git config --help # list all manuals of git (space for scroll down, q for quit)
 git config -h # shows short summary of manual of git
 git config --list #list all settings of git
@@ -35,8 +35,11 @@ git config --global core.autocrlf true/input #configures end of line characters 
 git status #show untracked and files not committed.
 git status -s #short status
 
+git diff <file> #show differences in changes in the terminal
+
     #ADD
 git add <file> #add certain untracked files into the staging areas
+git add -p <file> #add a certain chunk of a file only on the staging area
 git add . #add all untracked files into the staging area  
 
     #COMMIT
