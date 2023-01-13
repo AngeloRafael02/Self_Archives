@@ -15,7 +15,7 @@
         #Linux and MacOS uses LF only
             #this means that core.autocrlf = input
 
-git --verion #prints git version
+git --version #prints git version
 
 git init # initialize git in a repository/directory
 
