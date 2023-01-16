@@ -93,3 +93,6 @@ init 6      #Reboots the system by shutting it down completely and then restarti
 poweroff    #Shuts down the system by powering off
 reboot      #Reboots the system	
 shutdown    #Shuts down the system
+
+    # OTHER STUFF
+sudo -i -u postgres && psql #switch to postgres acc then ise psql
