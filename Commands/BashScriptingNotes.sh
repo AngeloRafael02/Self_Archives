@@ -7,13 +7,29 @@ sudo apt upgrade -y # Upgrades the packages, -y flag => yes to all prompts
 sudo systemctl status <packageName> # Checks if a packafe is running
 
     #INFO DISPLAY
-uname -r # Displays Kernel Version
-df -f # Displays disk usage
-cat /proc/meminfo # Displays memory info
-cat /etc/shells # Displays supported shell types
-echo <option> <string> # outouts desired text
-timedatectl status # Displays Time
 man <command> #manual command, shows the purpose of a certain command
+uname #Displays Kernel
+uname -r # Displays Kernel Version
+uname -a # Displays all Kernel Information
+df # Displays disk usage in blocks
+df -h # Displays disk usage in megabyte/gigabyte
+free # Prints amount of free and used memory in blocks
+free -m # Prints amount of free and used memory in Megabytes
+cat /proc/meminfo # Displays detailed memory info
+cat /etc/shells # Displays supported shell types
+lsb_release -a # Display all LSB Information
+lspci # Lists all PCI buses and devices connected to it
+lsusb # Lists all USB devices
+lshw  # Lists all Computer Hardware
+top # Displays System information such as Memory and CPU Usade
+timedatectl status # Displays Time
+ps # Display all processes currently running
+echo <option> <string> # outputs desired text
+
+    # NETWORK
+ifconfig # old way of showing network details
+iwconfig # Display wireless network information
+ip a # show / manipulate routing, network devices, interfaces and tunnels
 
     #DIRECTORY HANDLING
     #Change Permission (Also applies with files)
@@ -69,9 +85,6 @@ less <filename> # more and less commands help you navigate in big files
 
 cal #displays calendar
 
-    # NETWORK
-ifconfig # old way of chowing network details
-ip a # show / manipulate routing, network devices, interfaces and tunnels
 
     # WAYS TO SYSTEM SHUTDOWN
 halt        #Brings the system down immediately
