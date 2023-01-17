@@ -15,7 +15,8 @@ Languages Currently Documented:
         - Bootstrap CSS
         - SCSS
     - Bash
-        - Windows CMD Commands
+        - Batch Commands
+        - Bash Commands
         - Git Commands
     - C#
         - Basic C#
@@ -31,6 +32,9 @@ Languages Currently Documented:
     - Java 
         - Basic Java
         - OOP
+        - Java File Handling
+        - Java Arrays
+        - java AWT
         - Jav Swing
     - Javascript
         - Basic Javascript
@@ -45,6 +49,7 @@ Languages Currently Documented:
                 - NestJS
             - TensorFlowJS
         - ES6 
+    - GDScript
     - Databases 
         - PostgeSQL
         - MongoDB
