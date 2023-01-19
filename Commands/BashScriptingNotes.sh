@@ -66,7 +66,7 @@ rm -rf <folderName> # RM removing directory
     # copy and paste
 cp <fileName> <newFileCopyName> # copy and paste into same directory
 cp <filename> <AbsolutePath> # copy File into a new location/directory
-cp -r <directory> <newDirectoryName> copy #and paste directory at the same location with its contents
+cp -r <directory> <newDirectoryName> #copy and paste directory at the same location with its contents
     # move and rename file
 mv <fileName> <newFileName> #rename file (works on directories as well)
 mv <fileName> <AbsolutePath>/<newFileName> # move file and rename file
