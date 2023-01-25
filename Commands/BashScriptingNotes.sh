@@ -4,7 +4,7 @@
 sudo <command> #SuperUsedDO, prefix command, elevates a command to admin priviliedges
 sudo apt update #Checks for updates on packages
 sudo apt upgrade -y # Upgrades the packages, -y flag => yes to all prompts
-sudo systemctl status <packageName> # Checks if a packafe is running
+sudo systemctl status <packageName> # Checks if a package is running
 
     #INFO DISPLAY
 man <command> #manual command, shows the purpose of a certain command
@@ -54,7 +54,7 @@ clear # clears the terminal
 mkdir folder0 # MAKE DIRECTORY - create a folder
 mkdir -p folder1/folder2/folder3/.... # make nested directories
     # remove directory
-rmdir folder0 # remove EPMTY directory
+rmdir folder0 # remove EMPTY directory
 rmdir -p folder1/folder2/folder3/.... # remove specified nested directories
     # create file
 touch file1.txt file2.txt ... # create one or more files
