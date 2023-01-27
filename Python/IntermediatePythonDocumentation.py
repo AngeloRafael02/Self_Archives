@@ -36,7 +36,7 @@ print(nums.get(8)) #prints "none" of no keys were found
 
 def some_func():
     #print ("HI") 
-        #since no return statement was delcared a none object will print 
+        #since no return statement was declared a none object will print 
     var = some_func() # if called to print, only returns the "return" value
 #print(var) # prints all that can be printed even the lack of a return value 
 
@@ -46,7 +46,7 @@ def some_func():
     #terms: parameters-variables of the function definition, arguments-values put into parameters
 def add(a,b): #<- can have default values. Example: def add(a = 15,b = 4):
     c = a + b
-    return c #return: returns a valuethat can be used later
+    return c #return: returns a value that can be used later
     #function can have parameters/arguments if needed
     #function can be called + print in two ways:
 def subtract(a,b):
@@ -59,7 +59,7 @@ def multiply(a,b):
     return c
 display = multiply(10,5)
 #print(display)
-    #NOTE: variable insied functions cannot be called outside of the block
+    #NOTE: variable inside functions cannot be called outside of the block
 
     # Functions can be objects
 minus = subtract
@@ -116,7 +116,7 @@ libraries = {
 #f.write("This has been added to the file.")
 #f.close() #closing file after a write deletes all content from current file, making a new one according to the new write
         #READ
-#f = open("Python/subfolder/filename.txt", "r") # r means read mode, for reading contents of a file, also the deafult mode
+#f = open("Python/subfolder/filename.txt", "r") # r means read mode, for reading contents of a file, also the default mode
 #print(f.read()) #print the read file, read()reads the file, you car read certain bytes of the file by giving numbers as arguments in the read()
 #print(f.readlines()) #readlines() - return a list which each element is a line in the file
 #for line in f: # use for loop to iterate through lines in the file

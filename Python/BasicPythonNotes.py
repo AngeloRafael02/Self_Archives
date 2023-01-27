@@ -5,11 +5,11 @@
     #import math # module that provides mathematical function defined by the C standard
 
     #STRING: immutable
-    # quote marks/apostrophes can be used  with backslash at the start
+    # quote marks/apostrophes can be used with backslash at the start
 
 
 words = "\"HeLlO WoRlD\"" 
-    # strings can also be modified via  available functions
+    # strings can also be modified via available functions
 lowercase = words.lower()
 print(lowercase)
 uppercase = words.upper()
@@ -28,17 +28,17 @@ CREATE TABLE characters (
     email VARCHAR(50) 
 );
 """
-    # strings can be also called on to other strings with "f" decalred before the string
+    # strings can be also called on to other strings with "f" declared before the string
 sentence = f"my first code is { words }"
     # strings next to each other will automatically CONCATENATE, we can also select which strings to concatenate
-morningGreeting =  "Good" " Monring"
+morningGreeting =  "Good" " Morning"
 print(morningGreeting)
 
 firstWord = "Hey,"
 secondWord = " How Are you?"
 secondSentence = firstWord + secondWord + "lol" #use + to concatenate strings
 
-    #strings can also be considred as arrays of characters
+    #strings can also be considered as arrays of characters
 strArr = "Python String"
 ArrSplice = strArr[2] # prints T
     # len() function to get the length of the string
@@ -48,7 +48,7 @@ strSlice = strArr[0:2] # prints "p" and "y"
 #words.isalpha() #Return True if the string is an alphabetic string, False otherwise
 
 
-    #String Formating: alternative way of embeding strings and non-string
+    #String Formatting: alternative way of embedding strings and non-string
 array = [4,5,6]
 msg = "Numbers: {0} {1} {2}".format(array[0],array[1],array[2])
 print(msg)
@@ -58,9 +58,9 @@ print(q)
 
 
     #String Functions
-print(", ".join(['spam','eggs','ham']))#joins([]) joins a list of strings with another strins as a seperator
-print("spam, eggs, ham".split(", ")) #split() turns a string into a list with a certain seperator
-print('Hello World'.replace('World', 'Earth')) #replace() replaces one substrinf of a string with another
+print(", ".join(['spam','eggs','ham']))#joins([]) joins a list of strings with another strings as a separator
+print("spam, eggs, ham".split(", ")) #split() turns a string into a list with a certain separator
+print('Hello World'.replace('World', 'Earth')) #replace() replaces one substring of a string with another
 print('This is a Sentence'.startswith('This')) # startswith() determines the start of the string is a certain string
 print('This is a Sentence'.endswith('Sentence')) #endswith() determines the end of the string is it is a certain string
 
@@ -79,7 +79,7 @@ print(abs(-99)) # abs() finds the distance of a number from 0
 print(sum([1,2,3,4,5])) #sum([]) adds all the number in a list
 
 
-    #CONSTANTS: written in ALL_CAPITAL_LETTERS with undersores if separating the words
+    #CONSTANTS: written in ALL_CAPITAL_LETTERS with underscores if separating the words
     # All-caps to be treated by Programmers as Constant
 PI = 3.14
 GRAVITY = 9.81
@@ -87,10 +87,10 @@ GRAVITY = 9.81
     #use type(object) to return the data type of a specific input/data. Outputs "<class 'data type'>"
 
     #BOOLEAN: represents TRUE or FALSE. Note that the results are boolean, not string, despite using letters
-isthereString = bool('Hi') # prints TRUE
-isthereString2 = bool('') # prints FALSE
-isthereValue = bool(100) # prints TRUE
-isthereValue2 = bool(0) # prints FALSE
+isThereString = bool('Hi') # prints TRUE
+isThereString2 = bool('') # prints FALSE
+isThereValue = bool(100) # prints TRUE
+isThereValue2 = bool(0) # prints FALSE
 isNumberCorrect = bool(80 > 10) # prints TRUE
 isNumberCorrect2 = bool(80 < 10) # prints FALSE
 
@@ -111,7 +111,7 @@ print(add_numbers.__code__) #prints the location (by line) of the function where
 #print(input) #prints input function, receives an input and returns it back as output
 """
 factor1 = input('Enter factor1: ')
-factor2 = input('Enter facter2: ')
+factor2 = input('Enter factor2: ')
 answer = int(factor1) * int(factor2)
 print(f"the Product is {answer}")""" 
 
@@ -125,7 +125,7 @@ print(f"the Product is {answer}")"""
     #LIST: "Arrays" that can have several different data types
     # make object "plural" when naming the variable
     # Use list when collection of  data doe snot need random access.
-    # Usewhen you need a simple iterable collection that is modified frequently
+    # Use when you need a simple iterable collection that is modified frequently
 list1 = [1,2,3,4,6] #1d list
 list2 = [[0,0], [0,1], [1,1], [1,0]] #2d list
 print(list2) #prints all in list
@@ -141,7 +141,7 @@ list1.remove(3) #remove() removes item by value
 
 
     #LIST COMPREHENSIONS are  a useful way to quickly create lists
-    #NOTE: Creating a list in a very extensice range will result in Memory Error
+    #NOTE: Creating a list in a very extensive range will result in Memory Error
 cubes = [i**3 for i in range(5)] #lists the first 5 cubic numbers
 print(cubes) # prints [0, 1, 8, 27, 64]
 evens = [i**2 for i in range(10) if i**2 % 2 == 0]
@@ -150,9 +150,9 @@ print(evens) # prints [0, 4, 16, 36, 64]
 
     #LIST FUNCTIONS
 nums = [55,44,33,22,11]
-if all([i > 5 for i in nums]): # all() take a consition and determines it if it's true or false, if all consitions pass, returns true
+if all([i > 5 for i in nums]): # all() take a condition and determines it if it's true or false, if all conditions pass, returns true
     print("All Larger than 5")
-if any([i % 2 == 0 for i in nums]): #any() take a consition and determines it if it's true or false, if one consitions pass, returns true
+if any([i % 2 == 0 for i in nums]): #any() take a condition and determines it if it's true or false, if one conditions pass, returns true
     print("At least on is even")
 for v in enumerate(nums): # enumerate()
     print(v)
@@ -161,8 +161,8 @@ for v in enumerate(nums): # enumerate()
     #TUPLES: Lists that can't be mutated but can be reassigned a new variable, can be used in for loops
     #Use tuples when data should not be changes
     #tuples are faster than lists but cannot be changed
-rgb = ("red", "green", "blue") #tuples can also not have parethesis
-emptyTPL = () #empty tuple created by empty parethesis
+rgb = ("red", "green", "blue") #tuples can also not have parenthesis
+emptyTPL = () #empty tuple created by empty parenthesis
 print(rgb[0]) # access tuples with their index
     #rgb[3] = "white" <= however, item reassignment won't work, 'tuple' object does not support item assignment
 rgb = ("orange", "yellow", "violet") #tuples can be reassign to a variable that holds a tuple
@@ -217,10 +217,10 @@ guests = ['James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer']
 sort_guest = guests.sort()
 
     #list Slices: can be done in tuples too
-sorted_guests2 = guests[1:4]  # <= shows list slice, first parameter = starting index, second paramemeter = ending index
+sorted_guests2 = guests[1:4]  # <= shows list slice, first parameter = starting index, second parameter = ending index
 #sorted_guests3 = guests[-3:]  # negative first index refers to the arrangement in reverse
 #sorted_guests4 = guests[::3]  # third Parameter refers to intervals
-#sorted_guests5 = guests[::-1]  # negative parameters return list, from last element to first elemant
+#sorted_guests5 = guests[::-1]  # negative parameters return list, from last element to first element
 #guests[0:2] = ["Felix", "Daniel"] # appends items in a list
 #del guests[2:5] # Deletes items on a list
 
@@ -233,7 +233,7 @@ Try:
         raise (kind of Error) #Raise: exceptions, raised as arguments that would give detail about them
     false statement
         assert (is this code returning a false) #assert used to check if a line of code os not working/is not true/does not make sense
-except: #exceptwith without ant exception will cath all errors
+except: #except with without ant exception will cath all errors
     print("An error occurred")
     raise (kind of Error) # raise statement in except block re-raises what ever exception ocurred
     code if error 1 occurs
@@ -264,7 +264,7 @@ def func(x):  #assert example,
 
     #Dictionary: collection of key:value pairs where each key is diagnosed with a value    JSON??
     #            the value can be a number, string, tuple or even another dictionary as long as its immutable
-    # Used when you need logical association betwee a key:value pair, when you need fast lookup far data based on custom key
+    # Used when you need logical association between a key:value pair, when you need fast lookup far data based on custom key
     # Used when data is constantly modified, DICTIONARIES ARE MUTABLE
 me = {
     'name': 'Angelo Rafael Recio', 
@@ -299,7 +299,7 @@ for key in me.keys():
     #terms: parameters-variables of the function definition, arguments-values put into parameters
 def add(a,b): #<- can have default values. Example: def add(a = 15,b = 4):
     c = a + b
-    return c #return: returns a valuethat can be used later
+    return c #return: returns a value that can be used later
     #function can have parameters/arguments if needed
     #function can be called + print in two ways:
 def subtract(a,b):
@@ -312,7 +312,7 @@ def multiply(a,b):
     return c
 display = multiply(10,5)
 print(display) #prints 50
-    #NOTE: variable insied functions cannot be called outside of the block
+    #NOTE: variable inside functions cannot be called outside of the block
 
 
     ## Functions can be objects

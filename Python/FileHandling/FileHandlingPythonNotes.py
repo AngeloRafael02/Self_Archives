@@ -15,9 +15,9 @@
 
     # READ MODE
 f = open("Self_Archives\Python\FileHandling\samplefile.txt", "r") #relative path works here in this case
-content = f.read() #defalt content was "test sentence"
+content = f.read() #default content was "test sentence"
 print(content)
-f.close() #close() everytime a write or read is done
+f.close() #close() every time a write or read is done
 
 
     # WRITING MODE -  NOTE: may override the whole content of the file
@@ -49,7 +49,7 @@ h.close()
 #
 #           try:
 #               f = open("Self_Archives\Python\FileHandling\samplefile.txt", "r")
-#               content = f.read() #defalt content was "test sentence"
+#               content = f.read() #default content was "test sentence"
 #               print(content)
 #           finally:
 #               f.close()
