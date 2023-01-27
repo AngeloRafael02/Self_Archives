@@ -114,7 +114,7 @@ vague_list = VagueList(["A","B","C","D","E"])
 
     #ENCAPSULATION - involves packaging or related variables and function into an easy to use object
     #data hiding - implementation of detail of class should be hidden, we can use weakly private methods
-    #weakly private methods: have a single undersore in the beginning, this signals that they are private and shouldn't be used in an external code (mostly a convention, does not stop external code from accessing them).
+    #weakly private methods: have a single underscore in the beginning, this signals that they are private and shouldn't be used in an external code (mostly a convention, does not stop external code from accessing them).
 class Queue:
     def __init__(self, contents):
         self._hiddenlist = list(contents)
@@ -122,7 +122,7 @@ class Queue:
         self._hiddenlist.insert(0, value)
     def pop(self):
         return self._hiddenlist.pop(-1)
-    def __repr__(self): # __repr__ : magic methos used for string representation of the instance
+    def __repr__(self): # __repr__ : magic methods used for string representation of the instance
         return "Queue({})".format(self._hiddenlist)
 queue = Queue([1, 2, 3])
 print(queue) #Queue([1, 2, 3])
@@ -140,7 +140,7 @@ s = Spam()
 s.print_egg() # 7
 
     #CLASS METHODS: called by class which is passed to the cls parameter of the method
-    # Syntax: @classmethod <linebreak> def functionname(cls,arguments):
+    # Syntax: @classmethod <line break> def function name(cls,arguments):
     # - Marked with class method decorator (@classmethod)
 class Rectangle:
     def __init__(self,width,height): #3. changed argument initialized
@@ -156,7 +156,7 @@ print(square.calculate_area())
 
     #STATIC METHODS: does not have access to class level attributes, therefore it cannot modify the class state
     # bound to class and nor the object of the class
-    # Syntax: @classmethod <linebreak> def functionname(cls,arguments):
+    # Syntax: @classmethod <line break> def function name(cls,arguments):
     # - Marked with class method decorator (@classmethod)
 from datetime import date
 class Student:
@@ -178,7 +178,7 @@ print(person2.age) #prints 26(as of 2022)
 #Not an object but is called to now if its an adult.
 print(Student.is_adult(22)) #prints True
 
-    #PROPERTIES: provides a way in customizing access to instace attributes
+    #PROPERTIES: provides a way in customizing access to instance attributes
     #helps to access teh class methods as attributes (not need to use parenthesis ex. )
     #properties are used to make certain attributes read-only
 class Pizza:
@@ -192,7 +192,7 @@ class Pizza:
         else:
             return False
 pizza = Pizza(["cheese","tomato"],12)
-print(pizza.pineapple_allowed) # does not need parethesis like "pizza.pineapple_allowed()", takes the argument from the object itself
+print(pizza.pineapple_allowed) # does not need parenthesis like "pizza.pineapple_allowed()", takes the argument from the object itself
     # Properties can also be set by setter/getter functions
 class Pizza:
     def __init__(self, toppings):
@@ -205,11 +205,11 @@ class Pizza:
     def pineapple_allowed(self, value):
         if value:
             password = input("Enter the password: ")
-            if password == "Sw0rdf1sh!": # 2) if in correct consitions,
+            if password == "Sw0rdf1sh!": # 2) if in correct conditions,
                 self._pineapple_allowed = value 
             else:
                 raise ValueError("Alert! Intruder!")
 pizza = Pizza(["cheese", "tomato"])
 print(pizza.pineapple_allowed)
 pizza.pineapple_allowed = True # 3) value is changed
-print(pizza.pineapple_allowed) # 4) since correct consition, return value immediately
+print(pizza.pineapple_allowed) # 4) since correct condition, return value immediately
