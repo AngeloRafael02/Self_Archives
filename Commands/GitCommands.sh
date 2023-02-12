@@ -78,3 +78,6 @@ git remote prune origin # manage set of tracked repositories
     #.gitignore - file that can say what files should not be tracked by git
     #to add files, put the name of the file insid ethe .gitignore including file type.: temp.py
     #to add directories, input the name of the directory then put a "/" afterwards: subfolder/
+
+    #ADD REMOTE
+git remote add origin <https link>
