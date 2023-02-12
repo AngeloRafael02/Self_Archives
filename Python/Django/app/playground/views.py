@@ -6,3 +6,5 @@ from django.http import HttpResponse
 
 def sayHi(request):
     return HttpResponse('Sup')
+def renderHi(request):
+    return render(request,'hello.html',{'name':'Angelo'}) #remove dictionary parameter to change  template
