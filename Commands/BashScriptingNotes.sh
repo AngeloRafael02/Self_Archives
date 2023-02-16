@@ -97,3 +97,4 @@ shutdown    #Shuts down the system
     # OTHER STUFF
 sudo -i -u postgres && psql #switch to postgres acc then ise psql
 sudo /opt/lampp/manager-linux-x64.run # to run 64-bit XAMPP control panel
+smbclient //<ip-address>/<SambaFile> -U username #Access Samba File server
