@@ -16,7 +16,8 @@ Languages Currently Documented:
         - SCSS
     - Bash
         - Batch Commands
-        - Bash Commands
+        - Bash Language
+        - Bash Linux Scripts
         - Git Commands
     - C#
         - Basic C#
@@ -28,6 +29,7 @@ Languages Currently Documented:
         - Object Oriented Programming Python (OOP)
         - Python File Handling
         - Flask Python
+        - Python DJango
         - Machine Learning: Scikit-Learn
     - Java 
         - Basic Java

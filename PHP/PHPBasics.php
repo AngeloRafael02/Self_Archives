@@ -9,6 +9,10 @@
 <body>
     <?php
     echo "Hello World";
+    echo "<strong>Html markups can be added here</strong>"
+    //This is a comment
+    /*This is a 
+    multiline */
     ?>
 </body>
 </html>
