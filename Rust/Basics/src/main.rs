@@ -57,4 +57,13 @@ fn main() {
     }
     let last = array1[array1.len()-1];
     println!("{}",last); 
+
+    //FUNCTIONS
+    //Syntax:
+    fn say_hello(name:&str)->&str{ //function names must be snake case
+        println!("Hello! {name}");
+        return name; 
+    }
+    say_hello("Angelo");
+    println!("{}",say_hello("Angelo"));
 }
