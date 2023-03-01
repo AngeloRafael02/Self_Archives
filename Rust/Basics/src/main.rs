@@ -66,4 +66,38 @@ fn main() {
     }
     say_hello("Angelo");
     println!("{}",say_hello("Angelo"));
+
+    //CONTROL FLOWS
+    let mut number = 69;
+    // if statement
+    if number > 60 && number < 70 {
+        println!("Number is in the 60 range");
+    } else if number > 70 {
+        println!("Number is in the above 60 range");
+    } else {
+        println!("Number is in the above 60 range");
+    }
+    // loop
+    let _loop_result = loop { //snakecase in declaring loop variable name
+        number += 1 ;
+        println!("{number}");
+        if number == 75 {
+            break number*2; // retunr value of loop variable
+        }
+    };
+    println!("{_loop_result}");
+    // Conditional Loops
+    while number != 80 {
+        println!("{number}");
+        number += 1;
+    }
+    // loop through Collection
+    let array2 = [1,2,3,4,5];
+    for element in array2{
+        println!("Value: {element}");
+    }
+    // loop through collection 2nd syntax
+    for number in (1..4).rev() { //.rev() reverses the order of Collection
+        println!("{number}!");
+    }
 }
