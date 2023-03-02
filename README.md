@@ -57,6 +57,8 @@ Languages Currently Documented:
         - MongoDB
     - HDL
         - Verilog
+    - Rust
+        - Basics
 
 Other Documentations
     - Front-end Framework CDNs
