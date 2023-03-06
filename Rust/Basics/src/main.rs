@@ -92,12 +92,39 @@ fn main() {
         number += 1;
     }
     // loop through Collection
-    let array2 = [1,2,3,4,5];
-    for element in array2{
+    let array2 = [1,2,3,4,5];  
+    for element in array2 {
         println!("Value: {element}");
     }
     // loop through collection 2nd syntax
     for number in (1..4).rev() { //.rev() reverses the order of Collection
         println!("{number}!");
     }
+
+
+    // OWNERSHIP NOTES
+    let var1 = String::from("Hello");
+    let var2 = var1; // to save memory, duplicate variables with the same exact value will only share the value instead of duplicating it 
+        //var1 cannot be used anymore
+        //for some reason this only happened in String Variables;
+    println!("{}",var2);
+        // tho you can use .clone() to use both variables though it may cost performance
+    let var3 = String::from("Hi");
+    let var4 = var3.clone();
+    println!("{} , {}",var3,var4);
+        // other Data Types except String has a "copy" trait. Therefore does not have to deal with some Ownership restrictions
+        // Data Types that have a copy trait:
+        // Integers, Booleans, Floats, Chars, Tuples with variables with copy traits
+    let var5:i32 = 5;
+    let var6:i32 = 6;
+    println!("{} , {}",var5,var6);
+        // Rust does let us return multiple values using a tuple
+    let s1 = String::from("nice");
+    let (s2,s2len) = returns_tuples(s1);
+    println!("word:{}, length:{}",s2,s2len);
+}
+
+fn returns_tuples(s:String)->(String, usize){
+    let length = s.len();
+    (s, length)
 }
