@@ -122,9 +122,17 @@ fn main() {
     let s1 = String::from("nice");
     let (s2,s2len) = returns_tuples(s1);
     println!("word:{}, length:{}",s2,s2len);
+
+    //REFERENCING - when 
+    let len = return_length(&var3); // & <- reference / borrow a value already owned
+    println!("{}",len);
 }
 
 fn returns_tuples(s:String)->(String, usize){
     let length = s.len();
     (s, length)
 }
+fn return_length(s:&String)->usize{
+    s.len()
+}
+
