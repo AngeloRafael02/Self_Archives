@@ -1,3 +1,4 @@
+<!--HTML markups still work on PHP-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +9,17 @@
 </head>
 <body>
     <?php
-    echo "Hello World";
-    echo "<strong>Html markups can be added here</strong>"
+    echo "Hello World <br>";
+    echo "<strong>Html markups can be added here</strong><br>";
     //This is a comment
     /*This is a 
     multiline */
+
+    //VARIABLES
+    $variable = "Variable Value <br>";
+    echo $variable;   
+    echo var_dump($variable); //outputs variable type
+    // data types - Integer, String, Float, Boolean, Array, Object  
     ?>
 </body>
 </html>
