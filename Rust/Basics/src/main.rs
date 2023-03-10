@@ -78,11 +78,11 @@ fn main() {
         println!("Number is in the above 60 range");
     }
     // loop
-    let _loop_result = loop { //snakecase in declaring loop variable name
+    let _loop_result = loop { //snake case in declaring loop variable name
         number += 1 ;
         println!("{number}");
         if number == 75 {
-            break number*2; // retunr value of loop variable
+            break number*2; // return value of loop variable
         }
     };
     println!("{_loop_result}");
