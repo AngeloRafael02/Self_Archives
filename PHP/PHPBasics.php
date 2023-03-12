@@ -30,6 +30,16 @@
     echo "<br>";
     echo str_replace("Baby","Aira","Hello Baby"); //str_replace("word To replace", "String with word to replace", "New word")
     // data types - Integer, String, Float, Boolean, Array, Object  
+
+    // INTEGER FUNCTIONS and CONSTANTS
+    $number = 69420;
+    echo is_int($number); // is_int() - return boolean if numeric value is an integer or not
+    echo PHP_INT_MAX; // returns Maximum value in php integer
+    echo "<br>";
+    echo PHP_INT_MIN; // returns Maximum value in php integer
+    echo "<br>";
+    echo PHP_INT_SIZE; // returns Size of integer in bytes (8)
+    echo "<br>";
     ?>
 </body>
 </html>
