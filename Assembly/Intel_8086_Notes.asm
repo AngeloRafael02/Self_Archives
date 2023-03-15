@@ -11,3 +11,12 @@ str3: DB 10,13,"Heyy",'$'  ; For simplications, 10,13 is for new line
 arr DW 1111h, 2222h, 3333h
     ; Array Duplication
 arrdup DB 3 DUP(5,6) ; returns  5,6,5,6,5,6
+
+; MOV Instruction  - Copies Second operand to first operand
+; SYNTAX : MOV  FirstOperand/Destination SecondOperator/Source
+;   MOV Reg Memory (and Vice Versa)
+;   MOV Reg Reg
+;   MOV Memory Immediate
+;   MOV Reg Immediate
+; [MOV Memory Memory Not supported]
+MOV AX 17
