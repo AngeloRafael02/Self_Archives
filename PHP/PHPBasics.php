@@ -36,10 +36,26 @@
     echo is_int($number); // is_int() - return boolean if numeric value is an integer or not
     echo PHP_INT_MAX; // returns Maximum value in php integer
     echo "<br>";
-    echo PHP_INT_MIN; // returns Maximum value in php integer
+    echo PHP_INT_MIN; // returns Minimum value in php integer
     echo "<br>";
     echo PHP_INT_SIZE; // returns Size of integer in bytes (8)
     echo "<br>";
+    // FLOAT FUNCTIONS and CONSTANTS
+    $bigNumber = 420.69;
+    echo is_float($bigNumber); //is_Float - return boolean value of value is float or not
+    echo "<br>";
+    echo PHP_FLOAT_MAX; // return Maximum value of php float
+    echo "<br>";
+    echo PHP_FLOAT_MIN; // return Minimum value of php float
+    echo "<br>";
+    echo PHP_FLOAT_EPSILON; // returns the smallest representable positive number x, so that x + 1.0 != 1.0
+    echo "<br>";
+    // OTHERS
+    echo is_nan($number); //is_nan() - return boolean value if argument is not a number
+    echo "<br>";
+    var_dump(is_numeric("Hi")); //return a boolean value if argument is a numeric or not 
+    echo "<br>";
+
     ?>
 </body>
 </html>
