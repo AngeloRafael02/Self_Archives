@@ -56,6 +56,20 @@
     var_dump(is_numeric("Hi")); //return a boolean value if argument is a numeric or not 
     echo "<br>";
 
+    // MATH FUNCTIONS
+    echo(pi()); //returns value of PI
+    echo "<br>";
+    echo(min(0, 150, 30, 20, -8, -200));  // returns maximum of a series of numbers
+    echo "<br>";    
+    echo(max(0, 150, 30, 20, -8, -200));  // returns minimum of a series of numbers
+    echo "<br>";
+    echo(abs(-89)); // returns absolute value of a value
+    echo "<br>";
+    echo(sqrt(81)); // returns square root of a value
+    echo "<br>";
+    echo(round(1.50)); //rounds number into the nearest integer
+    echo "<br>";
+    echo(rand(0,100)); //returns a random number in a range
     ?>
 </body>
 </html>
