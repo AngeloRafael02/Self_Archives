@@ -70,6 +70,11 @@
     echo(round(1.50)); //rounds number into the nearest integer
     echo "<br>";
     echo(rand(0,100)); //returns a random number in a range
+
+    // CREATING CONSTANTS - Constants are automatically Global
+    // Syntax: define("VariableName","ConstantValue",case-sensitivity flag)
+    define("constantVariable","This is String Value from a Constant Variable",true);
+    echo constantVariable;
     ?>
 </body>
 </html>
