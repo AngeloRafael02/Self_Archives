@@ -12,11 +12,19 @@ arr DW 1111h, 2222h, 3333h
     ; Array Duplication
 arrdup DB 3 DUP(5,6) ; returns  5,6,5,6,5,6
 
-; MOV Instruction  - Copies Second operand to first operand
+; MOV Instruction - Copies Second operand to first operand
 ; SYNTAX : MOV  FirstOperand/Destination SecondOperator/Source
 ;   MOV Reg Memory (and Vice Versa)
 ;   MOV Reg Reg
 ;   MOV Memory Immediate
 ;   MOV Reg Immediate
 ; [MOV Memory Memory Not supported]
-MOV AX 17
+MOV AX 17A0
+
+; PUSH Intsruction - Pushes a value to stack memory
+; SYNTAX : PUSH (Value/Memory/Register)
+PUSH AX
+
+; POP Intruction - takes the values at the top of the stack memory and places it somewehre else
+; SYNTAX : POP (destination)
+POP BX
