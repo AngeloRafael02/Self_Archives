@@ -28,3 +28,17 @@ PUSH AX
 ; POP Intruction - takes the values at the top of the stack memory and places it somewehre else
 ; SYNTAX : POP (destination)
 POP BX
+
+; ADD Intrcution -  adds two values and puts the output at the first argument
+; SYNTAX : ADD destination source
+ADD AX BX
+; ADC Intrcution -  adds two values and puts the output at the first argument and allows carry
+; SYNTAX : ADC destination source carry_flag
+ADC AX 1234h 1
+
+; SUB Intrcution -  subtracts two values and puts the output at the first argument
+; SYNTAX : SUB destination source
+SUB AX 0
+; SBB Intrcution -  subtracts two values and puts the output at the first argument and allows carry
+; SYNTAX : SBB destination source carry_flag
+SBB AX 1234h 1
