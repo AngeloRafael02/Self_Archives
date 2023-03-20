@@ -75,6 +75,54 @@
     // Syntax: define("VariableName","ConstantValue",case-sensitivity flag)
     define("constantVariable","This is String Value from a Constant Variable",true);
     echo constantVariable;
+    echo "<br>";
+
+    // CONTROL FLOWS STATEMENTS
+    // IF-ELSE Statement
+    $secondNumber = 69;
+    if ($secondNumber > 90 && $secondNumber < 80  ){
+        echo "80 - 90";
+    } else if ($secondNumber > 80) {
+        echo "> 80";
+    } else {
+        echo "< 90";
+    }
+    echo "<br>";
+    // SWITCH STATEMENT
+    switch ($secondNumber) {
+        case 69 :
+            echo "number is 69";
+            break;
+        case 70 :
+            echo "number is 70";
+            break;
+        default:
+        echo "number is not 69 nor 70";
+            break;
+    }
+    echo "<br>";
+    // WHILE STATEMENT
+    while ($secondNumber > 74) {
+        echo "hi";
+        $secondNumber++;
+    }
+    echo "<br>";
+    // DO-WHILE STATEMENT
+    do {
+        echo "String is done at least once";
+        $secondNumber++;
+    } while ($secondNumber > 75);
+    echo "<br>";
+    // FOR LOOP STATEMENT
+    for ($i=0; $i < 5; $i++) { 
+        echo $i;
+    }
+    echo "<br>";
+    // FOREACH STATEMENT
+    $colors = array("red", "green", "blue", "yellow");
+    foreach ($colors as $value) {
+        echo "$value";
+    }
     ?>
 </body>
 </html>
