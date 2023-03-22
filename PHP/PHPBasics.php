@@ -123,6 +123,7 @@
         foreach ($colors as $value) {
             echo "$value";
         }
+        echo "<br>";
         
         // FUNCTIONS
         //Declaring Function
@@ -134,7 +135,43 @@
         }
         // Calling a function
         sayHI();
+        echo "<br>";
         echo addTwoNumbers(6,9);
+        echo "<br>";
+
+        // ARRAYS
+        // indexed arrays
+        $arr = array("Red","Orange","Yellow");
+        echo $arr;      // using the whole array
+        echo "<br>";
+        echo $arr[1];   //Using a single element of the array, calling its index
+        echo "<br>";
+        echo count($arr); // count() - functions counting the elements of the array
+        echo "<br>";
+        echo sort($arr); // sort() - functions sorting the elements of the array
+        echo "<br>";
+        echo rsort($arr); // rsort() - functions sorting the elements in reverse
+        echo "<br>";
+        // associative array
+        $arr2 = array("Philippines"=>"Manila","USA"=>"Washington","Germany"=>"Berlin");
+        echo $arr2;      // using the whole array
+        echo "<br>";
+        echo $arr2["Philippines"];   //Using a single element of the array, calling its key
+        echo "<br>";
+        echo asort($arr2); // asort() - functions sorting the elements of the associative array according to value
+        echo "<br>";
+        echo ksort($arr2); // ksort() - functions sorting the elements of the associative array according to key
+        echo "<br>";
+        echo arsort($arr2); // arsort() - functions sorting the elements of the associative array according to value in reverse
+        echo "<br>";
+        echo krsort($arr2); // krsort() - functions sorting the elements of the associative array according to key in reverse
+        echo "<br>";
+        // multi-dimensional array
+        $multiArr = array(array(1,2,3,4,5),array(6,7,8,9,0),array(11,12,13,14,15));
+        echo $multiArr;
+        echo "<br>";
+        echo $multiArr[1][2];
+        echo "<br>";
 
     ?>
 </body>
