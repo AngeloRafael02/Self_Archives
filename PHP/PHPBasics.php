@@ -70,10 +70,11 @@
         echo(round(1.50)); //rounds number into the nearest integer
         echo "<br>";
         echo(rand(0,100)); //returns a random number in a range
+        echo "<br>";
 
         // CREATING CONSTANTS - Constants are automatically Global
         // Syntax: define("VariableName","ConstantValue",case-sensitivity flag)
-        define("constantVariable","This is String Value from a Constant Variable",true);
+        define("constantVariable","This is String Value from a Constant Variable");
         echo constantVariable;
         echo "<br>";
 
@@ -142,7 +143,7 @@
         // ARRAYS
         // indexed arrays
         $arr = array("Red","Orange","Yellow");
-        echo $arr;      // using the whole array
+        print_r($arr);      // using the whole array
         echo "<br>";
         echo $arr[1];   //Using a single element of the array, calling its index
         echo "<br>";
@@ -154,7 +155,7 @@
         echo "<br>";
         // associative array
         $arr2 = array("Philippines"=>"Manila","USA"=>"Washington","Germany"=>"Berlin");
-        echo $arr2;      // using the whole array
+        print_r($arr2);      // using the whole array
         echo "<br>";
         echo $arr2["Philippines"];   //Using a single element of the array, calling its key
         echo "<br>";
@@ -168,11 +169,44 @@
         echo "<br>";
         // multi-dimensional array
         $multiArr = array(array(1,2,3,4,5),array(6,7,8,9,0),array(11,12,13,14,15));
-        echo $multiArr;
+        print_r($multiArr);  //output whole multi-dimensional array
         echo "<br>";
-        echo $multiArr[1][2];
+        echo $multiArr[1][2]; //output a simple element from the multi-dimensional array
         echo "<br>";
 
+        // SUPERGLOBALS
+        // $GLOBALS - used to access global variables anywhere from the PHP Script
+        $d = 75;
+        $e = 69; // go to h4 element with id named "GLOBAL_VARIABLE" for usage of $GLOBALS
+        // $_SERVER
+        echo $_SERVER['PHP_SELF']; // PHP_SELF - return filename of current script
+        echo "<br>";
+        echo $_SERVER['SERVER_NAME']; // SERVER_NAME returns tha name of the host server
+        echo "<br>";
+        echo $_SERVER['HTTP_HOST']; // HTTP_HOST - returns the host header from the current request
+        echo "<br>";
+        echo $_SERVER['HTTP_USER_AGENT']; // HTTP_USER_AGENT - returns text that the browsers themselves send to the webserver to identify themselves
+        echo "<br>";
+        echo $_SERVER['SCRIPT_NAME']; // SCRIPT_NAME - returns the path of the current script
+        echo "<br>";
     ?>
+
+    <!--$_REQUEST - super globasl variable used to collect data after submitting an html form--> 
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        Name: <input type="text" name="fname">
+        <input type="submit">
+    </form>
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // collect value of input field
+            $name = htmlspecialchars($_REQUEST['fname']);
+            if (empty($name)) {
+                echo "Name is empty";
+            } else {
+                echo $name;
+            }
+        }
+    ?>
+    <h4 id="GLOBAL_VARIABLE"><?php echo $GLOBALS['d'] + $GLOBALS['e']?></h4>
 </body>
 </html>
