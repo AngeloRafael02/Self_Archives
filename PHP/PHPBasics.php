@@ -191,9 +191,9 @@
         echo "<br>";
     ?>
 
-    <!--$_REQUEST - super globasl variable used to collect data after submitting an html form--> 
+    <!--$_REQUEST - super global variable used to collect data after submitting an html form--> 
     <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-        Name: <input type="text" name="fname">
+        First Name: <input type="text" name="fname">
         <input type="submit">
     </form>
     <?php
@@ -208,5 +208,30 @@
         }
     ?>
     <h4 id="GLOBAL_VARIABLE"><?php echo $GLOBALS['d'] + $GLOBALS['e']?></h4>
+
+    <!--$_POST - super global variable which is used to collect form data after submitting an HTML form with method="post"-->
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        Last Name: <input type="text" name="lname">
+        <input type="submit">
+    </form>
+    <?php
+        // $_POST is also widely used to pass variables.
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // collect value of input field
+            $name = $_POST['lname'];
+            if (empty($name)) {
+                echo "Name is empty";
+            } else {
+                echo $name;
+            }
+        }
+    ?>
+    <br>
+
+    <!--$_GET  - super global variable which is used to collect form data after submitting an HTML form with method="get".-->
+    <!-- can also collect data  sent in the URL -->
+    <!--SYNTAX: fileName?variable1=value1&variable2=value2...-->
+    <a href="test2.php?var1=PHP_Forms&var2=<?php echo (empty($lname)) ? "Input not Given" : $lname;  ?>;">Go to PHP_Forms.php</a>
+
 </body>
 </html>

@@ -34,11 +34,19 @@ POP BX
 ADD AX BX
 ; ADC Intrcution -  adds two values and puts the output at the first argument and allows carry
 ; SYNTAX : ADC destination source carry_flag
-ADC AX 1234h 1
+ADC AX 1234h 
 
 ; SUB Intrcution -  subtracts two values and puts the output at the first argument
 ; SYNTAX : SUB destination source
 SUB AX 0
 ; SBB Intrcution -  subtracts two values and puts the output at the first argument and allows carry
 ; SYNTAX : SBB destination source carry_flag
-SBB AX 1234h 1
+SBB AX 1234h 
+
+; INC Instruction - increments a value 
+; SYNTAX : INC (Memory/Register)
+INC AX
+
+; DEC Instruction - decrements a value
+; SYNTAX : DEC (Memory/Register)
+DEC AX
