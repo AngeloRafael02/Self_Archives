@@ -19,6 +19,8 @@ Languages Currently Documented:
         - Bash Language
         - Bash Linux Scripts
         - Git Commands
+    - Assembly
+        -Intel 8086
     - C#
         - Basic C#
     - Python
@@ -51,6 +53,8 @@ Languages Currently Documented:
                 - NestJS
             - TensorFlowJS
         - ES6 
+    - PHP
+        -PHP Basics
     - GDScript
     - Databases 
         - PostgeSQL
