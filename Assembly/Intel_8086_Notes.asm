@@ -50,3 +50,7 @@ INC AX
 ; DEC Instruction - decrements a value
 ; SYNTAX : DEC (Memory/Register)
 DEC AX
+
+; MUL Instruction - multiplies given value to whatever is in AX register
+; SYNTAX : MUL (Value/Memory/Register)
+MUL BX
