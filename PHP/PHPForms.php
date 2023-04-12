@@ -9,12 +9,24 @@
 <body>
     <?php
     echo "File:  " . $_GET['var1'] . " Welcome: " . (empty($_GET['var2'])) ? "Input not Given from PHP_Basic.php" : $_GET['var2'];
+   
+    $name = $email = "";
     ?>
+        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+            <p>Name: </p><input type="text" name="name" value="<?php echo $name;?>">
+            <br>
+            <p>E-Mail: </p><input type="text" name="name" value="<?php echo $email;?>">
+        </form>
     <?php
-        $name = $email = "";
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $lname = $_POST['lname'];
+            if (empty($lname)) {
+                echo "Name is empty";
+            } else {
+                echo $lname;
+            }
+        }
     ?>
-    <p>Name: </p><input type="text" name="name" value="<?php echo $name;?>">
-    <br>
-    <p>E-Mail: </p><input type="text" name="name" value="<?php echo $email;?>">
+    
 </body>
 </html>
