@@ -17,7 +17,7 @@
     "postgres": "^3.2.4",
     "random": "^3.0.6",
     "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.3.6"
+    "typeorm": "^0.3.14"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
