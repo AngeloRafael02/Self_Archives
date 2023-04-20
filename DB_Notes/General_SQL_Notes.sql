@@ -1,27 +1,7 @@
     --NOTE: This file is NOT to be executed to any program. This file is a Documentation of lessons.
-
-        --POSTGRESQL commands
-    --\copyright        for distribution terms
-    --\h                for help with SQL commands
-    --\?                for help with psql commands
-    --\g or terminate with semicolon to execute query
-    --\q                to quit
-    --\i scriptfilePath for executing SQL files
-    --\l = list all database
-    --\c dbName         connect to a database
-
-    --\d                diaplay tables of db including BIGSERAL
-    --dt                diplay tables of db excluding BIGSERAL
-    --\d+ table_name    show a table's columns
-    --dv                displays vies of the database
-
-    --pg_dump: creates backup of database to another directory/disk/etc.
-    --pg_dumpall -U postgres     > c:\pgbackup\all.sql
-    --                     v=prompts for password
-    --pg_dump -U username -W -F t dbname > filepath\dbname.file <-SAMPLE
-    --                       ^= specifies file format(c:custom-format archive file format, d:directory-format archive, t:tar, pplain-text SQL script file)
-
-        --Basic SQL
+    
+    --Basic SQL
+       
     --CREATE TABLE: create a tble fr a database
 CREATE TABLE tablename ( --CREATE Table with its columns
     id BIGSERIAL NOT NULL PRIMARY KEY, --PRIMARY KEY:used to identify a row uniquely in a table, SERIAL/BIGSERIAL: auto-increments
