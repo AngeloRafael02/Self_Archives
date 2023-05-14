@@ -13,3 +13,5 @@ SHOW DATABASES;                 #List all databases
 SHOW DATABASES LIKE "string"    #list all databases with the same name 
 SHOW SCHEMAS;                   #List all schemas 
 USE <DatabaseName>              #switch to another DB
+
+source \path\to\file.sql;       # used when running SQL Scipts
